@@ -517,7 +517,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
     </section>
 
     <section title="Do Not Use SHA-1 in TLSv1.2">
-		<t>[[This section was suggested in PR#2 by Hubert Kario. We're not 
+		<t>[[This section was suggested in PR#2 for the pre-WG draft repo by Hubert Kario. We're not 
 				clear if the WG would like this draft to include this or not,
 				so will ask the TLS WG at the appropriate time.]]</t>
 

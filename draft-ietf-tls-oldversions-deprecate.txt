@@ -458,9 +458,10 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
 8.  Do Not Use SHA-1 in TLSv1.2
 
-   [[This section was suggested in PR#2 by Hubert Kario.  We're not
-   clear if the WG would like this draft to include this or not, so will
-   ask the TLS WG at the appropriate time.]]
+   [[This section was suggested in PR#2 for the pre-WG draft repo by
+   Hubert Kario.  We're not clear if the WG would like this draft to
+   include this or not, so will ask the TLS WG at the appropriate
+   time.]]
 
    SHA-1 as a signature hash MUST NOT be used.  That means that clients
    MUST send signature_algorithms extension and that extension MUST NOT
@@ -497,7 +498,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
    This documents updates [RFC7525] Section 3.1.2 changing SHOULD NOT to
    MUST NOT as follows:
-
 
 
 
