@@ -10,7 +10,7 @@ Expires: March 16, 2019                               September 12, 2018
 
 
                     Deprecating TLSv1.0 and TLSv1.1
-              draft-moriarty-tls-oldversions-diediedie-02
+                draft-ietf-tls-oldversions-deprecate-00
 
 Abstract
 
@@ -103,7 +103,7 @@ Table of Contents
    [[Text in double-square brackets is intended to be fixed as the draft
    evolves.  You've seen that we need to figure out the list of RFCs
    that this'd update in the abstract.  There is a repo for this at:
-   https://github.com/sftcd/tls-oldversions-diediedie - PRs (on the xml
+   https://github.com/tlswg/oldversions-deprecate - PRs (on the xml
    file) are welcome there.]]
 
 
@@ -734,16 +734,14 @@ Appendix A.  Change Log
 
    [[RFC editor: please remove this before publication.]]
 
-   From -01 to -02:
+   From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-
+   oldversions-deprecate-00:
 
-   o  Note -02 may never be published, the TLS WG are considering
-      adopting this (see https://mailarchive.ietf.org/arch/msg/tls/
-      wkb4Fq1KX9-d9ZUHlDEvPxX8OGg) - if they do, then we'll likely shoot
-      out a -00 WG draft.
-   o  I-Ds became RFCs 8446/8447 (PR#4, for TLS1.3)
-   o  Accepted PR#5 fixing typos
+   o  I-Ds became RFCs 8446/8447 (old-repo PR#4, for TLS1.3)
+   o  Accepted old-repo PR#5 fixing typos
 
-   From -00 to -01:
+   From draft-moriarty-tls-oldversions-diediedie-00 to draft-moriarty-
+   tls-oldversions-diediedie-01:
 
    o  Added stats sent to list so far
    o  PR's #2,3
@@ -768,6 +766,8 @@ Authors' Addresses
 
    Phone: +353-1-896-2354
    EMail: stephen.farrell@cs.tcd.ie
+
+
 
 
 
