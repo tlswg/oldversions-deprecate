@@ -4,7 +4,7 @@ A draft to deprecate tlsv1.0 and tlsv1.1 initiated by Kathleen Moriarty,
 assisted by sftcd, now adopted by the TLS WG.
 
 The last pre-WG version was
-(draft-moriarty-tls-oldversions-diediedie-01.txt](https://tools.ietf.org/html/draft-moriarty-tls-oldversions-diediedie-01)
+[draft-moriarty-tls-oldversions-diediedie-01.txt](https://tools.ietf.org/html/draft-moriarty-tls-oldversions-diediedie-01)
 and was in [this repo](https://github.com/sftcd/tls-oldversions-diediedie).
 
 Please submit any PRs on the XML file - we're still using xml2rfc
