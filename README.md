@@ -7,6 +7,9 @@ The last pre-WG version was
 (draft-moriarty-tls-oldversions-diediedie-01.txt](https://tools.ietf.org/html/draft-moriarty-tls-oldversions-diediedie-01)
 and was in [this repo](https://github.com/sftcd/tls-oldversions-diediedie).
 
+Please submit any PRs on the XML file - we're still using xml2rfc
+for this with the XML file as the source.
+
 
 # IETF Note Well
 
