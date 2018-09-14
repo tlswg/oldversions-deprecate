@@ -3,7 +3,7 @@
 A draft to deprecate tlsv1.0 and tlsv1.1 initiated by Kathleen Moriarty,
 assisted by sftcd, now adopted by the TLS WG.
 
-The latest WG draft is [here](https://tools.ietf.org/html/draft-ietf-tls-oldversions-depracate).
+The latest WG draft is [here](https://tools.ietf.org/html/draft-ietf-tls-oldversions-deprecate).
 
 Please submit any PRs on the 
 [XML file](https://github.com/tlswg/oldversions-deprecate/blob/master/draft-ietf-tls-oldversions-deprecate.xml)
