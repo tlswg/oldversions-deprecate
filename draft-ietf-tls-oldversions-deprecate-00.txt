@@ -10,7 +10,7 @@ Expires: March 18, 2019                               September 14, 2018
 
 
                     Deprecating TLSv1.0 and TLSv1.1
-               draft-ietf-tls-oldversions-deprecate-01pre
+                draft-ietf-tls-oldversions-deprecate-00
 
 Abstract
 
@@ -734,11 +734,6 @@ Appendix A.  Change Log
 
    [[RFC editor: please remove this before publication.]]
 
-   From draft-ietf-tls-oldversions-deprecate-00 to draft-ietf-tls-
-   oldversions-deprecate-01:
-
-   o  Nothing yet
-
    From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-
    oldversions-deprecate-00:
 
@@ -771,6 +766,11 @@ Authors' Addresses
 
    Phone: +353-1-896-2354
    EMail: stephen.farrell@cs.tcd.ie
+
+
+
+
+
 
 
 

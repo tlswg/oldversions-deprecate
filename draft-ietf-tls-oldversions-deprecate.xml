@@ -19,7 +19,7 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
-<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-00"
+<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-01pre"
      ipr="trust200902" updates="[[List TBD]]">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
@@ -847,6 +847,12 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 
     <section title="Change Log ">
 	<t>[[RFC editor: please remove this before publication.]]</t>
+
+	<t>From draft-ietf-tls-oldversions-deprecate-00 to draft-ietf-tls-oldversions-deprecate-01:
+      <list style="symbols">
+			  <t>Nothing yet</t>
+	  </list>
+	</t>
 	<t>From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-oldversions-deprecate-00:
       <list style="symbols">
 			  <t>I-Ds became RFCs 8446/8447 (old-repo PR#4, for TLS1.3)</t>
