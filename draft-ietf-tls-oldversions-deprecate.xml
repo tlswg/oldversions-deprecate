@@ -255,6 +255,8 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
           <t>KeyCDN <xref target="KeyCDN"/></t>
           <t>PayPal <xref target="paypal"/></t>
 		  <t>Stripe <xref target="stripe"/></t>
+          <t>Google Chrome <xref target="chrome"/></t>
+          <t>Microsoft Edge <xref target="edge"/></t>
           <t>[[Numerous web sites...]]</t>
 
         </list></t>
@@ -790,6 +792,34 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
           <date year="2018"/>
         </front>
       </reference>
+
+
+      <reference anchor="chrome">
+         <front>
+          <title>Modernizing Transport Security
+          https://security.googleblog.com/2018/10/modernizing-transport-security.html</title>
+
+          <author>
+            <organization>Google</organization>  
+          </author>
+          
+          <date year="2018"/>
+        </front>
+      </reference> 
+
+      <reference anchor="edge">
+         <front>
+          <title>Modernizing TLS connections in Microsoft Edge and Internet Explorer 11
+          https://blogs.windows.com/msedgedev/2018/10/15/modernizing-tls-edge-ie11/</title>
+
+          <author>
+            <organization>Microsoft</organization>  
+          </author>
+          
+          <date year="2018"/>
+        </front>
+      </reference> 
+
 
       <reference anchor="Amazon">
         <front>
