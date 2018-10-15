@@ -882,6 +882,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 	<t>From draft-ietf-tls-oldversions-deprecate-00 to draft-ietf-tls-oldversions-deprecate-01:
       <list style="symbols">
 			  <t>PRs with typos and similar: so far just #1</t>
+			  <t>PR#2 noting msft browser announced deprecation</t>
 	  </list>
 	</t>
 	<t>From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-oldversions-deprecate-00:

@@ -6,7 +6,7 @@ Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
 Updates: [[List TBD]] (if approved)                           S. Farrell
 Intended status: Standards Track                  Trinity College Dublin
-Expires: March 19, 2019                               September 15, 2018
+Expires: April 18, 2019                                 October 15, 2018
 
 
                     Deprecating TLSv1.0 and TLSv1.1
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 19, 2019.
+   This Internet-Draft will expire on April 18, 2019.
 
 
 
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Moriarty & Farrell       Expires March 19, 2019                 [Page 1]
+Moriarty & Farrell       Expires April 18, 2019                 [Page 1]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
 
 Copyright Notice
@@ -82,7 +82,7 @@ Table of Contents
    4.  Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
      4.1.  Web . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
      4.2.  Mail  . . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     4.3.  Operating Systems . . . . . . . . . . . . . . . . . . . .   6
+     4.3.  Operating Systems . . . . . . . . . . . . . . . . . . . .   7
      4.4.  Enterprise Networks . . . . . . . . . . . . . . . . . . .   7
    5.  SHA-1 . . . . . . . . . . . . . . . . . . . . . . . . . . . .   7
    6.  Do Not Use TLSv1.0  . . . . . . . . . . . . . . . . . . . . .   8
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Moriarty & Farrell       Expires March 19, 2019                 [Page 2]
+Moriarty & Farrell       Expires April 18, 2019                 [Page 2]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
 
    Transport Layer Security (TLS) versions 1.0 [RFC2246] and 1.1
@@ -165,9 +165,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
 
 
-Moriarty & Farrell       Expires March 19, 2019                 [Page 3]
+Moriarty & Farrell       Expires April 18, 2019                 [Page 3]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
 
    14 [RFC2119] [RFC8174] when, and only when, they appear in all
@@ -221,9 +221,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
 
 
-Moriarty & Farrell       Expires March 19, 2019                 [Page 4]
+Moriarty & Farrell       Expires April 18, 2019                 [Page 4]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
 
       that use static RSA or DH key exchanges, the CBC mode of
@@ -248,6 +248,8 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
    o  KeyCDN [KeyCDN]
    o  PayPal [paypal]
    o  Stripe [stripe]
+   o  Google Chrome [chrome]
+   o  Microsoft Edge [edge]
    o  [[Numerous web sites...]]
 
    Many web sites have taken the action of including the deprecation of
@@ -272,15 +274,16 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
    Usage statistics for TLSv1.0 and TLSv1.1 on the public web vary, but
    have been in general very low and declined further with the impending
    PCI deadline to migrate off of TLSv1.0 by June 30, 2018.  As of
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                 [Page 5]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
    January 2018, [StackExchange] quoted 4 percent of browsers using
    TLSv1.0.
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                 [Page 5]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    The number of websites supporting TLS 1.2 is still growing (+0.4%),
    and has reached 92% according to sslpulse as of June 19, 2018.
@@ -325,18 +328,20 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
                          Figure 2: Mail Statistics
 
+
+
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                 [Page 6]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
 4.3.  Operating Systems
 
    Figure 3 presents statistics for use of TLS versions in operating
    systems.
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                 [Page 6]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    +----------------+----------+------+-------+-------+-------+-------+
    | Name/Ref       | Date     | SSLv3|TLSv1.0|TLSv1.1|TLSv1.2|TLSv1.3|
@@ -382,17 +387,14 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
    messages, making the only upgrade path the use of a newer protocol
    version.
 
-   See [Bhargavan2016] for additional detail.
 
 
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                 [Page 7]
+Moriarty & Farrell       Expires April 18, 2019                 [Page 7]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
+
+   See [Bhargavan2016] for additional detail.
 
 6.  Do Not Use TLSv1.0
 
@@ -439,17 +441,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
    libraries and will impact security going forward if mitigations for
    attacks cannot be easily addressed and supported in older libraries.
 
+
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                 [Page 8]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
    Historically, TLS specifications were not clear on what the record
    layer version number (TLSPlaintext.version) could contain when
    sending ClientHello.  Appendix E of [RFC5246] notes that
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                 [Page 8]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
-
    TLSPlaintext.version could be selected to maximize interoperability,
    though no definitive value is identified as ideal.  That guidance is
    still applicable; therefore, TLS servers MUST accept any value
@@ -496,15 +499,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
       over TLS 1.0 but still does not support certain stronger cipher
       suites.
 
+
+
+Moriarty & Farrell       Expires April 18, 2019                 [Page 9]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
    This documents updates [RFC7525] Section 3.1.2 changing SHOULD NOT to
    MUST NOT as follows:
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                 [Page 9]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    o  Implementations MUST NOT negotiate DTLS version 1.0 [RFC4347].
 
@@ -547,20 +550,23 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
               DOI 10.17487/RFC4346, April 2006,
               <https://www.rfc-editor.org/info/rfc4346>.
 
+
+
+
+
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                [Page 10]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
    [RFC7525]  Sheffer, Y., Holz, R., and P. Saint-Andre,
               "Recommendations for Secure Use of Transport Layer
               Security (TLS) and Datagram Transport Layer Security
               (DTLS)", BCP 195, RFC 7525, DOI 10.17487/RFC7525, May
               2015, <https://www.rfc-editor.org/info/rfc7525>.
-
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                [Page 10]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -587,6 +593,10 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
               policy-implementation-notices/
               implementing-https-secure-web-connections-itpin.html>.
 
+   [chrome]   Google, "Modernizing Transport Security
+              https://security.googleblog.com/2018/10/
+              modernizing-transport-security.html", 2018.
+
    [CloudFlare]
               CloudFlare, "CloudFlare Deprecated TLSv1.0 and TLSv1.1
               https://blog.cloudflare.com/deprecating-old-tls-versions-
@@ -597,6 +607,22 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
               https://www.digicert.com/blog/
               depreciating-tls-1-0-and-1-1/", 2018.
 
+
+
+
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                [Page 11]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
+   [edge]     Microsoft, "Modernizing TLS connections in Microsoft Edge
+              and Internet Explorer 11
+              https://blogs.windows.com/msedgedev/2018/10/15/
+              modernizing-tls-edge-ie11/", 2018.
+
    [GIT]      GitHub, "GitHub Deprecates TLSv1.0 and TLSv1.1
               https://githubengineering.com/crypto-removal-notice/",
               2018.
@@ -605,18 +631,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
               for Everyone
               https://www.keycdn.com/blog/deprecating-tls-1-0-and-1-1/",
               2018.
-
-
-
-
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                [Page 11]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    [NIST800-52r2]
               National Institute of Standards and Technology, "NIST
@@ -651,6 +665,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
               DOI 10.17487/RFC7568, June 2015,
               <https://www.rfc-editor.org/info/rfc7568>.
 
+
+
+
+
+Moriarty & Farrell       Expires April 18, 2019                [Page 12]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
+
+
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/info/rfc8446>.
@@ -662,17 +685,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
    [SSLpulse]
               SSLpulse - will be deleted before publication, "SSLpulse
               https://www.ssllabs.com/ssl-pulse/", 2018.
-
-
-
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                [Page 12]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
-
 
    [StackExchange]
               StackExchange - will be deleted before publication,
@@ -713,21 +725,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Moriarty & Farrell       Expires March 19, 2019                [Page 13]
+Moriarty & Farrell       Expires April 18, 2019                [Page 13]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1        October 2018
 
 
 Appendix A.  Change Log
@@ -738,6 +738,7 @@ Appendix A.  Change Log
    oldversions-deprecate-01:
 
    o  PRs with typos and similar: so far just #1
+   o  PR#2 noting msft browser announced deprecation
 
    From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-
    oldversions-deprecate-00:
@@ -780,5 +781,4 @@ Authors' Addresses
 
 
 
-
-Moriarty & Farrell       Expires March 19, 2019                [Page 14]
+Moriarty & Farrell       Expires April 18, 2019                [Page 14]
