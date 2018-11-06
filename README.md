@@ -13,6 +13,12 @@ The last pre-WG version was
 [draft-moriarty-tls-oldversions-diediedie-01.txt](https://tools.ietf.org/html/draft-moriarty-tls-oldversions-diediedie-01)
 and was in [this repo](https://github.com/sftcd/tls-oldversions-diediedie).
 
+Additionally:
+
+- A presentation on this from [IETF-103](https://datatracker.ietf.org/meeting/103/materials/slides-103-tls-sessa-ietf-103-deprecate-old-tls-versions-00)
+- A [script](./nonobsnorms.sh) to retrieve the set of RFCs that normatively refer
+  to TLS1.0 or TLS1.1 (93 exist) and that are not obsoleted (76 exist). The
+  output of that is [here](./nonobsnorms.out).
 
 # IETF Note Well
 
