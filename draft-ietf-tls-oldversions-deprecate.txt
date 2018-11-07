@@ -4,9 +4,22 @@
 
 Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
-Updates: [[List TBD]] (if approved)                           S. Farrell
-Intended status: Standards Track                  Trinity College Dublin
-Expires: May 10, 2019                                   November 6, 2018
+Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
+         7255 7030 6750 6749 6739 6367            Trinity College Dublin
+         6176 6042 5878 5734 5469 5422                  November 7, 2018
+         5364 5281 5263 5238 5216 5158
+         5091 5054 5049 5024 5023 5019
+         5018 4992 4976 4975 4964 4851
+         4823 4791 4785 4744 4743 4732
+         4712 4681 4680 4642 4616 4582
+         4540 4531 4513 4497 4279 4261
+         4235 4217 4168 4162 4111 4097
+         3983 3943 3903 3887 3871 3856
+         3767 3749 3656 3568 3552 3501
+         3470 3436 3329 3261 (if
+         approved)
+Intended status: Standards Track
+Expires: May 11, 2019
 
 
                     Deprecating TLSv1.0 and TLSv1.1
@@ -26,9 +39,9 @@ Abstract
    for misconfigurations.  Supporting these older versions also requires
    additional effort for library and product maintenance.
 
-   This document updates the backward compatibility sections of TLS RFCs
-   [[list TBD]] to prohibit fallback to TLSv1.0 and TLSv1.1.  This
-   document also updates RFC 7525 and hence is part of BCP195.
+   This document updates many RFCs that normatively refer to TLS1.0 or
+   TLS1.1 as described herein.  This document also updates RFC 7525 and
+   hence is part of BCP195.
 
 Status of This Memo
 
@@ -37,6 +50,14 @@ Status of This Memo
 
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 1]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
 
@@ -45,18 +66,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 10, 2019.
-
-
-
-
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 1]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
+   This Internet-Draft will expire on May 11, 2019.
 
 Copyright Notice
 
@@ -75,21 +85,34 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-     1.1.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   3
-   2.  Support for Deprecation . . . . . . . . . . . . . . . . . . .   3
-   3.  SHA-1 . . . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   4.  Do Not Use TLSv1.0  . . . . . . . . . . . . . . . . . . . . .   5
-   5.  Do Not Use TLSv1.1  . . . . . . . . . . . . . . . . . . . . .   5
-   6.  Updates to RFC7525  . . . . . . . . . . . . . . . . . . . . .   6
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
+     1.1.  Updates . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     1.2.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   4
+   2.  Support for Deprecation . . . . . . . . . . . . . . . . . . .   4
+   3.  SHA-1 . . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+   4.  Do Not Use TLSv1.0  . . . . . . . . . . . . . . . . . . . . .   6
+   5.  Do Not Use TLSv1.1  . . . . . . . . . . . . . . . . . . . . .   6
+   6.  Updates to RFC7525  . . . . . . . . . . . . . . . . . . . . .   7
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
    8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   7
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
-   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     10.1.  Normative References . . . . . . . . . . . . . . . . . .   7
-     10.2.  Informative References . . . . . . . . . . . . . . . . .   7
-   Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .   9
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
+   10. References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     10.1.  Normative References . . . . . . . . . . . . . . . . . .   8
+     10.2.  Informative References . . . . . . . . . . . . . . . . .  16
+   Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .  20
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  20
+
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 2]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
 
 1.  Introduction
 
@@ -105,14 +128,6 @@ Table of Contents
    Industry Association (PCI) [PCI-TLS1].
 
    The primary technical reasons for deprecating these versions include:
-
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 2]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    o  They require implementation of older cipher suites that are no
       longer desirable for cryptographic reasons, e.g.  TLSv1.0 makes
@@ -138,7 +153,37 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    attack surface and the scope of maintenance for protocols in their
    offerings.
 
-1.1.  Terminology
+1.1.  Updates
+
+   This document updates these RFCs that normatively reference TLS1.0 or
+   TLS1.1 and have not been obsoleted: [RFC8465] [RFC8422] [RFC7568]
+   [RFC7562] [RFC7507] [RFC7465] [RFC7255] [RFC7030] [RFC6750] [RFC6749]
+   [RFC6739] [RFC6367] [RFC6176] [RFC6042] [RFC5878] [RFC5734] [RFC5469]
+   [RFC5422] [RFC5364] [RFC5281] [RFC5263] [RFC5238] [RFC5216] [RFC5158]
+   [RFC5091] [RFC5054] [RFC5049] [RFC5024] [RFC5023] [RFC5019] [RFC5018]
+   [RFC4992] [RFC4976] [RFC4975] [RFC4964] [RFC4851] [RFC4823] [RFC4791]
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 3]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4785] [RFC4744] [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680]
+   [RFC4642] [RFC4616] [RFC4582] [RFC4540] [RFC4531] [RFC4513] [RFC4497]
+   [RFC4279] [RFC4261] [RFC4235] [RFC4217] [RFC4168] [RFC4162] [RFC4111]
+   [RFC4097] [RFC3983] [RFC3943] [RFC3903] [RFC3887] [RFC3871] [RFC3856]
+   [RFC3767] [RFC3749] [RFC3656] [RFC3568] [RFC3552] [RFC3501] [RFC3470]
+   [RFC3436] [RFC3329] [RFC3261]
+
+   In addition these RFCs normatively refer to TLS1.0 or TLS1.1 and have
+   been obsoleted, or informatively refer to TLS1.0 or TLS1.1: [RFC5101]
+   [RFC5081] [RFC5077] [RFC4934] [RFC4572] [RFC4507] [RFC4492] [RFC4366]
+   [RFC4347] [RFC4244] [RFC4132] [RFC3920] [RFC3734] [RFC3588] [RFC3546]
+   [RFC3489] [RFC3316]
+
+1.2.  Terminology
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -154,7 +199,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
    Specific details on attacks against TLSv1.0 and TLSv1.1 as well as
    their mitigations are provided in NIST SP800-52r2 [NIST800-52r2], RFC
-   7457 [RFC7457]  and other referenced RFCs.  Although the attacks have
+   7457 [RFC7457] and other referenced RFCs.  Although the attacks have
    been mitigated, if support is dropped for future library releases for
    these versions, it is unlikely attacks found going forward will be
    mitigated in older library releases.
@@ -162,13 +207,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    NIST for example have provided the following rationale, copied with
    permission from NIST SP800-52r2 [NIST800-52r2], section 1.2 "History
    of TLS" (with references changed for RFC formatting).
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 3]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
       TLS 1.1, specified in [RFC4346], was developed to address
       weaknesses discovered in TLS 1.0, primarily in the areas of
@@ -180,6 +218,14 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
       rather than a decryption failure.  In addition, the TLS 1.1 RFC
       acknowledges attacks on CBC mode that rely on the time to compute
       the message authentication code (MAC).  The TLS 1.1 specification
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 4]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
       states that to defend against such attacks, an implementation must
       process records in the same manner regardless of whether padding
       errors exist.  Further implementation considerations for CBC modes
@@ -217,15 +263,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
    Similarly, the authentication of the handshake depends on signatures
    made using SHA-1 hash or a not stronger concatenation of MD-5 and
-
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 4]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
    SHA-1 hashes, allowing the attacker to impersonate a server when it
    is able to break the severely weakened SHA-1 hash.
 
@@ -235,6 +272,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    version.
 
    See [Bhargavan2016] for additional detail.
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 5]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
 
 4.  Do Not Use TLSv1.0
 
@@ -273,15 +319,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    version set to {03,02} MUST respond with a "protocol_version" alert
    message and close the connection.
 
-
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 5]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
    Any newer version of TLS is more secure than TLSv1.1.  TLSv1.1 can be
    configured to prevent interception, though using the highest version
    available is preferable.  Support for TLSv1.1 is dwindling in
@@ -293,6 +330,14 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    sending ClientHello.  Appendix E of [RFC5246] notes that
    TLSPlaintext.version could be selected to maximize interoperability,
    though no definitive value is identified as ideal.  That guidance is
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 6]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
    still applicable; therefore, TLS servers MUST accept any value
    {03,XX} (including {03,00}) as the record layer version number for
    ClientHello, but they MUST NOT negotiate TLSv1.1.
@@ -329,15 +374,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    are a smaller number of supported protocols and fallback options are
    removed.
 
-
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 6]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
 8.  Acknowledgements
 
    Thanks to those that provided usage data, reviewed and/or improved
@@ -345,6 +381,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    Dukhovni, Alessandro Ghedini, Jeremy Harris, Russ Housley, Hubert
    Kario, Loganaden Velvindron, Eric Mill, Yoav Nir, Andrei Popov, Eric
    Rescorla, Yaron Sheffer, https://github.com/yaleman, and Jakub Wilk.
+
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 7]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
 
 9.  IANA Considerations
 
@@ -363,10 +411,436 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               RFC 2246, DOI 10.17487/RFC2246, January 1999,
               <https://www.rfc-editor.org/info/rfc2246>.
 
+   [RFC3261]  Rosenberg, J., Schulzrinne, H., Camarillo, G., Johnston,
+              A., Peterson, J., Sparks, R., Handley, M., and E.
+              Schooler, "SIP: Session Initiation Protocol", RFC 3261,
+              DOI 10.17487/RFC3261, June 2002,
+              <https://www.rfc-editor.org/info/rfc3261>.
+
+   [RFC3329]  Arkko, J., Torvinen, V., Camarillo, G., Niemi, A., and T.
+              Haukka, "Security Mechanism Agreement for the Session
+              Initiation Protocol (SIP)", RFC 3329,
+              DOI 10.17487/RFC3329, January 2003,
+              <https://www.rfc-editor.org/info/rfc3329>.
+
+   [RFC3436]  Jungmaier, A., Rescorla, E., and M. Tuexen, "Transport
+              Layer Security over Stream Control Transmission Protocol",
+              RFC 3436, DOI 10.17487/RFC3436, December 2002,
+              <https://www.rfc-editor.org/info/rfc3436>.
+
+   [RFC3470]  Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for
+              the Use of Extensible Markup Language (XML) within IETF
+              Protocols", BCP 70, RFC 3470, DOI 10.17487/RFC3470,
+              January 2003, <https://www.rfc-editor.org/info/rfc3470>.
+
+   [RFC3501]  Crispin, M., "INTERNET MESSAGE ACCESS PROTOCOL - VERSION
+              4rev1", RFC 3501, DOI 10.17487/RFC3501, March 2003,
+              <https://www.rfc-editor.org/info/rfc3501>.
+
+   [RFC3552]  Rescorla, E. and B. Korver, "Guidelines for Writing RFC
+              Text on Security Considerations", BCP 72, RFC 3552,
+              DOI 10.17487/RFC3552, July 2003,
+              <https://www.rfc-editor.org/info/rfc3552>.
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 8]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC3568]  Barbir, A., Cain, B., Nair, R., and O. Spatscheck, "Known
+              Content Network (CN) Request-Routing Mechanisms",
+              RFC 3568, DOI 10.17487/RFC3568, July 2003,
+              <https://www.rfc-editor.org/info/rfc3568>.
+
+   [RFC3656]  Siemborski, R., "The Mailbox Update (MUPDATE) Distributed
+              Mailbox Database Protocol", RFC 3656,
+              DOI 10.17487/RFC3656, December 2003,
+              <https://www.rfc-editor.org/info/rfc3656>.
+
+   [RFC3749]  Hollenbeck, S., "Transport Layer Security Protocol
+              Compression Methods", RFC 3749, DOI 10.17487/RFC3749, May
+              2004, <https://www.rfc-editor.org/info/rfc3749>.
+
+   [RFC3767]  Farrell, S., Ed., "Securely Available Credentials
+              Protocol", RFC 3767, DOI 10.17487/RFC3767, June 2004,
+              <https://www.rfc-editor.org/info/rfc3767>.
+
+   [RFC3856]  Rosenberg, J., "A Presence Event Package for the Session
+              Initiation Protocol (SIP)", RFC 3856,
+              DOI 10.17487/RFC3856, August 2004,
+              <https://www.rfc-editor.org/info/rfc3856>.
+
+   [RFC3871]  Jones, G., Ed., "Operational Security Requirements for
+              Large Internet Service Provider (ISP) IP Network
+              Infrastructure", RFC 3871, DOI 10.17487/RFC3871, September
+              2004, <https://www.rfc-editor.org/info/rfc3871>.
+
+   [RFC3887]  Hansen, T., "Message Tracking Query Protocol", RFC 3887,
+              DOI 10.17487/RFC3887, September 2004,
+              <https://www.rfc-editor.org/info/rfc3887>.
+
+   [RFC3903]  Niemi, A., Ed., "Session Initiation Protocol (SIP)
+              Extension for Event State Publication", RFC 3903,
+              DOI 10.17487/RFC3903, October 2004,
+              <https://www.rfc-editor.org/info/rfc3903>.
+
+   [RFC3943]  Friend, R., "Transport Layer Security (TLS) Protocol
+              Compression Using Lempel-Ziv-Stac (LZS)", RFC 3943,
+              DOI 10.17487/RFC3943, November 2004,
+              <https://www.rfc-editor.org/info/rfc3943>.
+
+   [RFC3983]  Newton, A. and M. Sanz, "Using the Internet Registry
+              Information Service (IRIS) over the Blocks Extensible
+              Exchange Protocol (BEEP)", RFC 3983, DOI 10.17487/RFC3983,
+              January 2005, <https://www.rfc-editor.org/info/rfc3983>.
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                  [Page 9]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4097]  Barnes, M., Ed., "Middlebox Communications (MIDCOM)
+              Protocol Evaluation", RFC 4097, DOI 10.17487/RFC4097, June
+              2005, <https://www.rfc-editor.org/info/rfc4097>.
+
+   [RFC4111]  Fang, L., Ed., "Security Framework for Provider-
+              Provisioned Virtual Private Networks (PPVPNs)", RFC 4111,
+              DOI 10.17487/RFC4111, July 2005,
+              <https://www.rfc-editor.org/info/rfc4111>.
+
+   [RFC4162]  Lee, H., Yoon, J., and J. Lee, "Addition of SEED Cipher
+              Suites to Transport Layer Security (TLS)", RFC 4162,
+              DOI 10.17487/RFC4162, August 2005,
+              <https://www.rfc-editor.org/info/rfc4162>.
+
+   [RFC4168]  Rosenberg, J., Schulzrinne, H., and G. Camarillo, "The
+              Stream Control Transmission Protocol (SCTP) as a Transport
+              for the Session Initiation Protocol (SIP)", RFC 4168,
+              DOI 10.17487/RFC4168, October 2005,
+              <https://www.rfc-editor.org/info/rfc4168>.
+
+   [RFC4217]  Ford-Hutchinson, P., "Securing FTP with TLS", RFC 4217,
+              DOI 10.17487/RFC4217, October 2005,
+              <https://www.rfc-editor.org/info/rfc4217>.
+
+   [RFC4235]  Rosenberg, J., Schulzrinne, H., and R. Mahy, Ed., "An
+              INVITE-Initiated Dialog Event Package for the Session
+              Initiation Protocol (SIP)", RFC 4235,
+              DOI 10.17487/RFC4235, November 2005,
+              <https://www.rfc-editor.org/info/rfc4235>.
+
+   [RFC4261]  Walker, J. and A. Kulkarni, Ed., "Common Open Policy
+              Service (COPS) Over Transport Layer Security (TLS)",
+              RFC 4261, DOI 10.17487/RFC4261, December 2005,
+              <https://www.rfc-editor.org/info/rfc4261>.
+
+   [RFC4279]  Eronen, P., Ed. and H. Tschofenig, Ed., "Pre-Shared Key
+              Ciphersuites for Transport Layer Security (TLS)",
+              RFC 4279, DOI 10.17487/RFC4279, December 2005,
+              <https://www.rfc-editor.org/info/rfc4279>.
+
    [RFC4346]  Dierks, T. and E. Rescorla, "The Transport Layer Security
               (TLS) Protocol Version 1.1", RFC 4346,
               DOI 10.17487/RFC4346, April 2006,
               <https://www.rfc-editor.org/info/rfc4346>.
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 10]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4497]  Elwell, J., Derks, F., Mourot, P., and O. Rousseau,
+              "Interworking between the Session Initiation Protocol
+              (SIP) and QSIG", BCP 117, RFC 4497, DOI 10.17487/RFC4497,
+              May 2006, <https://www.rfc-editor.org/info/rfc4497>.
+
+   [RFC4513]  Harrison, R., Ed., "Lightweight Directory Access Protocol
+              (LDAP): Authentication Methods and Security Mechanisms",
+              RFC 4513, DOI 10.17487/RFC4513, June 2006,
+              <https://www.rfc-editor.org/info/rfc4513>.
+
+   [RFC4531]  Zeilenga, K., "Lightweight Directory Access Protocol
+              (LDAP) Turn Operation", RFC 4531, DOI 10.17487/RFC4531,
+              June 2006, <https://www.rfc-editor.org/info/rfc4531>.
+
+   [RFC4540]  Stiemerling, M., Quittek, J., and C. Cadar, "NEC's Simple
+              Middlebox Configuration (SIMCO) Protocol Version 3.0",
+              RFC 4540, DOI 10.17487/RFC4540, May 2006,
+              <https://www.rfc-editor.org/info/rfc4540>.
+
+   [RFC4582]  Camarillo, G., Ott, J., and K. Drage, "The Binary Floor
+              Control Protocol (BFCP)", RFC 4582, DOI 10.17487/RFC4582,
+              November 2006, <https://www.rfc-editor.org/info/rfc4582>.
+
+   [RFC4616]  Zeilenga, K., Ed., "The PLAIN Simple Authentication and
+              Security Layer (SASL) Mechanism", RFC 4616,
+              DOI 10.17487/RFC4616, August 2006,
+              <https://www.rfc-editor.org/info/rfc4616>.
+
+   [RFC4642]  Murchison, K., Vinocur, J., and C. Newman, "Using
+              Transport Layer Security (TLS) with Network News Transfer
+              Protocol (NNTP)", RFC 4642, DOI 10.17487/RFC4642, October
+              2006, <https://www.rfc-editor.org/info/rfc4642>.
+
+   [RFC4680]  Santesson, S., "TLS Handshake Message for Supplemental
+              Data", RFC 4680, DOI 10.17487/RFC4680, October 2006,
+              <https://www.rfc-editor.org/info/rfc4680>.
+
+   [RFC4681]  Santesson, S., Medvinsky, A., and J. Ball, "TLS User
+              Mapping Extension", RFC 4681, DOI 10.17487/RFC4681,
+              October 2006, <https://www.rfc-editor.org/info/rfc4681>.
+
+   [RFC4712]  Siddiqui, A., Romascanu, D., Golovinsky, E., Rahman, M.,
+              and Y. Kim, "Transport Mappings for Real-time Application
+              Quality-of-Service Monitoring (RAQMON) Protocol Data Unit
+              (PDU)", RFC 4712, DOI 10.17487/RFC4712, October 2006,
+              <https://www.rfc-editor.org/info/rfc4712>.
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 11]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4732]  Handley, M., Ed., Rescorla, E., Ed., and IAB, "Internet
+              Denial-of-Service Considerations", RFC 4732,
+              DOI 10.17487/RFC4732, December 2006,
+              <https://www.rfc-editor.org/info/rfc4732>.
+
+   [RFC4743]  Goddard, T., "Using NETCONF over the Simple Object Access
+              Protocol (SOAP)", RFC 4743, DOI 10.17487/RFC4743, December
+              2006, <https://www.rfc-editor.org/info/rfc4743>.
+
+   [RFC4744]  Lear, E. and K. Crozier, "Using the NETCONF Protocol over
+              the Blocks Extensible Exchange Protocol (BEEP)", RFC 4744,
+              DOI 10.17487/RFC4744, December 2006,
+              <https://www.rfc-editor.org/info/rfc4744>.
+
+   [RFC4785]  Blumenthal, U. and P. Goel, "Pre-Shared Key (PSK)
+              Ciphersuites with NULL Encryption for Transport Layer
+              Security (TLS)", RFC 4785, DOI 10.17487/RFC4785, January
+              2007, <https://www.rfc-editor.org/info/rfc4785>.
+
+   [RFC4791]  Daboo, C., Desruisseaux, B., and L. Dusseault,
+              "Calendaring Extensions to WebDAV (CalDAV)", RFC 4791,
+              DOI 10.17487/RFC4791, March 2007,
+              <https://www.rfc-editor.org/info/rfc4791>.
+
+   [RFC4823]  Harding, T. and R. Scott, "FTP Transport for Secure Peer-
+              to-Peer Business Data Interchange over the Internet",
+              RFC 4823, DOI 10.17487/RFC4823, April 2007,
+              <https://www.rfc-editor.org/info/rfc4823>.
+
+   [RFC4851]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou, "The
+              Flexible Authentication via Secure Tunneling Extensible
+              Authentication Protocol Method (EAP-FAST)", RFC 4851,
+              DOI 10.17487/RFC4851, May 2007,
+              <https://www.rfc-editor.org/info/rfc4851>.
+
+   [RFC4964]  Allen, A., Ed., Holm, J., and T. Hallin, "The P-Answer-
+              State Header Extension to the Session Initiation Protocol
+              for the Open Mobile Alliance Push to Talk over Cellular",
+              RFC 4964, DOI 10.17487/RFC4964, September 2007,
+              <https://www.rfc-editor.org/info/rfc4964>.
+
+   [RFC4975]  Campbell, B., Ed., Mahy, R., Ed., and C. Jennings, Ed.,
+              "The Message Session Relay Protocol (MSRP)", RFC 4975,
+              DOI 10.17487/RFC4975, September 2007,
+              <https://www.rfc-editor.org/info/rfc4975>.
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 12]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4976]  Jennings, C., Mahy, R., and A. Roach, "Relay Extensions
+              for the Message Sessions Relay Protocol (MSRP)", RFC 4976,
+              DOI 10.17487/RFC4976, September 2007,
+              <https://www.rfc-editor.org/info/rfc4976>.
+
+   [RFC4992]  Newton, A., "XML Pipelining with Chunks for the Internet
+              Registry Information Service", RFC 4992,
+              DOI 10.17487/RFC4992, August 2007,
+              <https://www.rfc-editor.org/info/rfc4992>.
+
+   [RFC5018]  Camarillo, G., "Connection Establishment in the Binary
+              Floor Control Protocol (BFCP)", RFC 5018,
+              DOI 10.17487/RFC5018, September 2007,
+              <https://www.rfc-editor.org/info/rfc5018>.
+
+   [RFC5019]  Deacon, A. and R. Hurst, "The Lightweight Online
+              Certificate Status Protocol (OCSP) Profile for High-Volume
+              Environments", RFC 5019, DOI 10.17487/RFC5019, September
+              2007, <https://www.rfc-editor.org/info/rfc5019>.
+
+   [RFC5023]  Gregorio, J., Ed. and B. de hOra, Ed., "The Atom
+              Publishing Protocol", RFC 5023, DOI 10.17487/RFC5023,
+              October 2007, <https://www.rfc-editor.org/info/rfc5023>.
+
+   [RFC5024]  Friend, I., "ODETTE File Transfer Protocol 2.0", RFC 5024,
+              DOI 10.17487/RFC5024, November 2007,
+              <https://www.rfc-editor.org/info/rfc5024>.
+
+   [RFC5049]  Bormann, C., Liu, Z., Price, R., and G. Camarillo, Ed.,
+              "Applying Signaling Compression (SigComp) to the Session
+              Initiation Protocol (SIP)", RFC 5049,
+              DOI 10.17487/RFC5049, December 2007,
+              <https://www.rfc-editor.org/info/rfc5049>.
+
+   [RFC5054]  Taylor, D., Wu, T., Mavrogiannopoulos, N., and T. Perrin,
+              "Using the Secure Remote Password (SRP) Protocol for TLS
+              Authentication", RFC 5054, DOI 10.17487/RFC5054, November
+              2007, <https://www.rfc-editor.org/info/rfc5054>.
+
+   [RFC5091]  Boyen, X. and L. Martin, "Identity-Based Cryptography
+              Standard (IBCS) #1: Supersingular Curve Implementations of
+              the BF and BB1 Cryptosystems", RFC 5091,
+              DOI 10.17487/RFC5091, December 2007,
+              <https://www.rfc-editor.org/info/rfc5091>.
+
+   [RFC5158]  Huston, G., "6to4 Reverse DNS Delegation Specification",
+              RFC 5158, DOI 10.17487/RFC5158, March 2008,
+              <https://www.rfc-editor.org/info/rfc5158>.
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 13]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC5216]  Simon, D., Aboba, B., and R. Hurst, "The EAP-TLS
+              Authentication Protocol", RFC 5216, DOI 10.17487/RFC5216,
+              March 2008, <https://www.rfc-editor.org/info/rfc5216>.
+
+   [RFC5238]  Phelan, T., "Datagram Transport Layer Security (DTLS) over
+              the Datagram Congestion Control Protocol (DCCP)",
+              RFC 5238, DOI 10.17487/RFC5238, May 2008,
+              <https://www.rfc-editor.org/info/rfc5238>.
+
+   [RFC5263]  Lonnfors, M., Costa-Requena, J., Leppanen, E., and H.
+              Khartabil, "Session Initiation Protocol (SIP) Extension
+              for Partial Notification of Presence Information",
+              RFC 5263, DOI 10.17487/RFC5263, September 2008,
+              <https://www.rfc-editor.org/info/rfc5263>.
+
+   [RFC5281]  Funk, P. and S. Blake-Wilson, "Extensible Authentication
+              Protocol Tunneled Transport Layer Security Authenticated
+              Protocol Version 0 (EAP-TTLSv0)", RFC 5281,
+              DOI 10.17487/RFC5281, August 2008,
+              <https://www.rfc-editor.org/info/rfc5281>.
+
+   [RFC5364]  Garcia-Martin, M. and G. Camarillo, "Extensible Markup
+              Language (XML) Format Extension for Representing Copy
+              Control Attributes in Resource Lists", RFC 5364,
+              DOI 10.17487/RFC5364, October 2008,
+              <https://www.rfc-editor.org/info/rfc5364>.
+
+   [RFC5422]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou,
+              "Dynamic Provisioning Using Flexible Authentication via
+              Secure Tunneling Extensible Authentication Protocol (EAP-
+              FAST)", RFC 5422, DOI 10.17487/RFC5422, March 2009,
+              <https://www.rfc-editor.org/info/rfc5422>.
+
+   [RFC5469]  Eronen, P., Ed., "DES and IDEA Cipher Suites for Transport
+              Layer Security (TLS)", RFC 5469, DOI 10.17487/RFC5469,
+              February 2009, <https://www.rfc-editor.org/info/rfc5469>.
+
+   [RFC5734]  Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Transport over TCP", STD 69, RFC 5734,
+              DOI 10.17487/RFC5734, August 2009,
+              <https://www.rfc-editor.org/info/rfc5734>.
+
+   [RFC5878]  Brown, M. and R. Housley, "Transport Layer Security (TLS)
+              Authorization Extensions", RFC 5878, DOI 10.17487/RFC5878,
+              May 2010, <https://www.rfc-editor.org/info/rfc5878>.
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 14]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC6042]  Keromytis, A., "Transport Layer Security (TLS)
+              Authorization Using KeyNote", RFC 6042,
+              DOI 10.17487/RFC6042, October 2010,
+              <https://www.rfc-editor.org/info/rfc6042>.
+
+   [RFC6176]  Turner, S. and T. Polk, "Prohibiting Secure Sockets Layer
+              (SSL) Version 2.0", RFC 6176, DOI 10.17487/RFC6176, March
+              2011, <https://www.rfc-editor.org/info/rfc6176>.
+
+   [RFC6367]  Kanno, S. and M. Kanda, "Addition of the Camellia Cipher
+              Suites to Transport Layer Security (TLS)", RFC 6367,
+              DOI 10.17487/RFC6367, September 2011,
+              <https://www.rfc-editor.org/info/rfc6367>.
+
+   [RFC6739]  Schulzrinne, H. and H. Tschofenig, "Synchronizing Service
+              Boundaries and <mapping> Elements Based on the Location-
+              to-Service Translation (LoST) Protocol", RFC 6739,
+              DOI 10.17487/RFC6739, October 2012,
+              <https://www.rfc-editor.org/info/rfc6739>.
+
+   [RFC6749]  Hardt, D., Ed., "The OAuth 2.0 Authorization Framework",
+              RFC 6749, DOI 10.17487/RFC6749, October 2012,
+              <https://www.rfc-editor.org/info/rfc6749>.
+
+   [RFC6750]  Jones, M. and D. Hardt, "The OAuth 2.0 Authorization
+              Framework: Bearer Token Usage", RFC 6750,
+              DOI 10.17487/RFC6750, October 2012,
+              <https://www.rfc-editor.org/info/rfc6750>.
+
+   [RFC7030]  Pritikin, M., Ed., Yee, P., Ed., and D. Harkins, Ed.,
+              "Enrollment over Secure Transport", RFC 7030,
+              DOI 10.17487/RFC7030, October 2013,
+              <https://www.rfc-editor.org/info/rfc7030>.
+
+   [RFC7255]  Allen, A., Ed., "Using the International Mobile station
+              Equipment Identity (IMEI) Uniform Resource Name (URN) as
+              an Instance ID", RFC 7255, DOI 10.17487/RFC7255, May 2014,
+              <https://www.rfc-editor.org/info/rfc7255>.
+
+   [RFC7465]  Popov, A., "Prohibiting RC4 Cipher Suites", RFC 7465,
+              DOI 10.17487/RFC7465, February 2015,
+              <https://www.rfc-editor.org/info/rfc7465>.
+
+   [RFC7507]  Moeller, B. and A. Langley, "TLS Fallback Signaling Cipher
+              Suite Value (SCSV) for Preventing Protocol Downgrade
+              Attacks", RFC 7507, DOI 10.17487/RFC7507, April 2015,
+              <https://www.rfc-editor.org/info/rfc7507>.
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 15]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
 
    [RFC7525]  Sheffer, Y., Holz, R., and P. Saint-Andre,
               "Recommendations for Secure Use of Transport Layer
@@ -374,9 +848,30 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               (DTLS)", BCP 195, RFC 7525, DOI 10.17487/RFC7525, May
               2015, <https://www.rfc-editor.org/info/rfc7525>.
 
+   [RFC7562]  Thakore, D., "Transport Layer Security (TLS) Authorization
+              Using Digital Transmission Content Protection (DTCP)
+              Certificates", RFC 7562, DOI 10.17487/RFC7562, July 2015,
+              <https://www.rfc-editor.org/info/rfc7562>.
+
+   [RFC7568]  Barnes, R., Thomson, M., Pironti, A., and A. Langley,
+              "Deprecating Secure Sockets Layer Version 3.0", RFC 7568,
+              DOI 10.17487/RFC7568, June 2015,
+              <https://www.rfc-editor.org/info/rfc7568>.
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
+   [RFC8422]  Nir, Y., Josefsson, S., and M. Pegourie-Gonnard, "Elliptic
+              Curve Cryptography (ECC) Cipher Suites for Transport Layer
+              Security (TLS) Versions 1.2 and Earlier", RFC 8422,
+              DOI 10.17487/RFC8422, August 2018,
+              <https://www.rfc-editor.org/info/rfc8422>.
+
+   [RFC8465]  Atarius, R., Ed., "Using the Mobile Equipment Identity
+              (MEID) URN as an Instance ID", RFC 8465,
+              DOI 10.17487/RFC8465, September 2018,
+              <https://www.rfc-editor.org/info/rfc8465>.
 
 10.2.  Informative References
 
@@ -386,14 +881,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               https://www.mitls.org/downloads/
               transcript-collisions.pdf", 2016.
 
-
-
-
-Moriarty & Farrell        Expires May 10, 2019                  [Page 7]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
    [Canada]   Treasury Board of Canada Secretariat, "Implementing HTTPS
               for Secure Web Connections: Information Technology Policy
               Implementation Notice (ITPIN)", June 2018,
@@ -401,6 +888,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               secretariat/services/information-technology/
               policy-implementation-notices/
               implementing-https-secure-web-connections-itpin.html>.
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 16]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
 
    [NIST800-52r2]
               National Institute of Standards and Technology, "NIST
@@ -413,9 +909,111 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Early TLS https://www.pcisecuritystandards.org/documents/
               Migrating-from-SSL-Early-TLS-Info-Supp-v1_1.pdf", 2016.
 
+   [RFC3316]  Arkko, J., Kuijpers, G., Soliman, H., Loughney, J., and J.
+              Wiljakka, "Internet Protocol Version 6 (IPv6) for Some
+              Second and Third Generation Cellular Hosts", RFC 3316,
+              DOI 10.17487/RFC3316, April 2003,
+              <https://www.rfc-editor.org/info/rfc3316>.
+
+   [RFC3489]  Rosenberg, J., Weinberger, J., Huitema, C., and R. Mahy,
+              "STUN - Simple Traversal of User Datagram Protocol (UDP)
+              Through Network Address Translators (NATs)", RFC 3489,
+              DOI 10.17487/RFC3489, March 2003,
+              <https://www.rfc-editor.org/info/rfc3489>.
+
+   [RFC3546]  Blake-Wilson, S., Nystrom, M., Hopwood, D., Mikkelsen, J.,
+              and T. Wright, "Transport Layer Security (TLS)
+              Extensions", RFC 3546, DOI 10.17487/RFC3546, June 2003,
+              <https://www.rfc-editor.org/info/rfc3546>.
+
+   [RFC3588]  Calhoun, P., Loughney, J., Guttman, E., Zorn, G., and J.
+              Arkko, "Diameter Base Protocol", RFC 3588,
+              DOI 10.17487/RFC3588, September 2003,
+              <https://www.rfc-editor.org/info/rfc3588>.
+
+   [RFC3734]  Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Transport Over TCP", RFC 3734, DOI 10.17487/RFC3734, March
+              2004, <https://www.rfc-editor.org/info/rfc3734>.
+
+   [RFC3920]  Saint-Andre, P., Ed., "Extensible Messaging and Presence
+              Protocol (XMPP): Core", RFC 3920, DOI 10.17487/RFC3920,
+              October 2004, <https://www.rfc-editor.org/info/rfc3920>.
+
+   [RFC4132]  Moriai, S., Kato, A., and M. Kanda, "Addition of Camellia
+              Cipher Suites to Transport Layer Security (TLS)",
+              RFC 4132, DOI 10.17487/RFC4132, July 2005,
+              <https://www.rfc-editor.org/info/rfc4132>.
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 17]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC4244]  Barnes, M., Ed., "An Extension to the Session Initiation
+              Protocol (SIP) for Request History Information", RFC 4244,
+              DOI 10.17487/RFC4244, November 2005,
+              <https://www.rfc-editor.org/info/rfc4244>.
+
    [RFC4347]  Rescorla, E. and N. Modadugu, "Datagram Transport Layer
               Security", RFC 4347, DOI 10.17487/RFC4347, April 2006,
               <https://www.rfc-editor.org/info/rfc4347>.
+
+   [RFC4366]  Blake-Wilson, S., Nystrom, M., Hopwood, D., Mikkelsen, J.,
+              and T. Wright, "Transport Layer Security (TLS)
+              Extensions", RFC 4366, DOI 10.17487/RFC4366, April 2006,
+              <https://www.rfc-editor.org/info/rfc4366>.
+
+   [RFC4492]  Blake-Wilson, S., Bolyard, N., Gupta, V., Hawk, C., and B.
+              Moeller, "Elliptic Curve Cryptography (ECC) Cipher Suites
+              for Transport Layer Security (TLS)", RFC 4492,
+              DOI 10.17487/RFC4492, May 2006,
+              <https://www.rfc-editor.org/info/rfc4492>.
+
+   [RFC4507]  Salowey, J., Zhou, H., Eronen, P., and H. Tschofenig,
+              "Transport Layer Security (TLS) Session Resumption without
+              Server-Side State", RFC 4507, DOI 10.17487/RFC4507, May
+              2006, <https://www.rfc-editor.org/info/rfc4507>.
+
+   [RFC4572]  Lennox, J., "Connection-Oriented Media Transport over the
+              Transport Layer Security (TLS) Protocol in the Session
+              Description Protocol (SDP)", RFC 4572,
+              DOI 10.17487/RFC4572, July 2006,
+              <https://www.rfc-editor.org/info/rfc4572>.
+
+   [RFC4934]  Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Transport Over TCP", RFC 4934, DOI 10.17487/RFC4934, May
+              2007, <https://www.rfc-editor.org/info/rfc4934>.
+
+   [RFC5077]  Salowey, J., Zhou, H., Eronen, P., and H. Tschofenig,
+              "Transport Layer Security (TLS) Session Resumption without
+              Server-Side State", RFC 5077, DOI 10.17487/RFC5077,
+              January 2008, <https://www.rfc-editor.org/info/rfc5077>.
+
+   [RFC5081]  Mavrogiannopoulos, N., "Using OpenPGP Keys for Transport
+              Layer Security (TLS) Authentication", RFC 5081,
+              DOI 10.17487/RFC5081, November 2007,
+              <https://www.rfc-editor.org/info/rfc5081>.
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 18]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
+   [RFC5101]  Claise, B., Ed., "Specification of the IP Flow Information
+              Export (IPFIX) Protocol for the Exchange of IP Traffic
+              Flow Information", RFC 5101, DOI 10.17487/RFC5101, January
+              2008, <https://www.rfc-editor.org/info/rfc5101>.
 
    [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
               (TLS) Protocol Version 1.2", RFC 5246,
@@ -445,7 +1043,25 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 10, 2019                  [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 11, 2019                 [Page 19]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -501,4 +1117,4 @@ Authors' Addresses
 
 
 
-Moriarty & Farrell        Expires May 10, 2019                  [Page 9]
+Moriarty & Farrell        Expires May 11, 2019                 [Page 20]

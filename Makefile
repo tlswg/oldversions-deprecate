@@ -20,3 +20,5 @@ backuup:
 clean:
 	rm -f   draft-ietf-tls-oldversions-deprecate.txt *~
 
+nonobsnorms: nonobsnorms.sh
+	./onobsnorms.sh

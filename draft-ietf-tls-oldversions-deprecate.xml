@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="US-ASCII"?>
 <!-- this is version 5 of this xml2rfc template -->
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+
 <!ENTITY rfc2119 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
 <!ENTITY rfc2223 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2223.xml">
 <!ENTITY rfc2578 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2578.xml">
 <!ENTITY rfc2579 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2579.xml">
 <!ENTITY rfc2580 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2580.xml">
 <!ENTITY rfc2629 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2629.xml">
+<!ENTITY rfc3261 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3261.xml'>
+<!ENTITY rfc3316 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3316.xml'>
+<!ENTITY rfc3329 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3329.xml'>
 <!ENTITY rfc3410 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3410.xml">
+<!ENTITY rfc3436 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3436.xml'>
+<!ENTITY rfc3470 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3470.xml'>
+<!ENTITY rfc3489 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3489.xml'>
+<!ENTITY rfc3501 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3501.xml'>
+<!ENTITY rfc3546 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3546.xml'>
+<!ENTITY rfc3552 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3552.xml'>
+<!ENTITY rfc3568 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3568.xml'>
+<!ENTITY rfc3588 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3588.xml'>
+<!ENTITY rfc3656 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3656.xml'>
+<!ENTITY rfc3734 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3734.xml'>
+<!ENTITY rfc3749 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3749.xml'>
+<!ENTITY rfc3767 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3767.xml'>
+<!ENTITY rfc3856 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3856.xml'>
+<!ENTITY rfc3887 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3887.xml'>
+<!ENTITY rfc3903 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3903.xml'>
+<!ENTITY rfc3920 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3920.xml'>
+<!ENTITY rfc3943 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3943.xml'>
+<!ENTITY rfc3983 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.3983.xml'>
+<!ENTITY rfc4097 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4097.xml'>
+<!ENTITY rfc4111 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4111.xml'>
+<!ENTITY rfc4132 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4132.xml'>
+<!ENTITY rfc4162 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4162.xml'>
+<!ENTITY rfc4168 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4168.xml'>
 <!ENTITY rfc4181 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4181.xml">
+<!ENTITY rfc4217 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4217.xml'>
+<!ENTITY rfc4235 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4235.xml'>
+<!ENTITY rfc4244 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4244.xml'>
+<!ENTITY rfc4261 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4261.xml'>
+<!ENTITY rfc4279 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4279.xml'>
+<!ENTITY rfc4366 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4366.xml'>
+<!ENTITY rfc4492 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4492.xml'>
+<!ENTITY rfc4497 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4497.xml'>
+<!ENTITY rfc4507 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4507.xml'>
+<!ENTITY rfc4513 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4513.xml'>
+<!ENTITY rfc4531 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4531.xml'>
+<!ENTITY rfc4540 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4540.xml'>
+<!ENTITY rfc4572 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4572.xml'>
+<!ENTITY rfc4582 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4582.xml'>
+<!ENTITY rfc4616 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4616.xml'>
+<!ENTITY rfc4642 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4642.xml'>
+<!ENTITY rfc4680 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4680.xml'>
+<!ENTITY rfc4681 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4681.xml'>
+<!ENTITY rfc4712 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4712.xml'>
+<!ENTITY rfc4732 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4732.xml'>
+<!ENTITY rfc4743 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4743.xml'>
+<!ENTITY rfc4744 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4744.xml'>
+<!ENTITY rfc4785 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4785.xml'>
+<!ENTITY rfc4791 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4791.xml'>
+<!ENTITY rfc4823 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4823.xml'>
+<!ENTITY rfc4851 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4851.xml'>
+<!ENTITY rfc4934 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4934.xml'>
+<!ENTITY rfc4964 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4964.xml'>
+<!ENTITY rfc4975 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4975.xml'>
+<!ENTITY rfc4976 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4976.xml'>
+<!ENTITY rfc4992 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.4992.xml'>
+<!ENTITY rfc5018 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5018.xml'>
+<!ENTITY rfc5019 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5019.xml'>
+<!ENTITY rfc5023 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5023.xml'>
+<!ENTITY rfc5024 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5024.xml'>
+<!ENTITY rfc5049 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5049.xml'>
+<!ENTITY rfc5054 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5054.xml'>
+<!ENTITY rfc5077 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5077.xml'>
+<!ENTITY rfc5081 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5081.xml'>
+<!ENTITY rfc5091 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5091.xml'>
+<!ENTITY rfc5101 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5101.xml'>
+<!ENTITY rfc5158 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5158.xml'>
+<!ENTITY rfc5216 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5216.xml'>
+<!ENTITY rfc5238 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5238.xml'>
+<!ENTITY rfc5281 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5281.xml'>
+<!ENTITY rfc5364 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5364.xml'>
+<!ENTITY rfc5422 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5422.xml'>
+<!ENTITY rfc5469 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5469.xml'>
+<!ENTITY rfc5734 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5734.xml'>
+<!ENTITY rfc5878 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.5878.xml'>
+<!ENTITY rfc6042 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6042.xml'>
+<!ENTITY rfc6176 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6176.xml'>
+<!ENTITY rfc6367 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6367.xml'>
+<!ENTITY rfc6739 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6739.xml'>
+<!ENTITY rfc6749 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6749.xml'>
+<!ENTITY rfc6750 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6750.xml'>
+<!ENTITY rfc7030 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7030.xml'>
+<!ENTITY rfc7255 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7255.xml'>
 <!ENTITY rfc7457 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7457.xml">
+<!ENTITY rfc7465 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7465.xml'>
+<!ENTITY rfc7507 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7507.xml'>
+<!ENTITY rfc7562 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7562.xml'>
+<!ENTITY rfc7568 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7568.xml'>
+<!ENTITY rfc8422 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.8422.xml'>
+<!ENTITY rfc8465 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.8465.xml'>
 ]>
 <?rfc toc="yes"?>
 <?rfc symrefs="yes"?>
@@ -20,7 +111,7 @@
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
 <rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-01pre"
-     ipr="trust200902" updates="[[List TBD]]">
+		ipr="trust200902" updates="8465 8422 7568 7562 7507 7465 7255 7030 6750 6749 6739 6367 6176 6042 5878 5734 5469 5422 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
     TLSv1.1</title>
@@ -90,8 +181,8 @@
       opportunities for misconfigurations. Supporting these older versions
       also requires additional effort for library and product maintenance.</t>
 
-      <t>This document updates the backward compatibility sections of TLS RFCs
-      [[list TBD]] to prohibit fallback to TLSv1.0 and TLSv1.1. This document
+	  <t>This document updates many RFCs that normatively refer to TLS1.0
+			  or TLS1.1 as described herein. This document
       also updates RFC 7525 and hence is part of BCP195.</t>
     </abstract>
   </front>
@@ -173,6 +264,111 @@
 
       <!-- adding the boilerplate below for 2119 and 8174
           -->
+
+	<section title="Updates">
+			<t>This document updates these RFCs that normatively reference TLS1.0 or TLS1.1 and
+					have not been obsoleted: 
+
+<xref target='RFC8465'/>
+<xref target="RFC8422"/>
+<xref target="RFC7568"/>
+<xref target="RFC7562"/>
+<xref target="RFC7507"/>
+<xref target="RFC7465"/>
+<xref target="RFC7255"/>
+<xref target="RFC7030"/>
+<xref target="RFC6750"/>
+<xref target="RFC6749"/>
+<xref target="RFC6739"/>
+<xref target="RFC6367"/>
+<xref target="RFC6176"/>
+<xref target="RFC6042"/>
+<xref target="RFC5878"/>
+<xref target="RFC5734"/>
+<xref target="RFC5469"/>
+<xref target="RFC5422"/>
+<xref target="RFC5364"/>
+<xref target="RFC5281"/>
+<xref target="RFC5263"/>
+<xref target="RFC5238"/>
+<xref target="RFC5216"/>
+<xref target="RFC5158"/>
+<xref target="RFC5091"/>
+<xref target="RFC5054"/>
+<xref target="RFC5049"/>
+<xref target="RFC5024"/>
+<xref target="RFC5023"/>
+<xref target="RFC5019"/>
+<xref target="RFC5018"/>
+<xref target="RFC4992"/>
+<xref target="RFC4976"/>
+<xref target="RFC4975"/>
+<xref target="RFC4964"/>
+<xref target="RFC4851"/>
+<xref target="RFC4823"/>
+<xref target="RFC4791"/>
+<xref target="RFC4785"/>
+<xref target="RFC4744"/>
+<xref target="RFC4743"/>
+<xref target="RFC4732"/>
+<xref target="RFC4712"/>
+<xref target="RFC4681"/>
+<xref target="RFC4680"/>
+<xref target="RFC4642"/>
+<xref target="RFC4616"/>
+<xref target="RFC4582"/>
+<xref target="RFC4540"/>
+<xref target="RFC4531"/>
+<xref target="RFC4513"/>
+<xref target="RFC4497"/>
+<xref target="RFC4279"/>
+<xref target="RFC4261"/>
+<xref target="RFC4235"/>
+<xref target="RFC4217"/>
+<xref target="RFC4168"/>
+<xref target="RFC4162"/>
+<xref target="RFC4111"/>
+<xref target="RFC4097"/>
+<xref target="RFC3983"/>
+<xref target="RFC3943"/>
+<xref target="RFC3903"/>
+<xref target="RFC3887"/>
+<xref target="RFC3871"/>
+<xref target="RFC3856"/>
+<xref target="RFC3767"/>
+<xref target="RFC3749"/>
+<xref target="RFC3656"/>
+<xref target="RFC3568"/>
+<xref target="RFC3552"/>
+<xref target="RFC3501"/>
+<xref target="RFC3470"/>
+<xref target="RFC3436"/>
+<xref target="RFC3329"/>
+<xref target="RFC3261"/>
+		</t>
+	
+		<t>In addition these RFCs normatively refer to TLS1.0 or TLS1.1 and have been obsoleted,
+				or informatively refer to TLS1.0 or TLS1.1: 
+<xref target="RFC5101"/>
+<xref target="RFC5081"/>
+<xref target="RFC5077"/>
+<xref target="RFC4934"/>
+<xref target="RFC4572"/>
+<xref target="RFC4507"/>
+<xref target="RFC4492"/>
+<xref target="RFC4366"/>
+<xref target="RFC4347"/>
+<xref target="RFC4244"/>
+<xref target="RFC4132"/>
+<xref target="RFC3920"/>
+<xref target="RFC3734"/>
+<xref target="RFC3588"/>
+<xref target="RFC3546"/>
+<xref target="RFC3489"/>
+<xref target="RFC3316"/>
+		</t>
+
+	</section>
 
       <section title="Terminology">
         <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -599,6 +795,86 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
       <?rfc include='reference.RFC.4346'?>
 
       <?rfc include='reference.RFC.7525'?>
+
+	  <!-- these are from nonobsnorms.sh.refs -->
+
+<?rfc include='reference.RFC.8465'?>
+<?rfc include='reference.RFC.8422'?>
+<?rfc include='reference.RFC.7568'?>
+<?rfc include='reference.RFC.7562'?>
+<?rfc include='reference.RFC.7507'?>
+<?rfc include='reference.RFC.7465'?>
+<?rfc include='reference.RFC.7255'?>
+<?rfc include='reference.RFC.7030'?>
+<?rfc include='reference.RFC.6750'?>
+<?rfc include='reference.RFC.6749'?>
+<?rfc include='reference.RFC.6739'?>
+<?rfc include='reference.RFC.6367'?>
+<?rfc include='reference.RFC.6176'?>
+<?rfc include='reference.RFC.6042'?>
+<?rfc include='reference.RFC.5878'?>
+<?rfc include='reference.RFC.5734'?>
+<?rfc include='reference.RFC.5469'?>
+<?rfc include='reference.RFC.5422'?>
+<?rfc include='reference.RFC.5364'?>
+<?rfc include='reference.RFC.5281'?>
+<?rfc include='reference.RFC.5263'?>
+<?rfc include='reference.RFC.5238'?>
+<?rfc include='reference.RFC.5216'?>
+<?rfc include='reference.RFC.5158'?>
+<?rfc include='reference.RFC.5091'?>
+<?rfc include='reference.RFC.5054'?>
+<?rfc include='reference.RFC.5049'?>
+<?rfc include='reference.RFC.5024'?>
+<?rfc include='reference.RFC.5023'?>
+<?rfc include='reference.RFC.5019'?>
+<?rfc include='reference.RFC.5018'?>
+<?rfc include='reference.RFC.4992'?>
+<?rfc include='reference.RFC.4976'?>
+<?rfc include='reference.RFC.4975'?>
+<?rfc include='reference.RFC.4964'?>
+<?rfc include='reference.RFC.4851'?>
+<?rfc include='reference.RFC.4823'?>
+<?rfc include='reference.RFC.4791'?>
+<?rfc include='reference.RFC.4785'?>
+<?rfc include='reference.RFC.4744'?>
+<?rfc include='reference.RFC.4743'?>
+<?rfc include='reference.RFC.4732'?>
+<?rfc include='reference.RFC.4712'?>
+<?rfc include='reference.RFC.4681'?>
+<?rfc include='reference.RFC.4680'?>
+<?rfc include='reference.RFC.4642'?>
+<?rfc include='reference.RFC.4616'?>
+<?rfc include='reference.RFC.4582'?>
+<?rfc include='reference.RFC.4540'?>
+<?rfc include='reference.RFC.4531'?>
+<?rfc include='reference.RFC.4513'?>
+<?rfc include='reference.RFC.4497'?>
+<?rfc include='reference.RFC.4279'?>
+<?rfc include='reference.RFC.4261'?>
+<?rfc include='reference.RFC.4235'?>
+<?rfc include='reference.RFC.4217'?>
+<?rfc include='reference.RFC.4168'?>
+<?rfc include='reference.RFC.4162'?>
+<?rfc include='reference.RFC.4111'?>
+<?rfc include='reference.RFC.4097'?>
+<?rfc include='reference.RFC.3983'?>
+<?rfc include='reference.RFC.3943'?>
+<?rfc include='reference.RFC.3903'?>
+<?rfc include='reference.RFC.3887'?>
+<?rfc include='reference.RFC.3871'?>
+<?rfc include='reference.RFC.3856'?>
+<?rfc include='reference.RFC.3767'?>
+<?rfc include='reference.RFC.3749'?>
+<?rfc include='reference.RFC.3656'?>
+<?rfc include='reference.RFC.3568'?>
+<?rfc include='reference.RFC.3552'?>
+<?rfc include='reference.RFC.3501'?>
+<?rfc include='reference.RFC.3470'?>
+<?rfc include='reference.RFC.3436'?>
+<?rfc include='reference.RFC.3329'?>
+<?rfc include='reference.RFC.3261'?>
+
     </references>
 
     <references title="Informative References">
@@ -879,11 +1155,30 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
       <?rfc include='reference.RFC.7568'?>
 		-->
 
-      <?rfc include='reference.RFC.4347'?>
-
       <?rfc include='reference.RFC.8446'?>
 
 	  <?rfc include='reference.RFC.8447'?>
+
+	  <!-- these are from nonobsnorms.sh.irefs -->
+
+<?rfc include='reference.RFC.5101'?>
+<?rfc include='reference.RFC.5081'?>
+<?rfc include='reference.RFC.5077'?>
+<?rfc include='reference.RFC.4934'?>
+<?rfc include='reference.RFC.4572'?>
+<?rfc include='reference.RFC.4507'?>
+<?rfc include='reference.RFC.4492'?>
+<?rfc include='reference.RFC.4366'?>
+<?rfc include='reference.RFC.4347'?>
+<?rfc include='reference.RFC.4244'?>
+<?rfc include='reference.RFC.4132'?>
+<?rfc include='reference.RFC.3920'?>
+<?rfc include='reference.RFC.3734'?>
+<?rfc include='reference.RFC.3588'?>
+<?rfc include='reference.RFC.3546'?>
+<?rfc include='reference.RFC.3489'?>
+<?rfc include='reference.RFC.3316'?>
+
     </references>
 
     <section title="Change Log ">

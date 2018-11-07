@@ -16,6 +16,22 @@
 # the RFCs for which we wanna run this check
 TARGETS="2246 4346"
 
+# output files...
+# these files are to be manually included in the XML2RFC source
+
+# updates header
+UHEAD="$0.updates-header"
+# normative references xml
+NREFS="$0.refs"
+# Para that has references
+NPARA="$0.para"
+# informationals
+IREFS="$0.irefs"
+# para for those
+IPARA="$0.ipara"
+# ENTITY statements
+ESTAT="$0.entity"
+
 TMPF=`mktemp /tmp/nonobsnormsXXXX`
 
 for TARGET in $TARGETS
@@ -34,17 +50,62 @@ do
 done
 
 rlist=`cat $TMPF | sort -n | uniq`
+normlist=""
+inflist=""
+oddlist=""
 for rfc in $rlist
 do 
 	obscount=`curl "https://datatracker.ietf.org/doc/rfc$rfc/" | grep -c Obsoleted`
 	case "$obscount" in
-			"0") echo "RFC$rfc seems to be live";;
-			"1") echo "RFC$rfc seems to be obsoleted";;
-			*) echo "Not sure about RFC$rfc - go check";;
+			"0") echo "RFC$rfc seems to be live"; normlist="$rfc $normlist";;
+			"1") echo "RFC$rfc seems to be obsoleted"; inflist="$rfc $inflist";;
+			*) echo "Not sure about RFC$rfc - go check"; oddlist="$rfc $oddlist";;
 	esac
 done
 
+if [ -f $UHEAD ]
+then
+	mv $UHEAD $UHEAD.old
+fi
+echo "$normlist" >$UHEAD
 
+if [ -f $NREFS ]
+then
+	mv $NREFS $NREFS.old
+fi
+if [ -f $NPARA ]
+then
+	mv $NPARA $NPARA.old
+fi
+if [ -f $IREFS ]
+then
+	mv $IREFS $IREFS.old
+fi
+if [ -f $IPARA ]
+then
+	mv $IPARA $IPARA.old
+fi
+if [ -f $ESTAT ]
+then
+	mv $ESTAT $ESTAT.old
+fi
+
+for rfc in $normlist
+do
+	echo "<?rfc include='reference.RFC.$rfc'?>" >>$NREFS
+	echo "<xref target='RFC$rfc'/>" >>$NPARA
+done
+
+for rfc in $inflist
+do
+	echo "<?rfc include='reference.RFC.$rfc'?>" >>$IREFS
+	echo "<xref target='RFC$rfc'/>" >>$IPARA
+done
+
+for rfc in $rlist
+do
+	echo "<!ENTITY rfc$rfc SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.$rfc.xml'>" >>$ESTAT
+done
 
 # clean up
 rm -f $TMPF
