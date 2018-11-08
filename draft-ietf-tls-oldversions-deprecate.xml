@@ -110,7 +110,7 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
-<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-01pre"
+<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-01"
 		ipr="trust200902" updates="8465 8422 7568 7562 7507 7465 7255 7030 6750 6749 6739 6367 6176 6042 5878 5734 5469 5422 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
@@ -1190,9 +1190,11 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 			  <t>PR#2 noting msft browser announced deprecation (but this was OBE as per...)</t>
 			  <t>Implemented actions as per IETF-103 meeting:
 					  <list style="symbols">
-							  <t> Details about which RFC's, BCP's are affected</t>
-							  <t> Will remove the 'measurements' part</t>
-							  <t> Remove SHA-1 deprecation from this document</t>
+						  <t> Details about which RFC's, BCP's are affected were generated
+								  using a script in the git repo: 
+						  https://github.com/tlswg/oldversions-deprecate/blob/master/nonobsnorms.sh</t>
+						  <t> Removed the 'measurements' part</t>
+						  <t> Removed SHA-1 deprecation (section 8 of -00)</t>
 					  </list>
 			  </t>
 	  </list>

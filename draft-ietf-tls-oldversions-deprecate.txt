@@ -6,7 +6,7 @@ Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
 Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
          7255 7030 6750 6749 6739 6367            Trinity College Dublin
-         6176 6042 5878 5734 5469 5422                  November 7, 2018
+         6176 6042 5878 5734 5469 5422                  November 8, 2018
          5364 5281 5263 5238 5216 5158
          5091 5054 5049 5024 5023 5019
          5018 4992 4976 4975 4964 4851
@@ -19,11 +19,11 @@ Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
          3470 3436 3329 3261 (if
          approved)
 Intended status: Standards Track
-Expires: May 11, 2019
+Expires: May 12, 2019
 
 
                     Deprecating TLSv1.0 and TLSv1.1
-               draft-ietf-tls-oldversions-deprecate-01pre
+                draft-ietf-tls-oldversions-deprecate-01
 
 Abstract
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 1]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 1]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -66,7 +66,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 11, 2019.
+   This Internet-Draft will expire on May 12, 2019.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 2]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 2]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -165,7 +165,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 3]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 3]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -221,7 +221,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 4]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 4]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -277,7 +277,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 5]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 5]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -333,7 +333,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 6]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 6]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -389,7 +389,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 7]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 7]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -445,7 +445,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 8]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 8]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -501,7 +501,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                  [Page 9]
+Moriarty & Farrell        Expires May 12, 2019                  [Page 9]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -557,7 +557,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 10]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 10]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -613,7 +613,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 11]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 11]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -669,7 +669,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 12]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 12]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -725,7 +725,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 13]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 13]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -781,7 +781,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 14]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 14]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -837,7 +837,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 15]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 15]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -893,7 +893,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 16]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 16]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -949,7 +949,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 17]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 17]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -1005,7 +1005,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 18]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 18]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -1061,7 +1061,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 19]
+Moriarty & Farrell        Expires May 12, 2019                 [Page 19]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
@@ -1078,9 +1078,11 @@ Appendix A.  Change Log
       as per...)
    o  Implemented actions as per IETF-103 meeting:
 
-      *  Details about which RFC's, BCP's are affected
-      *  Will remove the 'measurements' part
-      *  Remove SHA-1 deprecation from this document
+      *  Details about which RFC's, BCP's are affected were generated
+         using a script in the git repo: https://github.com/tlswg/
+         oldversions-deprecate/blob/master/nonobsnorms.sh
+      *  Removed the 'measurements' part
+      *  Removed SHA-1 deprecation (section 8 of -00)
 
    From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-
    oldversions-deprecate-00:
@@ -1107,6 +1109,19 @@ Authors' Addresses
    EMail: Kathleen.Moriarty.ietf@gmail.com
 
 
+
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 12, 2019                 [Page 20]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+
+
    Stephen Farrell
    Trinity College Dublin
    Dublin  2
@@ -1117,4 +1132,45 @@ Authors' Addresses
 
 
 
-Moriarty & Farrell        Expires May 11, 2019                 [Page 20]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moriarty & Farrell        Expires May 12, 2019                 [Page 21]
