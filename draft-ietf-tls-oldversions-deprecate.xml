@@ -93,8 +93,6 @@
 <!ENTITY rfc6749 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6749.xml'>
 <!ENTITY rfc6750 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.6750.xml'>
 <!ENTITY rfc7030 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7030.xml'>
-<!ENTITY rfc7255 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7255.xml'>
-<!ENTITY rfc7457 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7457.xml">
 <!ENTITY rfc7465 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7465.xml'>
 <!ENTITY rfc7507 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7507.xml'>
 <!ENTITY rfc7562 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7562.xml'>
@@ -110,8 +108,8 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
-<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-01"
-		ipr="trust200902" updates="8465 8422 7568 7562 7507 7465 7255 7030 6750 6749 6739 6367 6176 6042 5878 5734 5469 5422 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
+<rfc category="std" docName="draft-ietf-tls-oldversions-deprecate-02"
+		ipr="trust200902" updates="8465 8422 7568 7562 7507 7465 7030 6750 6749 6739 6367 6176 6042 5878 5734 5469 5422 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
     TLSv1.1</title>
@@ -265,7 +263,7 @@
       <!-- adding the boilerplate below for 2119 and 8174
           -->
 
-	<section title="Updates">
+	<section title="RFCs Updated" anchor="updates">
 			<t>This document updates these RFCs that normatively reference TLS1.0 or TLS1.1 and
 					have not been obsoleted: 
 
@@ -275,8 +273,6 @@
 <xref target="RFC7562"/>
 <xref target="RFC7507"/>
 <xref target="RFC7465"/>
-<xref target="RFC7255"/>
-<xref target="RFC7030"/>
 <xref target="RFC6750"/>
 <xref target="RFC6749"/>
 <xref target="RFC6739"/>
@@ -347,8 +343,8 @@
 <xref target="RFC3261"/>
 		</t>
 	
-		<t>In addition these RFCs normatively refer to TLS1.0 or TLS1.1 and have been obsoleted,
-				or informatively refer to TLS1.0 or TLS1.1: 
+		<t>In addition these RFCs normatively refer to TLS1.0 or TLS1.1 and have been obsoleted:
+				
 <xref target="RFC5101"/>
 <xref target="RFC5081"/>
 <xref target="RFC5077"/>
@@ -772,6 +768,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 			  Andrei Popov,
 			  Eric Rescorla,
 			  Yaron Sheffer,
+			  Robert Sparks,
 			  https://github.com/yaleman,
 			  and
 			  Jakub Wilk.
@@ -804,8 +801,6 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 <?rfc include='reference.RFC.7562'?>
 <?rfc include='reference.RFC.7507'?>
 <?rfc include='reference.RFC.7465'?>
-<?rfc include='reference.RFC.7255'?>
-<?rfc include='reference.RFC.7030'?>
 <?rfc include='reference.RFC.6750'?>
 <?rfc include='reference.RFC.6749'?>
 <?rfc include='reference.RFC.6739'?>
@@ -1184,6 +1179,13 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
     <section title="Change Log ">
 	<t>[[RFC editor: please remove this before publication.]]</t>
 
+	<t>From draft-ietf-tls-oldversions-deprecate-01 to draft-ietf-tls-oldversions-deprecate-02:
+      <list style="symbols">
+			  <t>Correction: 2nd list of referenced RFCs in <xref target="updates"/> aren't informatively refering to tls1.0/1.1</t>
+			  <t>Remove RFC7255 from updates list - datatracker has bad data (spotted by Robert Sparks)</t>
+
+	  </list>
+	</t>
 	<t>From draft-ietf-tls-oldversions-deprecate-00 to draft-ietf-tls-oldversions-deprecate-01:
       <list style="symbols">
 			  <t>PRs with typos and similar: so far just #1</t>
