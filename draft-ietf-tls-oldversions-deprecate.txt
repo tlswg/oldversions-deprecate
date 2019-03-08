@@ -6,7 +6,7 @@ Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
 Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
          7030 6750 6749 6739 6367 6176            Trinity College Dublin
-         6042 5878 5734 5469 5422 5364                 November 11, 2018
+         6042 5878 5734 5469 5422 5364                     March 8, 2019
          5281 5263 5238 5216 5158 5091
          5054 5049 5024 5023 5019 5018
          4992 4976 4975 4964 4851 4823
@@ -18,7 +18,7 @@ Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
          3749 3656 3568 3552 3501 3470
          3436 3329 3261 (if approved)
 Intended status: Standards Track
-Expires: May 15, 2019
+Expires: September 9, 2019
 
 
                     Deprecating TLSv1.0 and TLSv1.1
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Moriarty & Farrell        Expires May 15, 2019                  [Page 1]
+Moriarty & Farrell      Expires September 9, 2019               [Page 1]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
    working documents as Internet-Drafts.  The list of current Internet-
@@ -66,11 +66,11 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 15, 2019.
+   This Internet-Draft will expire on September 9, 2019.
 
 Copyright Notice
 
-   Copyright (c) 2018 IETF Trust and the persons identified as the
+   Copyright (c) 2019 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Moriarty & Farrell        Expires May 15, 2019                  [Page 2]
+Moriarty & Farrell      Expires September 9, 2019               [Page 2]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
 1.  Introduction
@@ -165,9 +165,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 15, 2019                  [Page 3]
+Moriarty & Farrell      Expires September 9, 2019               [Page 3]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
    [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680] [RFC4642] [RFC4616]
@@ -181,6 +181,10 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    been obsoleted: [RFC5101] [RFC5081] [RFC5077] [RFC4934] [RFC4572]
    [RFC4507] [RFC4492] [RFC4366] [RFC4347] [RFC4244] [RFC4132] [RFC3920]
    [RFC3734] [RFC3588] [RFC3546] [RFC3489] [RFC3316]
+
+   In the case of [RFC4642], that has already been updated by [RFC8143]
+   which makes an overlapping, but not quite the same, update as this
+   document.
 
 1.2.  Terminology
 
@@ -214,18 +218,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
       class of attacks on the Cipher Block Chaining (CBC) mode of
       operation used by TLS.  The handling of padding errors was altered
       to treat a padding error as a bad message authentication code,
+
+
+
+Moriarty & Farrell      Expires September 9, 2019               [Page 4]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
       rather than a decryption failure.  In addition, the TLS 1.1 RFC
       acknowledges attacks on CBC mode that rely on the time to compute
       the message authentication code (MAC).  The TLS 1.1 specification
       states that to defend against such attacks, an implementation must
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 4]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
       process records in the same manner regardless of whether padding
       errors exist.  Further implementation considerations for CBC modes
       (which were not included in RFC4346 [RFC4346]) are discussed in
@@ -270,17 +274,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    messages, making the only upgrade path the use of a newer protocol
    version.
 
-   See [Bhargavan2016] for additional detail.
 
 
 
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 5]
+Moriarty & Farrell      Expires September 9, 2019               [Page 5]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   See [Bhargavan2016] for additional detail.
 
 4.  Do Not Use TLSv1.0
 
@@ -328,16 +330,16 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    Historically, TLS specifications were not clear on what the record
    layer version number (TLSPlaintext.version) could contain when
    sending ClientHello.  Appendix E of [RFC5246] notes that
+
+
+
+Moriarty & Farrell      Expires September 9, 2019               [Page 6]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    TLSPlaintext.version could be selected to maximize interoperability,
    though no definitive value is identified as ideal.  That guidance is
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 6]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
-
    still applicable; therefore, TLS servers MUST accept any value
    {03,XX} (including {03,00}) as the record layer version number for
    ClientHello, but they MUST NOT negotiate TLSv1.1.
@@ -378,21 +380,24 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
    Thanks to those that provided usage data, reviewed and/or improved
    this document, including: David Benjamin, David Black, Viktor
-   Dukhovni, Alessandro Ghedini, Jeremy Harris, Russ Housley, Hubert
-   Kario, Loganaden Velvindron, Eric Mill, Yoav Nir, Andrei Popov, Eric
-   Rescorla, Yaron Sheffer, Robert Sparks, https://github.com/yaleman,
-   and Jakub Wilk.
+   Dukhovni, Julien Elie, Alessandro Ghedini, Jeremy Harris, Russ
+   Housley, Hubert Kario, Loganaden Velvindron, Eric Mill, Yoav Nir,
+   Andrei Popov, Eric Rescorla, Yaron Sheffer, Robert Sparks,
+   https://github.com/yaleman, and Jakub Wilk.
 
 
 
 
 
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 7]
+Moriarty & Farrell      Expires September 9, 2019               [Page 7]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [[Note to RFC editor: At least Julien Elie's name above should have
+   an accent on the first letter of the surname.  Please fix that and
+   any others needing a similar fix if you can, I'm not sure the tooling
+   I have now allows that.]]
 
 9.  IANA Considerations
 
@@ -437,18 +442,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               4rev1", RFC 3501, DOI 10.17487/RFC3501, March 2003,
               <https://www.rfc-editor.org/info/rfc3501>.
 
+
+
+
+Moriarty & Farrell      Expires September 9, 2019               [Page 8]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC3552]  Rescorla, E. and B. Korver, "Guidelines for Writing RFC
               Text on Security Considerations", BCP 72, RFC 3552,
               DOI 10.17487/RFC3552, July 2003,
               <https://www.rfc-editor.org/info/rfc3552>.
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 8]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC3568]  Barbir, A., Cain, B., Nair, R., and O. Spatscheck, "Known
               Content Network (CN) Request-Routing Mechanisms",
@@ -492,19 +497,19 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               DOI 10.17487/RFC3943, November 2004,
               <https://www.rfc-editor.org/info/rfc3943>.
 
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019               [Page 9]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC3983]  Newton, A. and M. Sanz, "Using the Internet Registry
               Information Service (IRIS) over the Blocks Extensible
               Exchange Protocol (BEEP)", RFC 3983, DOI 10.17487/RFC3983,
               January 2005, <https://www.rfc-editor.org/info/rfc3983>.
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                  [Page 9]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC4097]  Barnes, M., Ed., "Middlebox Communications (MIDCOM)
               Protocol Evaluation", RFC 4097, DOI 10.17487/RFC4097, June
@@ -546,21 +551,21 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               RFC 4279, DOI 10.17487/RFC4279, December 2005,
               <https://www.rfc-editor.org/info/rfc4279>.
 
+
+
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 10]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC4346]  Dierks, T. and E. Rescorla, "The Transport Layer Security
               (TLS) Protocol Version 1.1", RFC 4346,
               DOI 10.17487/RFC4346, April 2006,
               <https://www.rfc-editor.org/info/rfc4346>.
-
-
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 10]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC4497]  Elwell, J., Derks, F., Mourot, P., and O. Rousseau,
               "Interworking between the Session Initiation Protocol
@@ -603,20 +608,21 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Mapping Extension", RFC 4681, DOI 10.17487/RFC4681,
               October 2006, <https://www.rfc-editor.org/info/rfc4681>.
 
+
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 11]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC4712]  Siddiqui, A., Romascanu, D., Golovinsky, E., Rahman, M.,
               and Y. Kim, "Transport Mappings for Real-time Application
               Quality-of-Service Monitoring (RAQMON) Protocol Data Unit
               (PDU)", RFC 4712, DOI 10.17487/RFC4712, October 2006,
               <https://www.rfc-editor.org/info/rfc4712>.
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 11]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC4732]  Handley, M., Ed., Rescorla, E., Ed., and IAB, "Internet
               Denial-of-Service Considerations", RFC 4732,
@@ -659,20 +665,19 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               RFC 4964, DOI 10.17487/RFC4964, September 2007,
               <https://www.rfc-editor.org/info/rfc4964>.
 
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 12]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC4975]  Campbell, B., Ed., Mahy, R., Ed., and C. Jennings, Ed.,
               "The Message Session Relay Protocol (MSRP)", RFC 4975,
               DOI 10.17487/RFC4975, September 2007,
               <https://www.rfc-editor.org/info/rfc4975>.
-
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 12]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC4976]  Jennings, C., Mahy, R., and A. Roach, "Relay Extensions
               for the Message Sessions Relay Protocol (MSRP)", RFC 4976,
@@ -713,6 +718,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Authentication", RFC 5054, DOI 10.17487/RFC5054, November
               2007, <https://www.rfc-editor.org/info/rfc5054>.
 
+
+
+
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 13]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC5091]  Boyen, X. and L. Martin, "Identity-Based Cryptography
               Standard (IBCS) #1: Supersingular Curve Implementations of
               the BF and BB1 Cryptosystems", RFC 5091,
@@ -722,13 +739,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    [RFC5158]  Huston, G., "6to4 Reverse DNS Delegation Specification",
               RFC 5158, DOI 10.17487/RFC5158, March 2008,
               <https://www.rfc-editor.org/info/rfc5158>.
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 13]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC5216]  Simon, D., Aboba, B., and R. Hurst, "The EAP-TLS
               Authentication Protocol", RFC 5216, DOI 10.17487/RFC5216,
@@ -767,6 +777,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Layer Security (TLS)", RFC 5469, DOI 10.17487/RFC5469,
               February 2009, <https://www.rfc-editor.org/info/rfc5469>.
 
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 14]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC5734]  Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
               Transport over TCP", STD 69, RFC 5734,
               DOI 10.17487/RFC5734, August 2009,
@@ -775,16 +794,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
    [RFC5878]  Brown, M. and R. Housley, "Transport Layer Security (TLS)
               Authorization Extensions", RFC 5878, DOI 10.17487/RFC5878,
               May 2010, <https://www.rfc-editor.org/info/rfc5878>.
-
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 14]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC6042]  Keromytis, A., "Transport Layer Security (TLS)
               Authorization Using KeyNote", RFC 6042,
@@ -824,6 +833,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Attacks", RFC 7507, DOI 10.17487/RFC7507, April 2015,
               <https://www.rfc-editor.org/info/rfc7507>.
 
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 15]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC7525]  Sheffer, Y., Holz, R., and P. Saint-Andre,
               "Recommendations for Secure Use of Transport Layer
               Security (TLS) and Datagram Transport Layer Security
@@ -834,13 +852,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Using Digital Transmission Content Protection (DTCP)
               Certificates", RFC 7562, DOI 10.17487/RFC7562, July 2015,
               <https://www.rfc-editor.org/info/rfc7562>.
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 15]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC7568]  Barnes, R., Thomson, M., Pironti, A., and A. Langley,
               "Deprecating Secure Sockets Layer Version 3.0", RFC 7568,
@@ -878,6 +889,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               policy-implementation-notices/
               implementing-https-secure-web-connections-itpin.html>.
 
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 16]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [NIST800-52r2]
               National Institute of Standards and Technology, "NIST
               SP800-52r2 https://csrc.nist.gov/CSRC/media/Publications/
@@ -888,15 +908,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               PCI Security Standards Council, "Migrating from SSL and
               Early TLS https://www.pcisecuritystandards.org/documents/
               Migrating-from-SSL-Early-TLS-Info-Supp-v1_1.pdf", 2016.
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 16]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC3316]  Arkko, J., Kuijpers, G., Soliman, H., Loughney, J., and J.
               Wiljakka, "Internet Protocol Version 6 (IPv6) for Some
@@ -933,6 +944,16 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               RFC 4132, DOI 10.17487/RFC4132, July 2005,
               <https://www.rfc-editor.org/info/rfc4132>.
 
+
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 17]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC4244]  Barnes, M., Ed., "An Extension to the Session Initiation
               Protocol (SIP) for Request History Information", RFC 4244,
               DOI 10.17487/RFC4244, November 2005,
@@ -946,13 +967,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               and T. Wright, "Transport Layer Security (TLS)
               Extensions", RFC 4366, DOI 10.17487/RFC4366, April 2006,
               <https://www.rfc-editor.org/info/rfc4366>.
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 17]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
 
    [RFC4492]  Blake-Wilson, S., Bolyard, N., Gupta, V., Hawk, C., and B.
               Moeller, "Elliptic Curve Cryptography (ECC) Cipher Suites
@@ -985,6 +999,17 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               DOI 10.17487/RFC5081, November 2007,
               <https://www.rfc-editor.org/info/rfc5081>.
 
+
+
+
+
+
+
+Moriarty & Farrell      Expires September 9, 2019              [Page 18]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC5101]  Claise, B., Ed., "Specification of the IP Flow Information
               Export (IPFIX) Protocol for the Exchange of IP Traffic
               Flow Information", RFC 5101, DOI 10.17487/RFC5101, January
@@ -1000,15 +1025,10 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
               Datagram TLS (DTLS)", RFC 7457, DOI 10.17487/RFC7457,
               February 2015, <https://www.rfc-editor.org/info/rfc7457>.
 
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 18]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
-
+   [RFC8143]  Elie, J., "Using Transport Layer Security (TLS) with
+              Network News Transfer Protocol (NNTP)", RFC 8143,
+              DOI 10.17487/RFC8143, April 2017,
+              <https://www.rfc-editor.org/info/rfc8143>.
 
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
@@ -1041,29 +1061,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 19]
+Moriarty & Farrell      Expires September 9, 2019              [Page 19]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
 Appendix A.  Change Log
@@ -1077,6 +1077,7 @@ Appendix A.  Change Log
       informatively refering to tls1.0/1.1
    o  Remove RFC7255 from updates list - datatracker has bad data
       (spotted by Robert Sparks)
+   o  Added point about RFCs 8143 and 4642
 
    From draft-ietf-tls-oldversions-deprecate-00 to draft-ietf-tls-
    oldversions-deprecate-01:
@@ -1116,10 +1117,9 @@ Authors' Addresses
 
 
 
-
-Moriarty & Farrell        Expires May 15, 2019                 [Page 20]
+Moriarty & Farrell      Expires September 9, 2019              [Page 20]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
    Kathleen Moriarty
@@ -1173,4 +1173,4 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1       November 2018
 
 
 
-Moriarty & Farrell        Expires May 15, 2019                 [Page 21]
+Moriarty & Farrell      Expires September 9, 2019              [Page 21]

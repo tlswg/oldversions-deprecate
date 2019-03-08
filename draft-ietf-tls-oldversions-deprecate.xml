@@ -99,6 +99,9 @@
 <!ENTITY rfc7568 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.7568.xml'>
 <!ENTITY rfc8422 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.8422.xml'>
 <!ENTITY rfc8465 SYSTEM 'https://xml.resource.org/public/rfc/bibxml/reference.RFC.8465.xml'>
+
+<!ENTITY rfc8143 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8143.xml">
+
 ]>
 <?rfc toc="yes"?>
 <?rfc symrefs="yes"?>
@@ -152,7 +155,7 @@
       </address>
     </author>
 
-    <date year="2018"/>
+    <date year="2019"/>
 
     <area>Security Area</area>
 
@@ -363,6 +366,9 @@
 <xref target="RFC3489"/>
 <xref target="RFC3316"/>
 		</t>
+
+        <t>In the case of <xref target="RFC4642"/>, that has already been updated by <xref target="RFC8143"/>
+            which makes an overlapping, but not quite the same, update as this document.</t>
 
 	</section>
 
@@ -758,6 +764,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 			  David Benjamin,
 			  David Black,
 			  Viktor Dukhovni,
+              Julien Elie,
 			  Alessandro Ghedini,
 			  Jeremy Harris,
 			  Russ Housley,
@@ -773,6 +780,10 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 			  and
 			  Jakub Wilk.
 	  </t>
+      <t>[[Note to RFC editor: At least Julien Elie's name above should
+          have an accent on the first letter of the surname. Please fix
+          that and any others needing a similar fix if you can, I'm not 
+          sure the tooling I have now allows that.]] </t>
     </section>
 
     <section title="IANA Considerations">
@@ -1150,8 +1161,8 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
       <?rfc include='reference.RFC.7568'?>
 		-->
 
+      <?rfc include='reference.RFC.8143'?>
       <?rfc include='reference.RFC.8446'?>
-
 	  <?rfc include='reference.RFC.8447'?>
 
 	  <!-- these are from nonobsnorms.sh.irefs -->
@@ -1174,6 +1185,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
 <?rfc include='reference.RFC.3489'?>
 <?rfc include='reference.RFC.3316'?>
 
+
     </references>
 
     <section title="Change Log ">
@@ -1183,6 +1195,7 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
       <list style="symbols">
 			  <t>Correction: 2nd list of referenced RFCs in <xref target="updates"/> aren't informatively refering to tls1.0/1.1</t>
 			  <t>Remove RFC7255 from updates list - datatracker has bad data (spotted by Robert Sparks)</t>
+              <t>Added point about RFCs 8143 and 4642</t>
 
 	  </list>
 	</t>
