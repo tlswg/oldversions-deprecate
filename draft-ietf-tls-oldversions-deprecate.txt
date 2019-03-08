@@ -4,20 +4,21 @@
 
 Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
-Updates: 8465 8422 7568 7562 7507 7465                        S. Farrell
-         7030 6750 6749 6739 6367 6176            Trinity College Dublin
-         6042 5878 5734 5469 5422 5364                     March 8, 2019
-         5281 5263 5238 5216 5158 5091
-         5054 5049 5024 5023 5019 5018
-         4992 4976 4975 4964 4851 4823
-         4791 4785 4744 4743 4732 4712
-         4681 4680 4642 4616 4582 4540
-         4531 4513 4497 4279 4261 4235
-         4217 4168 4162 4111 4097 3983
-         3943 3903 3887 3871 3856 3767
-         3749 3656 3568 3552 3501 3470
-         3436 3329 3261 (if approved)
-Intended status: Standards Track
+Updates: 8465 8422 7568 7562 7525 7507                        S. Farrell
+         7465 7030 6750 6749 6739 6367            Trinity College Dublin
+         6176 6042 5878 5734 5469 5422                     March 8, 2019
+         5364 5281 5263 5238 5216 5158
+         5091 5054 5049 5024 5023 5019
+         5018 4992 4976 4975 4964 4851
+         4823 4791 4785 4744 4743 4732
+         4712 4681 4680 4642 4616 4582
+         4540 4531 4513 4497 4279 4261
+         4235 4217 4168 4162 4111 4097
+         3983 3943 3903 3887 3871 3856
+         3767 3749 3656 3568 3552 3501
+         3470 3436 3329 3261 (if
+         approved)
+Intended status: Best Current Practice
 Expires: September 9, 2019
 
 
@@ -49,7 +50,6 @@ Status of This Memo
 
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
-
 
 
 
@@ -157,11 +157,11 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
    This document updates these RFCs that normatively reference TLS1.0 or
    TLS1.1 and have not been obsoleted: [RFC8465] [RFC8422] [RFC7568]
-   [RFC7562] [RFC7507] [RFC7465] [RFC6750] [RFC6749] [RFC6739] [RFC6367]
-   [RFC6176] [RFC6042] [RFC5878] [RFC5734] [RFC5469] [RFC5422] [RFC5364]
-   [RFC5281] [RFC5263] [RFC5238] [RFC5216] [RFC5158] [RFC5091] [RFC5054]
-   [RFC5049] [RFC5024] [RFC5023] [RFC5019] [RFC5018] [RFC4992] [RFC4976]
-   [RFC4975] [RFC4964] [RFC4851] [RFC4823] [RFC4791] [RFC4785] [RFC4744]
+   [RFC7562] [RFC7525] [RFC7507] [RFC7465] [RFC6750] [RFC6749] [RFC6739]
+   [RFC6367] [RFC6176] [RFC6042] [RFC5878] [RFC5734] [RFC5469] [RFC5422]
+   [RFC5364] [RFC5281] [RFC5263] [RFC5238] [RFC5216] [RFC5158] [RFC5091]
+   [RFC5054] [RFC5049] [RFC5024] [RFC5023] [RFC5019] [RFC5018] [RFC4992]
+   [RFC4976] [RFC4975] [RFC4964] [RFC4851] [RFC4823] [RFC4791] [RFC4785]
 
 
 
@@ -170,12 +170,12 @@ Moriarty & Farrell      Expires September 9, 2019               [Page 3]
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
-   [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680] [RFC4642] [RFC4616]
-   [RFC4582] [RFC4540] [RFC4531] [RFC4513] [RFC4497] [RFC4279] [RFC4261]
-   [RFC4235] [RFC4217] [RFC4168] [RFC4162] [RFC4111] [RFC4097] [RFC3983]
-   [RFC3943] [RFC3903] [RFC3887] [RFC3871] [RFC3856] [RFC3767] [RFC3749]
-   [RFC3656] [RFC3568] [RFC3552] [RFC3501] [RFC3470] [RFC3436] [RFC3329]
-   [RFC3261]
+   [RFC4744] [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680] [RFC4642]
+   [RFC4616] [RFC4582] [RFC4540] [RFC4531] [RFC4513] [RFC4497] [RFC4279]
+   [RFC4261] [RFC4235] [RFC4217] [RFC4168] [RFC4162] [RFC4111] [RFC4097]
+   [RFC3983] [RFC3943] [RFC3903] [RFC3887] [RFC3871] [RFC3856] [RFC3767]
+   [RFC3749] [RFC3656] [RFC3568] [RFC3552] [RFC3501] [RFC3470] [RFC3436]
+   [RFC3329] [RFC3261]
 
    In addition these RFCs normatively refer to TLS1.0 or TLS1.1 and have
    been obsoleted: [RFC5101] [RFC5081] [RFC5077] [RFC4934] [RFC4572]
