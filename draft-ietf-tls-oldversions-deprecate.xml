@@ -225,6 +225,9 @@
       such as the Payment Card Industry Association (PCI) <xref
       target="PCI-TLS1"/>.</t>
 
+        <t>3GPP have deprecated TLSv1.0 and DTLSv1.0 since their release-14 
+            in 2016. <xref target="TGPP33310"/></t>
+
       <t>The primary technical reasons for deprecating these versions
       include:</t>
 
@@ -284,8 +287,8 @@
 
         <t>[[We need to figure out what to do about RFC8261.]]</t>
 
-			<t>This document updates these RFCs that normatively reference TLSv1.0 or TLSv1.1 and
-					have not been obsoleted: 
+        <t>This document updates these RFCs that normatively reference TLSv1.0 or TLSv1.1 or
+            DTLS1.0 and have not been obsoleted: 
 
 <xref target='RFC8465'/>
 <xref target="RFC8422"/>
@@ -1170,6 +1173,16 @@ Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018.  TLSv1.2
             <date year="2016"/>
         </front>
       </reference>
+      
+     <reference anchor="TGPP33310">
+       <front>
+           <title>TS 33.310  - Network Domain Security (NDS); Authentication Framework (AF)</title>
+         <author>
+           <organization>3GPP</organization>
+         </author>
+         <date year="2016" />
+       </front>
+     </reference>
 
 	  <!--
 	  <reference anchor="clusters">

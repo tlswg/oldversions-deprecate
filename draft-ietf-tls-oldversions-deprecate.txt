@@ -93,14 +93,14 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
-     1.1.  RFCs Updated  . . . . . . . . . . . . . . . . . . . . . .   3
+     1.1.  RFCs Updated  . . . . . . . . . . . . . . . . . . . . . .   4
      1.2.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   4
    2.  Support for Deprecation . . . . . . . . . . . . . . . . . . .   4
-   3.  SHA-1 . . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+   3.  SHA-1 . . . . . . . . . . . . . . . . . . . . . . . . . . . .   6
    4.  Do Not Use TLSv1.0  . . . . . . . . . . . . . . . . . . . . .   6
-   5.  Do Not Use TLSv1.1  . . . . . . . . . . . . . . . . . . . . .   6
+   5.  Do Not Use TLSv1.1  . . . . . . . . . . . . . . . . . . . . .   7
    6.  Updates to RFC7525  . . . . . . . . . . . . . . . . . . . . .   7
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
    8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   8
    9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
    10. References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
@@ -130,6 +130,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    [NIST800-52r2]) and industry consortia such as the Payment Card
    Industry Association (PCI) [PCI-TLS1].
 
+   3GPP have deprecated TLSv1.0 and DTLSv1.0 since their release-14 in
+   2016.  [TGPP33310]
+
    The primary technical reasons for deprecating these versions include:
 
    o  They require implementation of older cipher suites that are no
@@ -156,12 +159,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    attack surface and the scope of maintenance for protocols in their
    offerings.
 
-1.1.  RFCs Updated
 
-   [[We need to figure out what to do about RFC8261.]]
 
-   This document updates these RFCs that normatively reference TLSv1.0
-   or TLSv1.1 and have not been obsoleted: [RFC8465] [RFC8422] [RFC7568]
+
 
 
 
@@ -170,18 +170,24 @@ Moriarty & Farrell     Expires September 10, 2019               [Page 3]
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
-   [RFC7562] [RFC7525] [RFC7507] [RFC7465] [RFC6750] [RFC6749] [RFC6739]
-   [RFC6460] [RFC6084] [RFC6083] [RFC6367] [RFC6176] [RFC6042] [RFC6012]
-   [RFC5878] [RFC5734] [RFC5469] [RFC5456] [RFC5422] [RFC5415] [RFC5364]
-   [RFC5281] [RFC5263] [RFC5238] [RFC5216] [RFC5158] [RFC5091] [RFC5054]
-   [RFC5049] [RFC5024] [RFC5023] [RFC5019] [RFC5018] [RFC4992] [RFC4976]
-   [RFC4975] [RFC4964] [RFC4851] [RFC4823] [RFC4791] [RFC4785] [RFC4744]
-   [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680] [RFC4642] [RFC4616]
-   [RFC4582] [RFC4540] [RFC4531] [RFC4513] [RFC4497] [RFC4279] [RFC4261]
-   [RFC4235] [RFC4217] [RFC4168] [RFC4162] [RFC4111] [RFC4097] [RFC3983]
-   [RFC3943] [RFC3903] [RFC3887] [RFC3871] [RFC3856] [RFC3767] [RFC3749]
-   [RFC3656] [RFC3568] [RFC3552] [RFC3501] [RFC3470] [RFC3436] [RFC3329]
-   [RFC3261]
+1.1.  RFCs Updated
+
+   [[We need to figure out what to do about RFC8261.]]
+
+   This document updates these RFCs that normatively reference TLSv1.0
+   or TLSv1.1 or DTLS1.0 and have not been obsoleted: [RFC8465]
+   [RFC8422] [RFC7568] [RFC7562] [RFC7525] [RFC7507] [RFC7465] [RFC6750]
+   [RFC6749] [RFC6739] [RFC6460] [RFC6084] [RFC6083] [RFC6367] [RFC6176]
+   [RFC6042] [RFC6012] [RFC5878] [RFC5734] [RFC5469] [RFC5456] [RFC5422]
+   [RFC5415] [RFC5364] [RFC5281] [RFC5263] [RFC5238] [RFC5216] [RFC5158]
+   [RFC5091] [RFC5054] [RFC5049] [RFC5024] [RFC5023] [RFC5019] [RFC5018]
+   [RFC4992] [RFC4976] [RFC4975] [RFC4964] [RFC4851] [RFC4823] [RFC4791]
+   [RFC4785] [RFC4744] [RFC4743] [RFC4732] [RFC4712] [RFC4681] [RFC4680]
+   [RFC4642] [RFC4616] [RFC4582] [RFC4540] [RFC4531] [RFC4513] [RFC4497]
+   [RFC4279] [RFC4261] [RFC4235] [RFC4217] [RFC4168] [RFC4162] [RFC4111]
+   [RFC4097] [RFC3983] [RFC3943] [RFC3903] [RFC3887] [RFC3871] [RFC3856]
+   [RFC3767] [RFC3749] [RFC3656] [RFC3568] [RFC3552] [RFC3501] [RFC3470]
+   [RFC3436] [RFC3329] [RFC3261]
 
    In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
    have been obsoleted: [RFC5101] [RFC5081] [RFC5077] [RFC4934]
@@ -212,12 +218,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    their mitigations are provided in NIST SP800-52r2 [NIST800-52r2], RFC
    7457 [RFC7457] and other referenced RFCs.  Although the attacks have
    been mitigated, if support is dropped for future library releases for
-   these versions, it is unlikely attacks found going forward will be
-   mitigated in older library releases.
-
-   NIST for example have provided the following rationale, copied with
-   permission from NIST SP800-52r2 [NIST800-52r2], section 1.2 "History
-   of TLS" (with references changed for RFC formatting).
 
 
 
@@ -225,6 +225,13 @@ Moriarty & Farrell     Expires September 10, 2019               [Page 4]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   these versions, it is unlikely attacks found going forward will be
+   mitigated in older library releases.
+
+   NIST for example have provided the following rationale, copied with
+   permission from NIST SP800-52r2 [NIST800-52r2], section 1.2 "History
+   of TLS" (with references changed for RFC formatting).
 
       TLS 1.1, specified in [RFC4346], was developed to address
       weaknesses discovered in TLS 1.0, primarily in the areas of
@@ -264,15 +271,8 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    Various companies and web sites have announced plans to deprecate
    these old versions of TLS.
 
-3.  SHA-1
 
-   The integrity of both TLSv1.0 and TLSv1.1 depends on a running SHA-1
-   hash of the exchanged messages.  This makes it possible to perform a
-   downgrade attack on the handshake by an attacker able to perform 2^77
-   operations, well below the acceptable modern security margin.
 
-   Similarly, the authentication of the handshake depends on signatures
-   made using SHA-1 hash or a not stronger concatenation of MD-5 and
 
 
 
@@ -282,6 +282,15 @@ Moriarty & Farrell     Expires September 10, 2019               [Page 5]
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
+3.  SHA-1
+
+   The integrity of both TLSv1.0 and TLSv1.1 depends on a running SHA-1
+   hash of the exchanged messages.  This makes it possible to perform a
+   downgrade attack on the handshake by an attacker able to perform 2^77
+   operations, well below the acceptable modern security margin.
+
+   Similarly, the authentication of the handshake depends on signatures
+   made using SHA-1 hash or a not stronger concatenation of MD-5 and
    SHA-1 hashes, allowing the attacker to impersonate a server when it
    is able to break the severely weakened SHA-1 hash.
 
@@ -317,6 +326,18 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    {03,XX} (including {03,00}) as the record layer version number for
    ClientHello, but they MUST NOT negotiate TLSv1.0.
 
+
+
+
+
+
+
+
+Moriarty & Farrell     Expires September 10, 2019               [Page 6]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
 5.  Do Not Use TLSv1.1
 
    TLSv1.1 MUST NOT be used.  Negotiation of TLSv1.1 from any version of
@@ -328,15 +349,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    {03,02}. Any party receiving a Hello message with the protocol
    version set to {03,02} MUST respond with a "protocol_version" alert
    message and close the connection.
-
-
-
-
-
-Moriarty & Farrell     Expires September 10, 2019               [Page 6]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
-
 
    Any newer version of TLS is more secure than TLSv1.1.  TLSv1.1 can be
    configured to prevent interception, though using the highest version
@@ -374,6 +386,14 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    This documents updates [RFC7525] Section 3.1.2 changing SHOULD NOT to
    MUST NOT as follows:
 
+
+
+
+Moriarty & Farrell     Expires September 10, 2019               [Page 7]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    o  Implementations MUST NOT negotiate DTLS version 1.0 [RFC4347],
       [RFC6347].
 
@@ -385,14 +405,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    reasons already described.  The attack surface is reduced when there
    are a smaller number of supported protocols and fallback options are
    removed.
-
-
-
-
-Moriarty & Farrell     Expires September 10, 2019               [Page 7]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
-
 
 8.  Acknowledgements
 
@@ -431,6 +443,13 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC3261, June 2002,
               <https://www.rfc-editor.org/info/rfc3261>.
 
+
+
+Moriarty & Farrell     Expires September 10, 2019               [Page 8]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC3329]  Arkko, J., Torvinen, V., Camarillo, G., Niemi, A., and T.
               Haukka, "Security Mechanism Agreement for the Session
               Initiation Protocol (SIP)", RFC 3329,
@@ -441,14 +460,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               Layer Security over Stream Control Transmission Protocol",
               RFC 3436, DOI 10.17487/RFC3436, December 2002,
               <https://www.rfc-editor.org/info/rfc3436>.
-
-
-
-
-Moriarty & Farrell     Expires September 10, 2019               [Page 8]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
-
 
    [RFC3470]  Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for
               the Use of Extensible Markup Language (XML) within IETF
@@ -487,6 +498,14 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC3856, August 2004,
               <https://www.rfc-editor.org/info/rfc3856>.
 
+
+
+
+Moriarty & Farrell     Expires September 10, 2019               [Page 9]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
+
+
    [RFC3871]  Jones, G., Ed., "Operational Security Requirements for
               Large Internet Service Provider (ISP) IP Network
               Infrastructure", RFC 3871, DOI 10.17487/RFC3871, September
@@ -495,16 +514,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
    [RFC3887]  Hansen, T., "Message Tracking Query Protocol", RFC 3887,
               DOI 10.17487/RFC3887, September 2004,
               <https://www.rfc-editor.org/info/rfc3887>.
-
-
-
-
-
-
-Moriarty & Farrell     Expires September 10, 2019               [Page 9]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
-
 
    [RFC3903]  Niemi, A., Ed., "Session Initiation Protocol (SIP)
               Extension for Event State Publication", RFC 3903,
@@ -545,15 +554,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC4217, October 2005,
               <https://www.rfc-editor.org/info/rfc4217>.
 
-   [RFC4235]  Rosenberg, J., Schulzrinne, H., and R. Mahy, Ed., "An
-              INVITE-Initiated Dialog Event Package for the Session
-              Initiation Protocol (SIP)", RFC 4235,
-              DOI 10.17487/RFC4235, November 2005,
-              <https://www.rfc-editor.org/info/rfc4235>.
-
-
-
-
 
 
 
@@ -561,6 +561,12 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 10]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC4235]  Rosenberg, J., Schulzrinne, H., and R. Mahy, Ed., "An
+              INVITE-Initiated Dialog Event Package for the Session
+              Initiation Protocol (SIP)", RFC 4235,
+              DOI 10.17487/RFC4235, November 2005,
+              <https://www.rfc-editor.org/info/rfc4235>.
 
    [RFC4261]  Walker, J. and A. Kulkarni, Ed., "Common Open Policy
               Service (COPS) Over Transport Layer Security (TLS)",
@@ -605,18 +611,17 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC4616, August 2006,
               <https://www.rfc-editor.org/info/rfc4616>.
 
-   [RFC4642]  Murchison, K., Vinocur, J., and C. Newman, "Using
-              Transport Layer Security (TLS) with Network News Transfer
-              Protocol (NNTP)", RFC 4642, DOI 10.17487/RFC4642, October
-              2006, <https://www.rfc-editor.org/info/rfc4642>.
-
-
 
 
 Moriarty & Farrell     Expires September 10, 2019              [Page 11]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC4642]  Murchison, K., Vinocur, J., and C. Newman, "Using
+              Transport Layer Security (TLS) with Network News Transfer
+              Protocol (NNTP)", RFC 4642, DOI 10.17487/RFC4642, October
+              2006, <https://www.rfc-editor.org/info/rfc4642>.
 
    [RFC4680]  Santesson, S., "TLS Handshake Message for Supplemental
               Data", RFC 4680, DOI 10.17487/RFC4680, October 2006,
@@ -661,11 +666,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               RFC 4823, DOI 10.17487/RFC4823, April 2007,
               <https://www.rfc-editor.org/info/rfc4823>.
 
-   [RFC4851]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou, "The
-              Flexible Authentication via Secure Tunneling Extensible
-              Authentication Protocol Method (EAP-FAST)", RFC 4851,
-              DOI 10.17487/RFC4851, May 2007,
-              <https://www.rfc-editor.org/info/rfc4851>.
 
 
 
@@ -673,6 +673,12 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 12]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC4851]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou, "The
+              Flexible Authentication via Secure Tunneling Extensible
+              Authentication Protocol Method (EAP-FAST)", RFC 4851,
+              DOI 10.17487/RFC4851, May 2007,
+              <https://www.rfc-editor.org/info/rfc4851>.
 
    [RFC4964]  Allen, A., Ed., Holm, J., and T. Hallin, "The P-Answer-
               State Header Extension to the Session Initiation Protocol
@@ -713,12 +719,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC5024, November 2007,
               <https://www.rfc-editor.org/info/rfc5024>.
 
-   [RFC5049]  Bormann, C., Liu, Z., Price, R., and G. Camarillo, Ed.,
-              "Applying Signaling Compression (SigComp) to the Session
-              Initiation Protocol (SIP)", RFC 5049,
-              DOI 10.17487/RFC5049, December 2007,
-              <https://www.rfc-editor.org/info/rfc5049>.
-
 
 
 
@@ -729,6 +729,12 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 13]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC5049]  Bormann, C., Liu, Z., Price, R., and G. Camarillo, Ed.,
+              "Applying Signaling Compression (SigComp) to the Session
+              Initiation Protocol (SIP)", RFC 5049,
+              DOI 10.17487/RFC5049, December 2007,
+              <https://www.rfc-editor.org/info/rfc5049>.
 
    [RFC5054]  Taylor, D., Wu, T., Mavrogiannopoulos, N., and T. Perrin,
               "Using the Secure Remote Password (SRP) Protocol for TLS
@@ -772,12 +778,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC5364, October 2008,
               <https://www.rfc-editor.org/info/rfc5364>.
 
-   [RFC5422]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou,
-              "Dynamic Provisioning Using Flexible Authentication via
-              Secure Tunneling Extensible Authentication Protocol (EAP-
-              FAST)", RFC 5422, DOI 10.17487/RFC5422, March 2009,
-              <https://www.rfc-editor.org/info/rfc5422>.
-
 
 
 
@@ -785,6 +785,12 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 14]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC5422]  Cam-Winget, N., McGrew, D., Salowey, J., and H. Zhou,
+              "Dynamic Provisioning Using Flexible Authentication via
+              Secure Tunneling Extensible Authentication Protocol (EAP-
+              FAST)", RFC 5422, DOI 10.17487/RFC5422, March 2009,
+              <https://www.rfc-editor.org/info/rfc5422>.
 
    [RFC5469]  Eronen, P., Ed., "DES and IDEA Cipher Suites for Transport
               Layer Security (TLS)", RFC 5469, DOI 10.17487/RFC5469,
@@ -828,12 +834,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               DOI 10.17487/RFC6750, October 2012,
               <https://www.rfc-editor.org/info/rfc6750>.
 
-   [RFC7465]  Popov, A., "Prohibiting RC4 Cipher Suites", RFC 7465,
-              DOI 10.17487/RFC7465, February 2015,
-              <https://www.rfc-editor.org/info/rfc7465>.
-
-
-
 
 
 
@@ -841,6 +841,10 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 15]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+   [RFC7465]  Popov, A., "Prohibiting RC4 Cipher Suites", RFC 7465,
+              DOI 10.17487/RFC7465, February 2015,
+              <https://www.rfc-editor.org/info/rfc7465>.
 
    [RFC7507]  Moeller, B. and A. Langley, "TLS Fallback Signaling Cipher
               Suite Value (SCSV) for Preventing Protocol Downgrade
@@ -885,10 +889,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               Attacks: Breaking Authentication in TLS, IKE, and SSH
               https://www.mitls.org/downloads/
               transcript-collisions.pdf", 2016.
-
-
-
-
 
 
 
@@ -1088,9 +1088,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
               and DTLS", RFC 8447, DOI 10.17487/RFC8447, August 2018,
               <https://www.rfc-editor.org/info/rfc8447>.
 
-
-
-
+   [TGPP33310]
+              3GPP, "TS 33.310 - Network Domain Security (NDS);
+              Authentication Framework (AF)", 2016.
 
 
 
