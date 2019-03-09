@@ -24,7 +24,7 @@ Expires: September 10, 2019
 
 
                     Deprecating TLSv1.0 and TLSv1.1
-                draft-ietf-tls-oldversions-deprecate-02
+                draft-ietf-tls-oldversions-deprecate-03
 
 Abstract
 
@@ -115,7 +115,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
 
    Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .  21
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  21
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  22
 
 1.  Introduction
 
@@ -1126,6 +1126,11 @@ Appendix A.  Change Log
 
    [[RFC editor: please remove this before publication.]]
 
+   From draft-ietf-tls-oldversions-deprecate-02 to draft-ietf-tls-
+   oldversions-deprecate-03:
+
+   o  Nothing yet.
+
    From draft-ietf-tls-oldversions-deprecate-01 to draft-ietf-tls-
    oldversions-deprecate-02:
 
@@ -1165,11 +1170,6 @@ Appendix A.  Change Log
    o  a few more references
    o  added section on email
 
-Authors' Addresses
-
-
-
-
 
 
 
@@ -1177,6 +1177,8 @@ Moriarty & Farrell     Expires September 10, 2019              [Page 21]
 
 Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
+
+Authors' Addresses
 
    Kathleen Moriarty
    Dell EMC
@@ -1194,8 +1196,6 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1          March 2019
 
    Phone: +353-1-896-2354
    EMail: stephen.farrell@cs.tcd.ie
-
-
 
 
 
