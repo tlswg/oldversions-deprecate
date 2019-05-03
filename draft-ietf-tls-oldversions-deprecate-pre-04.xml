@@ -700,10 +700,10 @@
 
       <t>RFC7525 is BCP195, "Recommendations for Secure Use of Transport Layer
       Security (TLS) and Datagram Transport Layer Security (DTLS)", is the
-      mpost recent best practice document for implementing TLS and was based
-      off of TLSv1.2. At the time of publication, TLSv1.0 and TLSv1.1 had not
-      yet been deprecated. As such, this document is called out specifically
-      to update text implementing the deprecation recommendations of this
+      most recent best practice document for implementing TLS and was based on
+      TLSv1.2. At the time of publication, TLSv1.0 and TLSv1.1 had not yet
+      been deprecated. As such, this document is called out specifically to
+      update text implementing the deprecation recommendations of this
       document.</t>
 
       <t>This documents updates <xref target="RFC7525"/> Section 3.1.1
