@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!-- this is version 5 of this xml2rfc template -->
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+<!ENTITY rfc2119 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
+<!ENTITY rfc2223 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2223.xml">
+<!ENTITY rfc2578 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2578.xml">
+<!ENTITY rfc2579 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2579.xml">
+<!ENTITY rfc2580 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2580.xml">
+<!ENTITY rfc2629 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.2629.xml">
+<!ENTITY rfc3261 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3261.xml">
+<!ENTITY rfc3316 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3316.xml">
+<!ENTITY rfc3329 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3329.xml">
+<!ENTITY rfc3410 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3410.xml">
+<!ENTITY rfc3436 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3436.xml">
+<!ENTITY rfc3470 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3470.xml">
+<!ENTITY rfc3489 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3489.xml">
+<!ENTITY rfc3501 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3501.xml">
+<!ENTITY rfc3546 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3546.xml">
+<!ENTITY rfc3552 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3552.xml">
+<!ENTITY rfc3568 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3568.xml">
+<!ENTITY rfc3588 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3588.xml">
+<!ENTITY rfc3656 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3656.xml">
+<!ENTITY rfc3734 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3734.xml">
+<!ENTITY rfc3749 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3749.xml">
+<!ENTITY rfc3767 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3767.xml">
+<!ENTITY rfc3856 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3856.xml">
+<!ENTITY rfc3887 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3887.xml">
+<!ENTITY rfc3903 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3903.xml">
+<!ENTITY rfc3920 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3920.xml">
+<!ENTITY rfc3943 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3943.xml">
+<!ENTITY rfc3983 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.3983.xml">
+<!ENTITY rfc4097 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4097.xml">
+<!ENTITY rfc4111 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4111.xml">
+<!ENTITY rfc4132 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4132.xml">
+<!ENTITY rfc4162 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4162.xml">
+<!ENTITY rfc4168 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4168.xml">
+<!ENTITY rfc4181 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4181.xml">
+<!ENTITY rfc4217 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4217.xml">
+<!ENTITY rfc4235 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4235.xml">
+<!ENTITY rfc4244 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4244.xml">
+<!ENTITY rfc4261 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4261.xml">
+<!ENTITY rfc4279 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4279.xml">
+<!ENTITY rfc4366 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4366.xml">
+<!ENTITY rfc4492 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4492.xml">
+<!ENTITY rfc4497 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4497.xml">
+<!ENTITY rfc4507 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4507.xml">
+<!ENTITY rfc4513 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4513.xml">
+<!ENTITY rfc4531 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4531.xml">
+<!ENTITY rfc4540 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4540.xml">
+<!ENTITY rfc4572 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4572.xml">
+<!ENTITY rfc4582 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4582.xml">
+<!ENTITY rfc4616 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4616.xml">
+<!ENTITY rfc4642 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4642.xml">
+<!ENTITY rfc4680 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4680.xml">
+<!ENTITY rfc4681 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4681.xml">
+<!ENTITY rfc4712 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4712.xml">
+<!ENTITY rfc4732 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4732.xml">
+<!ENTITY rfc4743 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4743.xml">
+<!ENTITY rfc4744 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4744.xml">
+<!ENTITY rfc4785 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4785.xml">
+<!ENTITY rfc4791 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4791.xml">
+<!ENTITY rfc4823 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4823.xml">
+<!ENTITY rfc4851 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4851.xml">
+<!ENTITY rfc4934 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4934.xml">
+<!ENTITY rfc4964 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4964.xml">
+<!ENTITY rfc4975 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4975.xml">
+<!ENTITY rfc4976 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4976.xml">
+<!ENTITY rfc4992 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.4992.xml">
+<!ENTITY rfc5018 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5018.xml">
+<!ENTITY rfc5019 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5019.xml">
+<!ENTITY rfc5023 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5023.xml">
+<!ENTITY rfc5024 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5024.xml">
+<!ENTITY rfc5049 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5049.xml">
+<!ENTITY rfc5054 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5054.xml">
+<!ENTITY rfc5077 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5077.xml">
+<!ENTITY rfc5081 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5081.xml">
+<!ENTITY rfc5091 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5091.xml">
+<!ENTITY rfc5101 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5101.xml">
+<!ENTITY rfc5158 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5158.xml">
+<!ENTITY rfc5216 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5216.xml">
+<!ENTITY rfc5238 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5238.xml">
+<!ENTITY rfc5281 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5281.xml">
+<!ENTITY rfc5364 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5364.xml">
+<!ENTITY rfc5422 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5422.xml">
+<!ENTITY rfc5469 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5469.xml">
+<!ENTITY rfc5734 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5734.xml">
+<!ENTITY rfc5878 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5878.xml">
+<!ENTITY rfc6042 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6042.xml">
+<!ENTITY rfc6176 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6176.xml">
+<!ENTITY rfc6367 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6367.xml">
+<!ENTITY rfc6739 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6739.xml">
+<!ENTITY rfc6749 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6749.xml">
+<!ENTITY rfc6750 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6750.xml">
+<!ENTITY rfc7030 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7030.xml">
+<!ENTITY rfc7465 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7465.xml">
+<!ENTITY rfc7507 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7507.xml">
+<!ENTITY rfc7562 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7562.xml">
+<!ENTITY rfc7568 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7568.xml">
+<!ENTITY rfc8422 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8422.xml">
+<!ENTITY rfc8465 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8465.xml">
+<!ENTITY rfc8143 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8261.xml">
+<!ENTITY rfc6347 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6347.xml">
+<!ENTITY rfc6460 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6460.xml">
+<!ENTITY rfc6084 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6084.xml">
+<!ENTITY rfc6083 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6083.xml">
+<!ENTITY rfc6012 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6012.xml">
+<!ENTITY rfc5456 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5456.xml">
+<!ENTITY rfc5415 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.5415.xml">
+]>
+<?rfc toc="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="yes"?>
+<?rfc strict="no"?>
+<?rfc rfcedstyle="yes"?>
+<?rfc comments="yes"?>
+<?rfc inline="yes"?>
+<rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-04"
+     ipr="trust200902"
+     updates="8465 8422 8261 7568 7562 7525 7507 7465 7030 6750 6749 6739 6460 6084 6083 6367 6347 6176 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
+  <front>
+    <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
+    TLSv1.1</title>
+
+    <author fullname="Kathleen Moriarty" initials="K" surname="Moriarty">
+      <organization>Dell EMC</organization>
+
+      <address>
+        <postal>
+          <street>176 South Street</street>
+
+          <city>Hopkinton</city>
+
+          <country>United States</country>
+        </postal>
+
+        <email>Kathleen.Moriarty.ietf@gmail.com</email>
+      </address>
+    </author>
+
+    <author fullname="Stephen Farrell" initials="S." surname="Farrell">
+      <organization>Trinity College Dublin</organization>
+
+      <address>
+        <postal>
+          <street/>
+
+          <city>Dublin</city>
+
+          <region/>
+
+          <code>2</code>
+
+          <country>Ireland</country>
+        </postal>
+
+        <phone>+353-1-896-2354</phone>
+
+        <email>stephen.farrell@cs.tcd.ie</email>
+      </address>
+    </author>
+
+    <date year="2019"/>
+
+    <area>Security Area</area>
+
+    <workgroup>Internet Engineering Task Force</workgroup>
+
+    <keyword>TLS</keyword>
+
+    <keyword>deprecate</keyword>
+
+    <keyword>TLSv1.0</keyword>
+
+    <keyword>TLSv1.1</keyword>
+
+    <abstract>
+      <t>This document, if approved, formally deprecates Transport Layer
+      Security (TLS) versions 1.0 <xref target="RFC2246"/> and 1.1 <xref
+      target="RFC4346"/> and moves these documents to the historic state.
+      These versions lack support for current and recommended cipher suites,
+      and various government and industry profiles of applications using TLS
+      now mandate avoiding these old TLS versions. TLSv1.2 has been the
+      recommended version for IETF protocols since 2008, providing sufficient
+      time to transition away from older versions. Products having to support
+      older versions increase the attack surface unnecessarily and increase
+      opportunities for misconfigurations. Supporting these older versions
+      also requires additional effort for library and product maintenance.</t>
+
+      <t>This document also deprecates Datagram TLS (DTLS) version 1.0 <xref
+      target="RFC6347"/> (but not DTLS version 1.2, and there is no DTLS
+      version 1.1).</t>
+
+      <t>This document updates many RFCs that normatively refer to TLSv1.0 or
+      TLSv1.1 as described herein. This document also updates RFC 7525 and
+      hence is part of BCP195.</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section title="Introduction">
+      <!--
+      <t>[[Text in double-square brackets is intended
+      to be fixed as the draft evolves. You've seen that we need to
+      figure out the list of RFCs that this'd update in the abstract.
+	  There is a repo for this at: https://github.com/tlswg/oldversions-deprecate
+	  - PRs (on the xml file) are welcome there.]]</t>
+		-->
+
+      <t>Transport Layer Security (TLS) versions 1.0 <xref target="RFC2246"/>
+      and 1.1 <xref target="RFC4346"/> were superceded by TLSv1.2 <xref
+      target="RFC5246"/> in 2008, which has now itself been superceded by
+      TLSv1.3 <xref target="RFC8446"/>. It is therefore timely to further
+      deprecate these old versions. The expectation is that TLSv1.2 will
+      continue to be used for many years alongside TLSv1.3.</t>
+
+      <!--
+      <t>TLSv1.1 and TLSv1.0 are also actively being deprecated in accordance
+      with guidance from government agencies (e.g. <xref
+      target="NIST800-52r2">NIST SP 80052r2</xref>) and industry consortia
+      such as the Payment Card Industry Association (PCI) <xref
+      target="PCI-TLS1"/>.</t>
+
+      <t>3GPP have deprecated TLSv1.0 and DTLSv1.0 since their release-14 in
+      2016. <xref target="TGPP33310"/></t>
+      -->
+
+      <t>The primary technical reasons for deprecating these versions
+      include:</t>
+
+      <t><list style="symbols">
+          <t>They require implementation of older cipher suites that are no
+          longer desirable for cryptographic reasons, e.g. TLSv1.0 makes
+          TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA mandatory to implement</t>
+
+          <t>Lack of support for current recommended cipher suites, especially
+          using AEAD ciphers which are not supported prior to TLSv1.2. Note:
+          registry entries for no-longer-desirable ciphersuites remain in the
+          registries, but many TLS registries are being updated through <xref
+          target="RFC8447"/> which denotes such entries as "not
+          recommended."</t>
+
+          <t>Integrity of the handshake depends on SHA-1 hash</t>
+
+          <t>Authentication of the peers depends on SHA-1 signatures</t>
+
+          <t>Support for four protocol versions increases the likelihood of
+          misconfiguration</t>
+
+          <t>At least one widely-used library has plans to drop TLSv1.1 and
+          TLSv1.0 support in upcoming releases; products using such libraries
+          would need to use older versions of the libraries to support TLSv1.0
+          and TLSv1.1, which is clearly undesirable</t>
+        </list></t>
+
+      <t>Deprecation of these versions is intended to assist developers as
+      additional justification to no longer support older TLS versions and to
+      migrate to a minimum of TLSv1.2. Deprecation also assists product teams
+      with phasing out support for the older versions to reduce the attack
+      surface and the scope of maintenance for protocols in their
+      offerings.</t>
+
+      <!-- duplication - already said in the bullet list above
+      <t>Some TLS libraries are considering dropping support for TLSv1.0 and
+      TLSv1.1 in upcoming releases. If products do not follow suit because the
+      protocol has not been deprecated, multiple libraries may be needed for a
+      very small number of deployments. While fixes have been developed to
+      address the known vulnerabilities in TLSv1.0 and TLSv1.1, this may not
+      continue if library support is eliminated for new releases.</t>
+		-->
+
+      <!--
+      <t>[[This draft is being written now so that the TLS WG chairs can just
+      hit the "publication requested" button as soon as there is WG consensus
+      to deprecate these ancient versions of TLS. The authors however think
+      that deprecation now is timely.]]</t>
+		-->
+
+      <!-- adding the boilerplate below for 2119 and 8174
+          -->
+
+      <section anchor="updates" title="RFCs Updated">
+        <t>This document updates the following RFCs that normatively reference
+        TLSv1.0 or TLSv1.1 or DTLS1.0. The update is to obsolete usage of
+        these older versions. Fallback to these versions are prohibited
+        through this update.</t>
+
+        <t><xref target="RFC8465"/> <xref target="RFC8422"/> <xref
+        target="RFC8261"/> <xref target="RFC7568"/> <xref target="RFC7562"/>
+        <xref target="RFC7525"/> <xref target="RFC7507"/> <xref
+        target="RFC7465"/> <xref target="RFC6750"/> <xref target="RFC6749"/>
+        <xref target="RFC6739"/> <xref target="RFC6460"/> <xref
+        target="RFC6084"/> <xref target="RFC6083"/> <xref target="RFC6367"/>
+        <xref target="RFC6176"/> <xref target="RFC6042"/> <xref
+        target="RFC6012"/> <xref target="RFC5878"/> <xref target="RFC5734"/>
+        <xref target="RFC5469"/> <xref target="RFC5456"/> <xref
+        target="RFC5422"/> <xref target="RFC5415"/> <xref target="RFC5364"/>
+        <xref target="RFC5281"/> <xref target="RFC5263"/> <xref
+        target="RFC5238"/> <xref target="RFC5216"/> <xref target="RFC5158"/>
+        <xref target="RFC5091"/> <xref target="RFC5054"/> <xref
+        target="RFC5049"/> <xref target="RFC5024"/> <xref target="RFC5023"/>
+        <xref target="RFC5019"/> <xref target="RFC5018"/> <xref
+        target="RFC4992"/> <xref target="RFC4976"/> <xref target="RFC4975"/>
+        <xref target="RFC4964"/> <xref target="RFC4851"/> <xref
+        target="RFC4823"/> <xref target="RFC4791"/> <xref target="RFC4785"/>
+        <xref target="RFC4744"/> <xref target="RFC4743"/> <xref
+        target="RFC4732"/> <xref target="RFC4712"/> <xref target="RFC4681"/>
+        <xref target="RFC4680"/> <xref target="RFC4642"/> <xref
+        target="RFC4616"/> <xref target="RFC4582"/> <xref target="RFC4540"/>
+        <xref target="RFC4531"/> <xref target="RFC4513"/> <xref
+        target="RFC4497"/> <xref target="RFC4279"/> <xref target="RFC4261"/>
+        <xref target="RFC4235"/> <xref target="RFC4217"/> <xref
+        target="RFC4168"/> <xref target="RFC4162"/> <xref target="RFC4111"/>
+        <xref target="RFC4097"/> <xref target="RFC3983"/> <xref
+        target="RFC3943"/> <xref target="RFC3903"/> <xref target="RFC3887"/>
+        <xref target="RFC3871"/> <xref target="RFC3856"/> <xref
+        target="RFC3767"/> <xref target="RFC3749"/> <xref target="RFC3656"/>
+        <xref target="RFC3568"/> <xref target="RFC3552"/> <xref
+        target="RFC3501"/> <xref target="RFC3470"/> <xref target="RFC3436"/>
+        <xref target="RFC3329"/> <xref target="RFC3261"/></t>
+
+        <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
+        have been obsoleted: <xref target="RFC5101"/> <xref target="RFC5081"/>
+        <xref target="RFC5077"/> <xref target="RFC4934"/> <xref
+        target="RFC4572"/> <xref target="RFC4507"/> <xref target="RFC4492"/>
+        <xref target="RFC4366"/> <xref target="RFC4347"/> <xref
+        target="RFC4244"/> <xref target="RFC4132"/> <xref target="RFC3920"/>
+        <xref target="RFC3734"/> <xref target="RFC3588"/> <xref
+        target="RFC3546"/> <xref target="RFC3489"/> <xref
+        target="RFC3316"/></t>
+
+        <t>In the case of <xref target="RFC4642"/>, that has already been
+        updated by <xref target="RFC8143"/> which makes an overlapping, but
+        not quite the same, update as this document.</t>
+
+        <t>This document updates DTLS <xref target="RFC6347"/>.</t>
+      </section>
+
+      <section title="Terminology">
+        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+        "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+        "OPTIONAL" in this document are to be interpreted as described in BCP
+        14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only
+        when, they appear in all capitals, as shown here.</t>
+      </section>
+    </section>
+
+    <section title="Support for Deprecation">
+      <!-- Removing per WGLC Feedback from Martin Thomson
+      <t>Industry has actively followed guidance provided by NIST and the PCI
+      Council to deprecate TLSv1.0 and TLSv1.1 by June 30, 2018. TLSv1.2
+      should remain a minimum baseline for TLS support at this time.</t>
+      -->
+
+      <t>Specific details on attacks against TLSv1.0 and TLSv1.1 as well as
+      their mitigations are provided in <xref target="NIST800-52r2">NIST
+      SP800-52r2</xref>, RFC 7457 <xref target="RFC7457"/> and other
+      referenced RFCs. Although the attacks have been mitigated, if support is
+      dropped for future library releases for these versions, it is unlikely
+      attacks found going forward will be mitigated in older library
+      releases.</t>
+
+      <t>NIST for example have provided the following rationale, copied with
+      permission from <xref target="NIST800-52r2">NIST SP800-52r2</xref>,
+      section 1.2 "History of TLS" (with references changed for RFC
+      formatting). <list>
+          <t>TLS 1.1, specified in <xref target="RFC4346"/>, was developed to
+          address weaknesses discovered in TLS 1.0, primarily in the areas of
+          initialization vector selection and padding error processing.
+          Initialization vectors were made explicit to prevent a certain class
+          of attacks on the Cipher Block Chaining (CBC) mode of operation used
+          by TLS. The handling of padding errors was altered to treat a
+          padding error as a bad message authentication code, rather than a
+          decryption failure. In addition, the TLS 1.1 RFC acknowledges
+          attacks on CBC mode that rely on the time to compute the message
+          authentication code (MAC). The TLS 1.1 specification states that to
+          defend against such attacks, an implementation must process records
+          in the same manner regardless of whether padding errors exist.
+          Further implementation considerations for CBC modes (which were not
+          included in <xref target="RFC4346">RFC4346</xref>) are discussed in
+          Section 3.3.2.</t>
+
+          <!--subcompact="yes" above isn't nice here - add lines -->
+
+          <t/>
+
+          <t>TLSv1.2, specified in <xref target="RFC5246">RFC5246</xref>, made
+          several cryptographic enhancements, particularly in the area of hash
+          functions, with the ability to use or specify the SHA-2 family
+          algorithms for hash, MAC, and Pseudorandom Function (PRF)
+          computations. TLSv1.2 also adds authenticated encryption with
+          associated data (AEAD) cipher suites.</t>
+
+          <t/>
+
+          <t>TLS 1.3, specified in <xref target="RFC8446">TLSv1.3</xref>,
+          represents a significant change to TLS that aims to address threats
+          that have arisen over the years. Among the changes are a new
+          handshake protocol, a new key derivation process that uses the
+          HMAC-based Extract-and-Expand Key Derivation Function (HKDF), and
+          the removal of cipher suites that use static RSA or DH key
+          exchanges, the CBC mode of operation, or SHA-1. The list of
+          extensions that can be used with TLS 1.3 has been reduced
+          considerably.</t>
+        </list></t>
+
+      <!--
+      <t>The German Federal Office for Information Security, recommends
+      against use of TLS versions less than 1.2 in the publication <xref
+      target="TR-02102-2">Cryptographic Mechanisms: Recommendations and Key
+      Lengths</xref>.</t>
+-->
+
+      <!--  Removing per WGLC feedback from Martin Thomson
+      <t>The Canadian government treasury board have also mandated that these
+      old versions of TLS not be used. <xref target="Canada"/></t>
+
+      <t>Various companies and web sites have announced plans to deprecate
+      these old versions of TLS.</t>
+      -->
+    </section>
+
+    <!--
+		 removing as per IETF-103 meeting
+
+	<section title="Removing Support">
+
+      <t>[[This section can be removed upon publication - or maybe keep it?]]</t>
+
+      <t>Support for TLSv1.0 has been removed by the July 2018 PCI deadline from the
+      following standards, products, and services:</t>
+
+      <t><list style="symbols">
+          <t>3GPP 5G</t>
+          <t>Amazon Elastic Load Balancing <xref target="Amazon"/></t>
+          <t>CloudFlare <xref target="CloudFlare"/></t>
+	  	  <t>Digicert <xref target="Digicert"/></t>
+          <t>GitHub <xref target="GIT"/></t>
+          <t>KeyCDN <xref target="KeyCDN"/></t>
+          <t>PayPal <xref target="paypal"/></t>
+		  <t>Stripe <xref target="stripe"/></t>
+          <t>Google Chrome <xref target="chrome"/></t>
+          <t>Microsoft Edge <xref target="edge"/></t>
+          <t>[[Numerous web sites...]]</t>
+
+        </list></t>
+
+      <t>Many web sites have taken the action of including the deprecation of
+      TLSv1.1 into their plans for deprecating TLSv1.0 for the PCI council
+      deadline. Support for TLSv1.1 has been removed by the July 2018 PCI deadline
+      from the following standards, products, and services:</t>
+
+      <t><list style="symbols">
+          <t>3GPP 5G Release 16</t>
+          <t>Amazon Elastic Load Balancing <xref target="Amazon"/></t>
+          <t>CloudFlare <xref target="CloudFlare"/></t>
+          <t>GitHub <xref target="GIT"/></t>
+          <t>PayPal <xref target="paypal"/></t>
+		  <t>Stripe <xref target="stripe"/></t>
+          <t>[[Numerous web sites...]]</t>
+
+        </list></t>
+	</section>
+
+	-->
+
+    <!--
+		 removing as per IETF-103 meeting
+
+    <section title="Usage">
+      <t>[[This section can be removed upon publication - or maybe keep it?]]</t>
+
+
+	  <section title="Web">
+
+			  <t>Usage statistics for TLSv1.0 and TLSv1.1 on the public web vary, but have
+					 been in general very low and declined further with the impending
+      PCI deadline to migrate off of TLSv1.0 by June 30, 2018. As of January
+	  2018, <xref target="StackExchange"/> quoted 4 percent
+      of browsers using TLSv1.0.</t>
+
+    <t> The number of websites supporting TLSv1.2 is still growing (+0.4%), and has
+     reached 92% according to sslpulse as of June 19, 2018.
+	 <xref target="SSLpulse"/> Deprecating TLS 1.0 and
+	 TLS 1.1 will thus not have a major impact on browser or web server
+	 implementations.
+     </t>
+
+	-->
+
+    <!--
+      <t><xref target="Alexa">The Top 1 Million Analysis</xref> from
+      February 2018 shows that for the sites surveyed, the vast majority
+      support TLSv1.2 (97.9 percent), with a mere 2.0 percent using TLSv1.0
+      and an even smaller percentage using TLSv1.1.
+	-->
+
+    <!--
+	<t><xref target="web-stats"/> presents statistics for use of TLS versions in the web.</t>
+
+<figure anchor="web-stats" title="Web Statistics" >
+<artwork><![CDATA[
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Name/Ref       | Date     | SSLv3|TLSv1.0|TLSv1.1|TLSv1.2|TLSv1.3|
++-  - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+! Alexa [1]      | 20180226 |    - |   2.0 |  <0.1 |  97.9 |     - |
+| Cloudflare [2] | 20180518 |  0.0 |   9.3 |   0.2 |  84.9 |   5.5 |
+| Firefox [3]    | 20180709 |    - |   1.0 |     - |  94.0 |   5.0 |
+| Chrome [4]     | 20180711 |    - |   0.4 |  <0.1 |    -  |     core - |
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+[https://scotthelme.co.uk/alexa-top-1-million-analysis-february-2018/
+[2] https://www.ietf.org/mail-archive/web/tls/current/msg26578.html
+[3] https://www.ietf.org/mail-archive/web/tls/current/msg26575.html
+[4] https://www.ietf.org/mail-archive/web/tls/current/msg26620.html
+  ]]></artwork>
+</figure>
+
+		</section>
+
+		<section title="Mail">
+
+				<t>E-Mail uses TLS for SMTP, submission (port 587), POP/POP3 and IMAP.
+						Typically email deployments lag public web deployments in
+						terms of the rate of adoption of new TLS versions.
+	<xref target="mail-stats"/> presents statistics for use of TLS versions in the email applications.</t>
+
+-->
+
+    <!--
+				<t>In one 2018 ZMap-based study <xref target="clusters"/> of
+						~200,000 mail server IP addresses in 10 countries, use
+						of TLSv1.0 for various TLS services (both web and mail)
+						on IP addresses that host some mail service was seen at
+						10.6%. Use of TLSv1.1 was negligible - at 0.01%, for 
+					   TLSv1.1,	SSLv3 was twice as common.  TLSv1.2 was used for 89.3% of
+						services and no TLSv1.3 was seen.</t>
+				-->
+
+    <!--
+
+<figure anchor="mail-stats" title="Mail Statistics" >
+<artwork><![CDATA[
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Name/Ref       | Date     | SSLv3|TLSv1.0|TLSv1.1|TLSv1.2|TLSv1.3|
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Clusters [1]   | 20180316 | <0.1 |  10.6 |  <0.1 |  89.3 |     - |
+| TLSA [2]       | 20180710 |    - |   1.4 |   0.1 |  98.5 |     - |
+| UK-ESP [3]     | 20180710 |    - |  19.9 |  <0.1 |    -  |     - |
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+[1] https://eprint.iacr.org/2018/299
+[2] https://www.ietf.org/mail-archive/web/tls/current/msg26603.html
+[3] https://www.ietf.org/mail-archive/web/tls/current/msg26603.html
+
+  ]]></artwork>
+</figure>
+
+
+		</section>
+
+		<section title="Operating Systems">
+
+	<t><xref target="os-stats"/> presents statistics for use of TLS versions in operating systems.</t>
+
+<figure anchor="os-stats" title="Operating System Statistics" >
+<artwork><![CDATA[
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Name/Ref       | Date     | SSLv3|TLSv1.0|TLSv1.1|TLSv1.2|TLSv1.3|
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Windows cli [1]| 20180709 |    - | >10.0 |  ~0.3 |    -  |     - |
+| Windows svr [1]| 20180709 |    - |  ~1.5 |  ~0.0 |    -  |     - |
+| Apple [2]      | 20180709 |    - |   0.4 |     - |  99.6 |     - |
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+[1] https://www.ietf.org/mail-archive/web/tls/current/msg26577.html
+[2] https://www.ietf.org/mail-archive/web/tls/current/msg26634.html
+  ]]></artwork>
+</figure>
+
+
+		</section>
+
+		<section title="Enterprise Networks">
+
+	<t><xref target="intra-stats"/> presents statistics for use of TLS versions in the enterprise networks.
+			The tcd.ie numbers below were the result of a student project and need further validation.</t>
+
+<figure anchor="intra-stats" title="Enterprise Network Statistics" >
+<artwork><![CDATA[
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| Name/Ref       | Date     | SSLv3|TLSv1.0|TLSv1.1|TLSv1.2|TLSv1.3|
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+| tcd.ie [1]     | 20180713 | 18.0 |  35.0 |    0  |  45.0 |     0 |
++- - - - - - - - - - - - - - - - +- - - - - - - - - - +- - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +- - - - - - - +
+[1] https://www.ietf.org/mail-archive/web/tls/current/msg26633.html
+  ]]></artwork>
+</figure>
+
+
+		</section>
+
+    </section>
+	-->
+
+    <section title="SHA-1 Usage Problematic in TLSv1.0 and TLSv1.1">
+      <t>The integrity of both TLSv1.0 and TLSv1.1 depends on a running SHA-1
+      hash of the exchanged messages. This makes it possible to perform a
+      downgrade attack on the handshake by an attacker able to perform 2^77
+      operations, well below the acceptable modern security margin.</t>
+
+      <t>Similarly, the authentication of the handshake depends on signatures
+      made using SHA-1 hash or a not stronger concatenation of MD-5 and SHA-1
+      hashes, allowing the attacker to impersonate a server when it is able to
+      break the severely weakened SHA-1 hash.</t>
+
+      <t>Neither TLSv1.0 nor TLSv1.1 allow the peers to select a stronger hash
+      for signatures in the ServerKeyExchange or CertificateVerify messages,
+      making the only upgrade path the use of a newer protocol version.</t>
+
+      <t>See <xref target="Bhargavan2016"/> for additional detail.</t>
+    </section>
+
+    <section title="Do Not Use TLSv1.0">
+      <t>TLSv1.0 MUST NOT be used. <!-- I didn't get the reason for this here: <xref target="RFC8174"/>.  -->
+      Negotiation of TLSv1.0 from any version of TLS MUST NOT be
+      permitted.</t>
+
+      <t>Any other version of TLS is more secure than TLSv1.0. TLSv1.0 can be
+      configured to prevent interception, though using the highest version
+      available is preferable.</t>
+
+      <t>Pragmatically, clients MUST NOT send a ClientHello with
+      ClientHello.client_version set to {03,01}. Similarly, servers MUST NOT
+      send a ServerHello with ServerHello.server_version set to {03,01}. Any
+      party receiving a Hello message with the protocol version set to {03,01}
+      MUST respond with a "protocol_version" alert message and close the
+      connection.</t>
+
+      <t>Historically, TLS specifications were not clear on what the record
+      layer version number (TLSPlaintext.version) could contain when sending
+      ClientHello. Appendix E of [RFC5246] notes that TLSPlaintext.version
+      could be selected to maximize interoperability, though no definitive
+      value is identified as ideal. That guidance is still applicable;
+      therefore, TLS servers MUST accept any value {03,XX} (including {03,00})
+      as the record layer version number for ClientHello, but they MUST NOT
+      negotiate TLSv1.0.</t>
+
+      <!--
+	  <t>[[Text here is derived (or stolen:-) from <xref target="RFC7568"/>]]</t>
+		-->
+    </section>
+
+    <section title="Do Not Use TLSv1.1">
+      <t>TLSv1.1 MUST NOT be used. Negotiation of TLSv1.1 from any version of
+      TLS MUST NOT be permitted.</t>
+
+      <t>Pragmatically, clients MUST NOT send a ClientHello with
+      ClientHello.client_version set to {03,02}. Similarly, servers MUST NOT
+      send a ServerHello with ServerHello.server_version set to {03,02}. Any
+      party receiving a Hello message with the protocol version set to {03,02}
+      MUST respond with a "protocol_version" alert message and close the
+      connection.</t>
+
+      <t>Any newer version of TLS is more secure than TLSv1.1. TLSv1.1 can be
+      configured to prevent interception, though using the highest version
+      available is preferable. Support for TLSv1.1 is dwindling in libraries
+      and will impact security going forward if mitigations for attacks cannot
+      be easily addressed and supported in older libraries.</t>
+
+      <t>Historically, TLS specifications were not clear on what the record
+      layer version number (TLSPlaintext.version) could contain when sending
+      ClientHello. Appendix E of [RFC5246] notes that TLSPlaintext.version
+      could be selected to maximize interoperability, though no definitive
+      value is identified as ideal. That guidance is still applicable;
+      therefore, TLS servers MUST accept any value {03,XX} (including {03,00})
+      as the record layer version number for ClientHello, but they MUST NOT
+      negotiate TLSv1.1.</t>
+    </section>
+
+    <!--
+
+    <section title="Do Not Use SHA-1 in TLSv1.2">
+		<t>[[This section was suggested in PR#2 for the pre-WG draft repo by Hubert Kario. We're not 
+				clear if the WG would like this draft to include this or not,
+				so will ask the TLS WG at the appropriate time.]]</t>
+
+        <t>SHA-1 as a signature hash MUST NOT be used. That means that
+            clients MUST send signature_algorithms extension and that extension
+            MUST NOT include pairs that include SHA-1 hash. In particular,
+            values {2, 1}, {2, 2} and {2, 3} MUST NOT be present in the
+            extension.</t>
+        <t>Note: this does not affect cipher suites that use SHA-1 HMAC for
+            data integrity as the HMAC construction is still considered secure
+            and when they are used in TLSv1.2 SHA-256 is used for handshake
+            integrity.</t>
+    </section>
+	-->
+
+    <section title="Updates to RFC7525">
+      <!--
+      <t>[[Since RFC7525 is BCP195, there'll probably be some process-fun to
+      do an update of that. Formally, it may be that this document becomes a
+      new part of BCP195 I guess, but we can figure that out with chairs and
+      ADs.]]</t>
+		-->
+
+      <t>RFC7525 is BCP195, "Recommendations for Secure Use of Transport Layer
+      Security (TLS) and Datagram Transport Layer Security (DTLS)", is the
+      most recent best practice document for implementing TLS and was based on
+      TLSv1.2. At the time of publication, TLSv1.0 and TLSv1.1 had not yet
+      been deprecated. As such, this document is called out specifically to
+      update text implementing the deprecation recommendations of this
+      document.</t>
+
+      <t>This documents updates <xref target="RFC7525"/> Section 3.1.1
+      changing SHOULD NOT to MUST NOT as follows:</t>
+
+      <t><list style="symbols">
+          <t>Implementations MUST NOT negotiate TLS version 1.0 <xref
+          target="RFC2246"/>. <vspace blankLines="1"/> Rationale: TLSv1.0
+          (published in 1999) does not support many modern, strong cipher
+          suites. In addition, TLSv1.0 lacks a per- record Initialization
+          Vector (IV) for CBC-based cipher suites and does not warn against
+          common padding errors. <vspace blankLines="1"/></t>
+
+          <t>Implementations MUST NOT negotiate TLS version 1.1 <xref
+          target="RFC4346"/>. <vspace blankLines="1"/> Rationale: TLSv1.1
+          (published in 2006) is a security improvement over TLSv1.0 but still
+          does not support certain stronger cipher suites.</t>
+        </list></t>
+
+      <t>This documents updates <xref target="RFC7525"/> Section 3.1.2
+      changing SHOULD NOT to MUST NOT as follows:</t>
+
+      <t><list style="symbols">
+          <t>Implementations MUST NOT negotiate DTLS version 1.0 <xref
+          target="RFC4347"/>, <xref target="RFC6347"/>. <vspace
+          blankLines="1"/> Version 1.0 of DTLS correlates to version 1.1 of
+          TLS (see above).</t>
+        </list></t>
+    </section>
+
+    <section title="Security Considerations">
+      <t>This document deprecates two older protocol versions for security
+      reasons already described. The attack surface is reduced when there are
+      a smaller number of supported protocols and fallback options are
+      removed.</t>
+    </section>
+
+    <section title="Acknowledgements">
+      <t>Thanks to those that provided usage data, reviewed and/or improved
+      this document, including: David Benjamin, David Black, Viktor Dukhovni,
+      Julien Elie, Gary Gapinski, Alessandro Ghedini, Jeremy Harris, Russ
+      Housley, Hubert Kario, John Mattsson, Eric Mill, Yoav Nir, Andrei Popov,
+      Eric Rescorla, Yaron Sheffer, Robert Sparks, Martin Thomson, Loganaden
+      Velvindron, https://github.com/yaleman, and Jakub Wilk.</t>
+
+      <t>[[Note to RFC editor: At least Julien Elie's name above should have
+      an accent on the first letter of the surname. Please fix that and any
+      others needing a similar fix if you can, I'm not sure the tooling I have
+      now allows that.]]</t>
+    </section>
+
+    <section title="IANA Considerations">
+      <t>[[This memo includes no request to IANA.]]</t>
+    </section>
+  </middle>
+
+  <back>
+    <references title="Normative References">
+      <?rfc include='reference.RFC.8174'?>
+
+      <?rfc include='reference.RFC.2119'?>
+
+      <?rfc include='reference.RFC.2246'?>
+
+      <?rfc include='reference.RFC.4346'?>
+
+      <?rfc include='reference.RFC.7525'?>
+
+      <!-- these are from nonobsnorms.sh.refs -->
+
+      <?rfc include='reference.RFC.8465'?>
+
+      <?rfc include='reference.RFC.8422'?>
+
+      <?rfc include='reference.RFC.7568'?>
+
+      <?rfc include='reference.RFC.7562'?>
+
+      <?rfc include='reference.RFC.7507'?>
+
+      <?rfc include='reference.RFC.7465'?>
+
+      <?rfc include='reference.RFC.6750'?>
+
+      <?rfc include='reference.RFC.6749'?>
+
+      <?rfc include='reference.RFC.6739'?>
+
+      <?rfc include='reference.RFC.6367'?>
+
+      <?rfc include='reference.RFC.6176'?>
+
+      <?rfc include='reference.RFC.6042'?>
+
+      <?rfc include='reference.RFC.5878'?>
+
+      <?rfc include='reference.RFC.5734'?>
+
+      <?rfc include='reference.RFC.5469'?>
+
+      <?rfc include='reference.RFC.5422'?>
+
+      <?rfc include='reference.RFC.5364'?>
+
+      <?rfc include='reference.RFC.5281'?>
+
+      <?rfc include='reference.RFC.5263'?>
+
+      <?rfc include='reference.RFC.5238'?>
+
+      <?rfc include='reference.RFC.5216'?>
+
+      <?rfc include='reference.RFC.5158'?>
+
+      <?rfc include='reference.RFC.5091'?>
+
+      <?rfc include='reference.RFC.5054'?>
+
+      <?rfc include='reference.RFC.5049'?>
+
+      <?rfc include='reference.RFC.5024'?>
+
+      <?rfc include='reference.RFC.5023'?>
+
+      <?rfc include='reference.RFC.5019'?>
+
+      <?rfc include='reference.RFC.5018'?>
+
+      <?rfc include='reference.RFC.4992'?>
+
+      <?rfc include='reference.RFC.4976'?>
+
+      <?rfc include='reference.RFC.4975'?>
+
+      <?rfc include='reference.RFC.4964'?>
+
+      <?rfc include='reference.RFC.4851'?>
+
+      <?rfc include='reference.RFC.4823'?>
+
+      <?rfc include='reference.RFC.4791'?>
+
+      <?rfc include='reference.RFC.4785'?>
+
+      <?rfc include='reference.RFC.4744'?>
+
+      <?rfc include='reference.RFC.4743'?>
+
+      <?rfc include='reference.RFC.4732'?>
+
+      <?rfc include='reference.RFC.4712'?>
+
+      <?rfc include='reference.RFC.4681'?>
+
+      <?rfc include='reference.RFC.4680'?>
+
+      <?rfc include='reference.RFC.4642'?>
+
+      <?rfc include='reference.RFC.4616'?>
+
+      <?rfc include='reference.RFC.4582'?>
+
+      <?rfc include='reference.RFC.4540'?>
+
+      <?rfc include='reference.RFC.4531'?>
+
+      <?rfc include='reference.RFC.4513'?>
+
+      <?rfc include='reference.RFC.4497'?>
+
+      <?rfc include='reference.RFC.4279'?>
+
+      <?rfc include='reference.RFC.4261'?>
+
+      <?rfc include='reference.RFC.4235'?>
+
+      <?rfc include='reference.RFC.4217'?>
+
+      <?rfc include='reference.RFC.4168'?>
+
+      <?rfc include='reference.RFC.4162'?>
+
+      <?rfc include='reference.RFC.4111'?>
+
+      <?rfc include='reference.RFC.4097'?>
+
+      <?rfc include='reference.RFC.3983'?>
+
+      <?rfc include='reference.RFC.3943'?>
+
+      <?rfc include='reference.RFC.3903'?>
+
+      <?rfc include='reference.RFC.3887'?>
+
+      <?rfc include='reference.RFC.3871'?>
+
+      <?rfc include='reference.RFC.3856'?>
+
+      <?rfc include='reference.RFC.3767'?>
+
+      <?rfc include='reference.RFC.3749'?>
+
+      <?rfc include='reference.RFC.3656'?>
+
+      <?rfc include='reference.RFC.3568'?>
+
+      <?rfc include='reference.RFC.3552'?>
+
+      <?rfc include='reference.RFC.3501'?>
+
+      <?rfc include='reference.RFC.3470'?>
+
+      <?rfc include='reference.RFC.3436'?>
+
+      <?rfc include='reference.RFC.3329'?>
+
+      <?rfc include='reference.RFC.3261'?>
+    </references>
+
+    <references title="Informative References">
+      <?rfc include='reference.RFC.7457'?>
+
+      <!--
+      <reference anchor="Alexa">
+        <front>
+          <title>The Alexa Top 1 Million Analysis
+          https://scotthelme.co.uk/alexa-top-1-million-analysis-february-2018/</title>
+
+          <author>
+            <organization>Will be deleted before publication</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="StackExchange">
+        <front>
+          <title>Stackexchange
+          https://security.stackexchange.com/questions/177182/is-there-a-list-of-old-browsers-that-only-support-tls-1-0</title>
+
+          <author>
+            <organization>StackExchange - will be deleted before
+            publication</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="Windows">
+        <front>
+          <title>Windows
+          <author>
+            <organization>Andrei Popov</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+
+      <reference anchor="FF">
+        <front>
+          <title>Firefox
+          https://www.ietf.org/mail-archive/web/tls/current/msg26575.html</title>
+          <author>
+            <organization>Eric Rescorla</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="SSLpulse">
+        <front>
+          <title>SSLpulse
+          https://www.ssllabs.com/ssl-pulse/</title>
+          <author>
+            <organization>SSLpulse - will be deleted before
+            publication</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <reference anchor="NIST800-52r2">
+        <front>
+          <title>NIST SP800-52r2
+          https://csrc.nist.gov/CSRC/media/Publications/sp/800-52/rev-2/draft/documents/sp800-52r2-draft.pdf</title>
+
+          <author>
+            <organization>National Institute of Standards and
+            Technology</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+
+      <!--
+      <reference anchor="PCI-TLS1">
+        <front>
+          <title>Migrating from SSL and Early TLS
+          https://www.pcisecuritystandards.org/documents/Migrating-from-SSL-Early-TLS-Info-Supp-v1_1.pdf</title>
+
+          <author>
+            <organization>PCI Security Standards Council</organization>
+          </author>
+
+          <date year="2016"/>
+        </front>
+      </reference>
+      -->
+
+      <!--
+      <reference anchor="stripe">
+        <front>
+				<title>"Upgrading to SHA-2 and TLSv1.2"
+						https://stripe.com/blog/upgrading-tls
+				</title>
+          <author>
+            <organization>Stripe</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="paypal">
+        <front>
+				<title>"TLS1.2 and HTTP/1.1 Upgrade"
+		  https://www.paypal-notice.com/en/TLS-1.2-and-HTTP1.1-Upgrade/
+  		</title>
+          <author>
+            <organization>Paypal</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="GIT">
+        <front>
+          <title>GitHub Deprecates TLSv1.0 and TLSv1.1
+          https://githubengineering.com/crypto-removal-notice/</title>
+          <author>
+            <organization>GitHub</organization>
+          </author>
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="CloudFlare">
+        <front>
+          <title>CloudFlare Deprecated TLSv1.0 and TLSv1.1
+          https://blog.cloudflare.com/deprecating-old-tls-versions-on-cloudflare-dashboard-and-api/</title>
+
+          <author>
+            <organization>CloudFlare</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="Canada"
+                 target="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/policy-implementation-notices/implementing-https-secure-web-connections-itpin.html">
+        <front>
+          <title>Implementing HTTPS for Secure Web Connections: Information
+          Technology Policy Implementation Notice (ITPIN)</title>
+
+          <author>
+            <organization>Treasury Board of Canada Secretariat</organization>
+          </author>
+
+          <date day="27" month="June" year="2018"/>
+        </front>
+      </reference>
+      -->
+
+      <!--
+      <reference anchor="Digicert">
+        <front>
+          <title>Deprecating TLS 1.0 and 1.1
+          https://www.digicert.com/blog/depreciating-tls-1-0-and-1-1/</title>
+
+          <author>
+            <organization>Digicert</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="KeyCDN">
+         <front>
+          <title>Deprecating TLS 1.0 and 1.1 Enhancing Security for Everyone
+          https://www.keycdn.com/blog/deprecating-tls-1-0-and-1-1/</title>
+
+          <author>
+            <organization>KeyCDN</organization>
+          </author>
+
+          <date year="2018"/>
+        </front>
+      </reference>
+		-->
+
+      <!--
+      <reference anchor="chrome">
+         <front>
+          <title>Modernizing Transport Security
+          https://security.googleblog.com/2018/10/modernizing-transport-security.html</title>
+
+          <author>
+            <organization>Google</organization>  
+          </author>
+          
+          <date year="2018"/>
+        </front>
+      </reference> 
+		-->
+
+      <!--
+      <reference anchor="edge">
+         <front>
+          <title>Modernizing TLS connections in Microsoft Edge and Internet Explorer 11
+          https://blogs.windows.com/msedgedev/2018/10/15/modernizing-tls-edge-ie11/</title>
+
+          <author>
+            <organization>Microsoft</organization>  
+          </author>
+          
+          <date year="2018"/>
+        </front>
+      </reference> 
+		-->
+
+      <!--
+      <reference anchor="Amazon">
+        <front>
+          <title>Amazon Elastic Load Balancing Support Deprecated TLSv1.0 and
+          TLSv1.1
+          https://aws.amazon.com/about-aws/whats-new/2017/02/elastic-load-balancing-support-for-tls-1-1-and-tls-1-2-pre-defined-security-policies/</title>
+
+          <author>
+            <organization>Amazon</organization>
+          </author>
+
+          <date year="2017"/>
+        </front>
+      </reference>
+		-->
+
+      <!-- 2nd author name below - need to figure HOWTO get fullname correct with non-ASCII
+		   character - the "e" in "Gaetan" should be an "e" with two dots above, as in PR#2 -->
+
+      <reference anchor="Bhargavan2016">
+        <front>
+          <title>Transcript Collision Attacks: Breaking Authentication in TLS,
+          IKE, and SSH
+          https://www.mitls.org/downloads/transcript-collisions.pdf</title>
+
+          <author fullname="Karthikeyan Bhargavan" initials="K.B."
+                  surname="Bhargavan">
+            <organization>INRIA</organization>
+          </author>
+
+          <author fullname="Gaetan Leuren" initials="G.L." surname="Leuren">
+            <organization>INRIA</organization>
+          </author>
+
+          <date year="2016"/>
+        </front>
+      </reference>
+
+      <!--
+      <reference anchor="TGPP33310">
+        <front>
+          <title>TS 33.310 - Network Domain Security (NDS); Authentication
+          Framework (AF)</title>
+
+          <author>
+            <organization>3GPP</organization>
+          </author>
+
+          <date year="2016"/>
+        </front>
+      </reference>
+      -->
+
+      <!--
+      <reference anchor="TR-02102-2">
+        <front>
+          <title>Technical Guideline TR-02102-2 Cryptographic Mechanisms:
+          Recommendations and Key Lengths</title>
+
+          <author>
+            <organization>The German Federal Office for Information Security
+            https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-2.pdf</organization>
+          </author>
+
+          <date year="2019"/>
+        </front>
+      </reference>
+      -->
+
+      <!--
+	  <reference anchor="clusters">
+			  <front>
+					  <title>"Clusters of re-used keys"
+					  https://eprint.iacr.org/2018/299</title>
+					  <author fullname="Stephen Farrell" initials="S." surname="Farrell" />
+					  <date year="2018" />
+	  			</front>
+	</reference>
+	-->
+
+      <?rfc include='reference.RFC.5246'?>
+
+      <?rfc include='reference.RFC.6347'?>
+
+      <?rfc include='reference.RFC.6460'?>
+
+      <?rfc include='reference.RFC.6084'?>
+
+      <?rfc include='reference.RFC.6083'?>
+
+      <?rfc include='reference.RFC.6012'?>
+
+      <?rfc include='reference.RFC.5456'?>
+
+      <?rfc include='reference.RFC.5415'?>
+
+      <!--
+      <?rfc include='reference.RFC.7568'?>
+		-->
+
+      <?rfc include='reference.RFC.8143'?>
+
+      <?rfc include='reference.RFC.8261'?>
+
+      <?rfc include='reference.RFC.8446'?>
+
+      <?rfc include='reference.RFC.8447'?>
+
+      <!-- these are from nonobsnorms.sh.irefs -->
+
+      <?rfc include='reference.RFC.5101'?>
+
+      <?rfc include='reference.RFC.5081'?>
+
+      <?rfc include='reference.RFC.5077'?>
+
+      <?rfc include='reference.RFC.4934'?>
+
+      <?rfc include='reference.RFC.4572'?>
+
+      <?rfc include='reference.RFC.4507'?>
+
+      <?rfc include='reference.RFC.4492'?>
+
+      <?rfc include='reference.RFC.4366'?>
+
+      <?rfc include='reference.RFC.4347'?>
+
+      <?rfc include='reference.RFC.4244'?>
+
+      <?rfc include='reference.RFC.4132'?>
+
+      <?rfc include='reference.RFC.3920'?>
+
+      <?rfc include='reference.RFC.3734'?>
+
+      <?rfc include='reference.RFC.3588'?>
+
+      <?rfc include='reference.RFC.3546'?>
+
+      <?rfc include='reference.RFC.3489'?>
+
+      <?rfc include='reference.RFC.3316'?>
+    </references>
+
+    <section title="Change Log ">
+      <t>[[RFC editor: please remove this before publication.]]</t>
+
+      <t>From draft-ietf-tls-oldversions-deprecate-04 to
+      draft-ietf-tls-oldversions-deprecate-05: <list style="symbols">
+          <t>Removed references to goverment related deprecation statements:
+          US, Canada, and Germany. NIST documentation rationale remains as a
+          reference describing the relevent RFCs and justification.</t>
+        </list></t>
+
+      <t>From draft-ietf-tls-oldversions-deprecate-02 to
+      draft-ietf-tls-oldversions-deprecate-03: <list style="symbols">
+          <t>Added 8261 to updates list based on IETF-104 meeting.</t>
+        </list></t>
+
+      <t>From draft-ietf-tls-oldversions-deprecate-01 to
+      draft-ietf-tls-oldversions-deprecate-02: <list style="symbols">
+          <t>Correction: 2nd list of referenced RFCs in <xref
+          target="updates"/> aren't informatively refering to tls1.0/1.1</t>
+
+          <t>Remove RFC7255 from updates list - datatracker has bad data
+          (spotted by Robert Sparks)</t>
+
+          <t>Added point about RFCs 8143 and 4642</t>
+
+          <t>Added UPDATEs for RFCs that refer to 4347 and aren't
+          OBSOLETEd</t>
+
+          <t>Added note about RFC8261 to see what WG want.</t>
+        </list></t>
+
+      <t>From draft-ietf-tls-oldversions-deprecate-00 to
+      draft-ietf-tls-oldversions-deprecate-01: <list style="symbols">
+          <t>PRs with typos and similar: so far just #1</t>
+
+          <t>PR#2 noting msft browser announced deprecation (but this was OBE
+          as per...)</t>
+
+          <t>Implemented actions as per IETF-103 meeting: <list
+              style="symbols">
+              <t>Details about which RFC's, BCP's are affected were generated
+              using a script in the git repo:
+              https://github.com/tlswg/oldversions-deprecate/blob/master/nonobsnorms.sh</t>
+
+              <t>Removed the 'measurements' part</t>
+
+              <t>Removed SHA-1 deprecation (section 8 of -00)</t>
+            </list></t>
+        </list></t>
+
+      <t>From draft-moriarty-tls-oldversions-diediedie-01 to
+      draft-ietf-tls-oldversions-deprecate-00: <list style="symbols">
+          <t>I-Ds became RFCs 8446/8447 (old-repo PR#4, for TLSv1.3)</t>
+
+          <t>Accepted old-repo PR#5 fixing typos</t>
+        </list></t>
+
+      <t>From draft-moriarty-tls-oldversions-diediedie-00 to
+      draft-moriarty-tls-oldversions-diediedie-01: <list style="symbols">
+          <t>Added stats sent to list so far</t>
+
+          <t>PR's #2,3</t>
+
+          <t>a few more references</t>
+
+          <t>added section on email</t>
+        </list></t>
+    </section>
+  </back>
+</rfc>
