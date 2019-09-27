@@ -212,8 +212,11 @@
       and 1.1 <xref target="RFC4346"/> were superceded by TLSv1.2 <xref
       target="RFC5246"/> in 2008, which has now itself been superceded by
       TLSv1.3 <xref target="RFC8446"/>. It is therefore timely to further
-      deprecate these old versions. The expectation is that TLSv1.2 will
+      deprecate these old versions.</t>
+      
+      <!--The expectation is that TLSv1.2 will
       continue to be used for many years alongside TLSv1.3.</t>
+      -->
 
       <!--
       <t>TLSv1.1 and TLSv1.0 are also actively being deprecated in accordance

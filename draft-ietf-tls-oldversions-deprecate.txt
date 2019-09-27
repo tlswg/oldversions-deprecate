@@ -6,7 +6,7 @@ Internet Engineering Task Force                              K. Moriarty
 Internet-Draft                                                  Dell EMC
 Updates: 8465 8422 8261 7568 7562 7525                        S. Farrell
          7507 7465 7030 6750 6749 6739            Trinity College Dublin
-         6614 6460 6084 6083 6367 6347                   August 21, 2019
+         6614 6460 6084 6083 6367 6347                September 27, 2019
          6176 6042 6012 5878 5734 5469
          5456 5422 5415 5364 5281 5263
          5238 5216 5158 5091 5054 5049
@@ -20,7 +20,7 @@ Updates: 8465 8422 8261 7568 7562 7525                        S. Farrell
          3568 3552 3501 3470 3436 3329
          3261 (if approved)
 Intended status: Best Current Practice
-Expires: February 22, 2020
+Expires: March 30, 2020
 
 
                     Deprecating TLSv1.0 and TLSv1.1
@@ -53,9 +53,9 @@ Abstract
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 1]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 1]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
 Status of This Memo
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 22, 2020.
+   This Internet-Draft will expire on March 30, 2020.
 
 Copyright Notice
 
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 2]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 2]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .  21
@@ -122,8 +122,7 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
    Transport Layer Security (TLS) versions 1.0 [RFC2246] and 1.1
    [RFC4346] were superceded by TLSv1.2 [RFC5246] in 2008, which has now
    itself been superceded by TLSv1.3 [RFC8446].  It is therefore timely
-   to further deprecate these old versions.  The expectation is that
-   TLSv1.2 will continue to be used for many years alongside TLSv1.3.
+   to further deprecate these old versions.
 
    The primary technical reasons for deprecating these versions include:
 
@@ -162,15 +161,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
    [RFC7465] [RFC6750] [RFC6749] [RFC6739] [RFC6460] [RFC6084] [RFC6083]
    [RFC6367] [RFC6176] [RFC6042] [RFC6012] [RFC5878] [RFC5734] [RFC5469]
    [RFC5456] [RFC5422] [RFC5415] [RFC5364] [RFC5281] [RFC5263] [RFC5238]
-
-
-
-Moriarty & Farrell      Expires February 22, 2020               [Page 3]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
-
-
    [RFC5216] [RFC5158] [RFC5091] [RFC5054] [RFC5049] [RFC5024] [RFC5023]
+
+
+
+Moriarty & Farrell       Expires March 30, 2020                 [Page 3]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
+
+
    [RFC5019] [RFC5018] [RFC4992] [RFC4976] [RFC4975] [RFC4964] [RFC4851]
    [RFC4823] [RFC4791] [RFC4785] [RFC4744] [RFC4743] [RFC4732] [RFC4712]
    [RFC4681] [RFC4680] [RFC4642] [RFC4616] [RFC4582] [RFC4540] [RFC4531]
@@ -218,15 +217,15 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
       weaknesses discovered in TLS 1.0, primarily in the areas of
       initialization vector selection and padding error processing.
       Initialization vectors were made explicit to prevent a certain
-
-
-
-Moriarty & Farrell      Expires February 22, 2020               [Page 4]
-
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
-
-
       class of attacks on the Cipher Block Chaining (CBC) mode of
+
+
+
+Moriarty & Farrell       Expires March 30, 2020                 [Page 4]
+
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
+
+
       operation used by TLS.  The handling of padding errors was altered
       to treat a padding error as a bad message authentication code,
       rather than a decryption failure.  In addition, the TLS 1.1 RFC
@@ -277,9 +276,10 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 5]
+
+Moriarty & Farrell       Expires March 30, 2020                 [Page 5]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
 4.  Do Not Use TLSv1.0
@@ -333,9 +333,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 6]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 6]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    still applicable; therefore, TLS servers MUST accept any value
@@ -389,9 +389,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 7]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 7]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
 8.  Acknowledgements
@@ -445,9 +445,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 8]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 8]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC3470]  Hollenbeck, S., Rose, M., and L. Masinter, "Guidelines for
@@ -501,9 +501,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020               [Page 9]
+Moriarty & Farrell       Expires March 30, 2020                 [Page 9]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC3903]  Niemi, A., Ed., "Session Initiation Protocol (SIP)
@@ -557,9 +557,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 10]
+Moriarty & Farrell       Expires March 30, 2020                [Page 10]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC4261]  Walker, J. and A. Kulkarni, Ed., "Common Open Policy
@@ -613,9 +613,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 11]
+Moriarty & Farrell       Expires March 30, 2020                [Page 11]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC4680]  Santesson, S., "TLS Handshake Message for Supplemental
@@ -669,9 +669,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 12]
+Moriarty & Farrell       Expires March 30, 2020                [Page 12]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC4964]  Allen, A., Ed., Holm, J., and T. Hallin, "The P-Answer-
@@ -725,9 +725,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 13]
+Moriarty & Farrell       Expires March 30, 2020                [Page 13]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC5054]  Taylor, D., Wu, T., Mavrogiannopoulos, N., and T. Perrin,
@@ -781,9 +781,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 14]
+Moriarty & Farrell       Expires March 30, 2020                [Page 14]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC5469]  Eronen, P., Ed., "DES and IDEA Cipher Suites for Transport
@@ -837,9 +837,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 15]
+Moriarty & Farrell       Expires March 30, 2020                [Page 15]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC7507]  Moeller, B. and A. Langley, "TLS Fallback Signaling Cipher
@@ -893,9 +893,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 16]
+Moriarty & Farrell       Expires March 30, 2020                [Page 16]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [NIST800-52r2]
@@ -949,9 +949,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 17]
+Moriarty & Farrell       Expires March 30, 2020                [Page 17]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC4347]  Rescorla, E. and N. Modadugu, "Datagram Transport Layer
@@ -1005,9 +1005,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 18]
+Moriarty & Farrell       Expires March 30, 2020                [Page 18]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
@@ -1061,9 +1061,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 19]
+Moriarty & Farrell       Expires March 30, 2020                [Page 19]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    [RFC7457]  Sheffer, Y., Holz, R., and P. Saint-Andre, "Summarizing
@@ -1117,9 +1117,9 @@ Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 20]
+Moriarty & Farrell       Expires March 30, 2020                [Page 20]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
 Appendix A.  Change Log
@@ -1173,9 +1173,9 @@ Appendix A.  Change Log
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 21]
+Moriarty & Farrell       Expires March 30, 2020                [Page 21]
 
-Internet-Draft       Deprecating TLSv1.0 and TLSv1.1         August 2019
+Internet-Draft       Deprecating TLSv1.0 and TLSv1.1      September 2019
 
 
    From draft-moriarty-tls-oldversions-diediedie-01 to draft-ietf-tls-
@@ -1229,4 +1229,4 @@ Authors' Addresses
 
 
 
-Moriarty & Farrell      Expires February 22, 2020              [Page 22]
+Moriarty & Farrell       Expires March 30, 2020                [Page 22]
