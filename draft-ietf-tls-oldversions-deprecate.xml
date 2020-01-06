@@ -161,7 +161,7 @@
       </address>
     </author>
 
-    <date year="2019"/>
+    <date year="2020"/>
 
     <area>Security Area</area>
 
@@ -177,8 +177,8 @@
 
     <abstract>
       <t>This document, if approved, formally deprecates Transport Layer
-      Security (TLS) versions 1.0 <xref target="RFC2246"/> and 1.1 <xref
-      target="RFC4346"/> and moves these documents to the historic state.
+      Security (TLS) versions 1.0 (RFC 2246) and 1.1 
+      (RFC 4346) and moves these documents to the historic state.
       These versions lack support for current and recommended cipher suites,
       and various government and industry profiles of applications using TLS
       now mandate avoiding these old TLS versions. TLSv1.2 has been the
@@ -188,9 +188,9 @@
       opportunities for misconfigurations. Supporting these older versions
       also requires additional effort for library and product maintenance.</t>
 
-      <t>This document also deprecates Datagram TLS (DTLS) version 1.0 <xref
-      target="RFC6347"/> (but not DTLS version 1.2, and there is no DTLS
-      version 1.1).</t>
+      <t>This document also deprecates Datagram TLS (DTLS) version 1.0 
+      (RFC6347), but not DTLS version 1.2, and there is no DTLS
+      version 1.1.</t>
 
       <t>This document updates many RFCs that normatively refer to TLSv1.0 or
       TLSv1.1 as described herein. This document also updates RFC 7525 and
@@ -229,8 +229,7 @@
       2016. <xref target="TGPP33310"/></t>
       -->
 
-      <t>The primary technical reasons for deprecating these versions
-      include:</t>
+      <t>Technical reasons for deprecating these versions include:</t>
 
       <t><list style="symbols">
           <t>They require implementation of older cipher suites that are no
@@ -289,39 +288,93 @@
         these older versions. Fallback to these versions are prohibited
         through this update.</t>
 
-        <t><xref target="RFC8465"/> <xref target="RFC8422"/> <xref
-        target="RFC8261"/> <xref target="RFC7568"/> <xref target="RFC7562"/>
-        <xref target="RFC7525"/> <xref target="RFC7507"/> <xref
-        target="RFC7465"/> <xref target="RFC6750"/> <xref target="RFC6749"/>
-        <xref target="RFC6739"/> <xref target="RFC6460"/> <xref
-        target="RFC6084"/> <xref target="RFC6083"/> <xref target="RFC6367"/>
-        <xref target="RFC6176"/> <xref target="RFC6042"/> <xref
-        target="RFC6012"/> <xref target="RFC5878"/> <xref target="RFC5734"/>
-        <xref target="RFC5469"/> <xref target="RFC5456"/> <xref
-        target="RFC5422"/> <xref target="RFC5415"/> <xref target="RFC5364"/>
-        <xref target="RFC5281"/> <xref target="RFC5263"/> <xref
-        target="RFC5238"/> <xref target="RFC5216"/> <xref target="RFC5158"/>
-        <xref target="RFC5091"/> <xref target="RFC5054"/> <xref
-        target="RFC5049"/> <xref target="RFC5024"/> <xref target="RFC5023"/>
-        <xref target="RFC5019"/> <xref target="RFC5018"/> <xref
-        target="RFC4992"/> <xref target="RFC4976"/> <xref target="RFC4975"/>
-        <xref target="RFC4964"/> <xref target="RFC4851"/> <xref
-        target="RFC4823"/> <xref target="RFC4791"/> <xref target="RFC4785"/>
-        <xref target="RFC4744"/> <xref target="RFC4743"/> <xref
-        target="RFC4732"/> <xref target="RFC4712"/> <xref target="RFC4681"/>
-        <xref target="RFC4680"/> <xref target="RFC4642"/> <xref
-        target="RFC4616"/> <xref target="RFC4582"/> <xref target="RFC4540"/>
-        <xref target="RFC4531"/> <xref target="RFC4513"/> <xref
-        target="RFC4497"/> <xref target="RFC4279"/> <xref target="RFC4261"/>
-        <xref target="RFC4235"/> <xref target="RFC4217"/> <xref
-        target="RFC4168"/> <xref target="RFC4162"/> <xref target="RFC4111"/>
-        <xref target="RFC4097"/> <xref target="RFC3983"/> <xref
-        target="RFC3943"/> <xref target="RFC3903"/> <xref target="RFC3887"/>
-        <xref target="RFC3871"/> <xref target="RFC3856"/> <xref
-        target="RFC3767"/> <xref target="RFC3749"/> <xref target="RFC3656"/>
-        <xref target="RFC3568"/> <xref target="RFC3552"/> <xref
-        target="RFC3501"/> <xref target="RFC3470"/> <xref target="RFC3436"/>
-        <xref target="RFC3329"/> <xref target="RFC3261"/></t>
+    <t>
+		
+		<xref target="RFC8465"/> 
+		<xref target="RFC8422"/> 
+		<xref target="RFC8261"/> 
+		<xref target="RFC7568"/> 
+		<xref target="RFC7562"/>
+		<xref target="RFC7525"/> 
+		<xref target="RFC7507"/> 
+		<xref target="RFC7465"/> 
+		<xref target="RFC7030"/> 
+		<xref target="RFC6750"/> 
+		<xref target="RFC6749"/>
+		<xref target="RFC6739"/> 
+		<xref target="RFC6460"/> 
+		<xref target="RFC6084"/> 
+		<xref target="RFC6083"/> 
+		<xref target="RFC6367"/>
+		<xref target="RFC6176"/> 
+		<xref target="RFC6042"/> 
+		<xref target="RFC6012"/> 
+		<xref target="RFC5878"/> 
+		<xref target="RFC5734"/>
+		<xref target="RFC5469"/> 
+		<xref target="RFC5456"/> 
+		<xref target="RFC5422"/> 
+		<xref target="RFC5415"/> 
+		<xref target="RFC5364"/>
+		<xref target="RFC5281"/> 
+		<xref target="RFC5263"/> 
+		<xref target="RFC5238"/> 
+		<xref target="RFC5216"/> 
+		<xref target="RFC5158"/>
+		<xref target="RFC5091"/> 
+		<xref target="RFC5054"/> 
+		<xref target="RFC5049"/> 
+		<xref target="RFC5024"/> 
+		<xref target="RFC5023"/>
+		<xref target="RFC5019"/> 
+		<xref target="RFC5018"/> 
+		<xref target="RFC4992"/> 
+		<xref target="RFC4976"/> 
+		<xref target="RFC4975"/>
+		<xref target="RFC4964"/> 
+		<xref target="RFC4851"/> 
+		<xref target="RFC4823"/> 
+		<xref target="RFC4791"/> 
+		<xref target="RFC4785"/>
+		<xref target="RFC4744"/> 
+		<xref target="RFC4743"/> 
+		<xref target="RFC4732"/> 
+		<xref target="RFC4712"/> 
+		<xref target="RFC4681"/>
+		<xref target="RFC4680"/> 
+		<xref target="RFC4642"/> 
+		<xref target="RFC4616"/> 
+		<xref target="RFC4582"/> 
+		<xref target="RFC4540"/>
+		<xref target="RFC4531"/> 
+		<xref target="RFC4513"/> 
+		<xref target="RFC4497"/> 
+		<xref target="RFC4279"/> 
+		<xref target="RFC4261"/>
+		<xref target="RFC4235"/> 
+		<xref target="RFC4217"/> 
+		<xref target="RFC4168"/> 
+		<xref target="RFC4162"/> 
+		<xref target="RFC4111"/>
+		<xref target="RFC4097"/> 
+		<xref target="RFC3983"/> 
+		<xref target="RFC3943"/> 
+		<xref target="RFC3903"/> 
+		<xref target="RFC3887"/>
+		<xref target="RFC3871"/> 
+		<xref target="RFC3856"/> 
+		<xref target="RFC3767"/> 
+		<xref target="RFC3749"/> 
+		<xref target="RFC3656"/>
+		<xref target="RFC3568"/> 
+		<xref target="RFC3552"/> 
+		<xref target="RFC3501"/> 
+		<xref target="RFC3470"/> 
+		<xref target="RFC3436"/>
+		<xref target="RFC3329"/> 
+		<xref target="RFC3261"/>
+		
+    </t>
 
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
         have been obsoleted: <xref target="RFC5101"/> <xref target="RFC5081"/>
@@ -796,6 +849,8 @@
       <?rfc include='reference.RFC.7507'?>
 
       <?rfc include='reference.RFC.7465'?>
+
+      <?rfc include='reference.RFC.7030'?>
 
       <?rfc include='reference.RFC.6750'?>
 
@@ -1322,6 +1377,15 @@
 
           <t>Fixed "yaleman" ack.</t>
           <t>Added RFC6614 to UPDATEs list.</t>
+          <t>per preliminary AD review:
+              <list style="symbols">
+                  <t>Remove references from abstract</t>
+                  <t>s/primary technical reasons/technical reasons/</t>
+                  <t>Add rfc7030 to 1.1</t>
+                  <t>verified that all the RFCs in the (massive:-) Updates meta-data
+                      are mentioned in section 1.1 (I think appropriately;-)</t>
+              </list>
+          </t>
         </list></t>
 
       <t>From draft-ietf-tls-oldversions-deprecate-04 to
