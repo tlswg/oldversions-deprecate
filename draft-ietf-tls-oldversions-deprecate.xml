@@ -118,7 +118,8 @@
 <?rfc inline="yes"?>
 <rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-06"
      ipr="trust200902"
-     updates="8465 8422 8261 7568 7562 7525 7507 7465 7030 6750 6749 6739 6614 6460 6084 6083 6367 6347 6176 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261">
+     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6614 6460 6084 6083 6367 6347 6176 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
+     obsoletes="7507">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
     TLSv1.1</title>
@@ -296,7 +297,6 @@
 		<xref target="RFC7568"/> 
 		<xref target="RFC7562"/>
 		<xref target="RFC7525"/> 
-		<xref target="RFC7507"/> 
 		<xref target="RFC7465"/> 
 		<xref target="RFC7030"/> 
 		<xref target="RFC6750"/> 
@@ -377,7 +377,7 @@
     </t>
 
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
-        have been obsoleted: <xref target="RFC5101"/> <xref target="RFC5081"/>
+        have been obsoleted: <xref target="RFC7507"/> <xref target="RFC5101"/> <xref target="RFC5081"/>
         <xref target="RFC5077"/> <xref target="RFC4934"/> <xref
         target="RFC4572"/> <xref target="RFC4507"/> <xref target="RFC4492"/>
         <xref target="RFC4366"/> <xref target="RFC4347"/> <xref
