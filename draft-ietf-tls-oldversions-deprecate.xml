@@ -178,24 +178,24 @@
 
     <abstract>
       <t>This document, if approved, formally deprecates Transport Layer
-      Security (TLS) versions 1.0 (RFC 2246) and 1.1 
-      (RFC 4346) and moves these documents to the historic state.
-      These versions lack support for current and recommended cipher suites,
-      and various government and industry profiles of applications using TLS
-      now mandate avoiding these old TLS versions. TLSv1.2 has been the
-      recommended version for IETF protocols since 2008, providing sufficient
-      time to transition away from older versions. Products having to support
-      older versions increase the attack surface unnecessarily and increase
-      opportunities for misconfigurations. Supporting these older versions
-      also requires additional effort for library and product maintenance.</t>
+      Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346). Accordingly,
+      those documents (will be moved|have been moved) to Historic status.
+      These versions lack support for current and recommended cryptographic
+      algorithms and mechanisms, and various government and industry profiles
+      of applications using TLS now mandate avoiding these old TLS versions.
+      TLSv1.2 has been the recommended version for IETF protocols since 2008,
+      providing sufficient time to transition away from older versions.
+      Removing support for older versions from implementations reduces the
+      attack surface, reduces opportunity for misconfiguration, and
+      streamlines library and product maintenance.</t>
 
       <t>This document also deprecates Datagram TLS (DTLS) version 1.0 
       (RFC6347), but not DTLS version 1.2, and there is no DTLS
       version 1.1.</t>
 
       <t>This document updates many RFCs that normatively refer to TLSv1.0 or
-      TLSv1.1 as described herein. This document also updates RFC 7525 and
-      hence is part of BCP195.</t>
+      TLSv1.1 as described herein. This document also updates the best
+      practices for TLS usage in RFC 7525 and hence is part of BCP195.</t>
     </abstract>
   </front>
 
@@ -212,7 +212,9 @@
       <t>Transport Layer Security (TLS) versions 1.0 <xref target="RFC2246"/>
       and 1.1 <xref target="RFC4346"/> were superceded by TLSv1.2 <xref
       target="RFC5246"/> in 2008, which has now itself been superceded by
-      TLSv1.3 <xref target="RFC8446"/>. It is therefore timely to further
+      TLSv1.3 <xref target="RFC8446"/>. Datagram Transport Layer Security
+      (DTLS) version 1.0 <xref target="RFC4347"/> was superceded by DTLSv1.2
+      <xref target="RFC6347"/> in 2012.  It is therefore timely to further
       deprecate these old versions.</t>
       
       <!--The expectation is that TLSv1.2 will
@@ -234,33 +236,33 @@
 
       <t><list style="symbols">
           <t>They require implementation of older cipher suites that are no
-          longer desirable for cryptographic reasons, e.g. TLSv1.0 makes
+          longer desirable for cryptographic reasons, e.g., TLSv1.0 makes
           TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA mandatory to implement</t>
 
           <t>Lack of support for current recommended cipher suites, especially
-          using AEAD ciphers which are not supported prior to TLSv1.2. Note:
+          AEAD ciphers which are not supported prior to TLSv1.2. Note:
           registry entries for no-longer-desirable ciphersuites remain in the
           registries, but many TLS registries are being updated through <xref
-          target="RFC8447"/> which denotes such entries as "not
-          recommended."</t>
+          target="RFC8447"/> which indicates that such entries are not
+          recommended by the IETF.</t>
 
-          <t>Integrity of the handshake depends on SHA-1 hash</t>
+          <t>Integrity of the handshake depends on SHA-1 hash.</t>
 
-          <t>Authentication of the peers depends on SHA-1 signatures</t>
+          <t>Authentication of the peers depends on SHA-1 signatures.</t>
 
-          <t>Support for four protocol versions increases the likelihood of
-          misconfiguration</t>
+          <t>Support for four TLS protocol versions increases the likelihood of
+          misconfiguration.</t>
 
           <t>At least one widely-used library has plans to drop TLSv1.1 and
           TLSv1.0 support in upcoming releases; products using such libraries
           would need to use older versions of the libraries to support TLSv1.0
-          and TLSv1.1, which is clearly undesirable</t>
+          and TLSv1.1, which is clearly undesirable.</t>
         </list></t>
 
       <t>Deprecation of these versions is intended to assist developers as
-      additional justification to no longer support older TLS versions and to
-      migrate to a minimum of TLSv1.2. Deprecation also assists product teams
-      with phasing out support for the older versions to reduce the attack
+      additional justification to no longer support older (D)TLS versions and to
+      migrate to a minimum of (D)TLSv1.2. Deprecation also assists product teams
+      with phasing out support for the older versions, to reduce the attack
       surface and the scope of maintenance for protocols in their
       offerings.</t>
 
@@ -287,7 +289,12 @@
         <t>This document updates the following RFCs that normatively reference
         TLSv1.0 or TLSv1.1 or DTLS1.0. The update is to obsolete usage of
         these older versions. Fallback to these versions are prohibited
-        through this update.</t>
+        through this update. Specific references to mandatory minimum protocol
+        versions of TLSv1.0 or TLSv1.1 are replaced by TLSv1.2, and references
+        to minimum protocol version DTLSv1.0 are replaced by DTLSv1.2.
+        Statements that "TLS 1.0 is the most widely deployed version and will
+        provide the broadest interoperability" are removed without
+        replacement.</t>
 
     <t>
 		
@@ -377,7 +384,9 @@
     </t>
 
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
-        have been obsoleted: <xref target="RFC7507"/> <xref target="RFC5101"/> <xref target="RFC5081"/>
+        have already been obsoleted; they are still listed here and marked as
+        updated by this document in order to reiterate that any usage of the
+        obsolete protocol should still use modern TLS: <xref target="RFC7507"/> <xref target="RFC5101"/> <xref target="RFC5081"/>
         <xref target="RFC5077"/> <xref target="RFC4934"/> <xref
         target="RFC4572"/> <xref target="RFC4507"/> <xref target="RFC4492"/>
         <xref target="RFC4366"/> <xref target="RFC4347"/> <xref
@@ -386,14 +395,17 @@
         target="RFC3546"/> <xref target="RFC3489"/> <xref
         target="RFC3316"/></t>
 
-        <t>In the case of <xref target="RFC4642"/>, that has already been
-        updated by <xref target="RFC8143"/> which makes an overlapping, but
-        not quite the same, update as this document.</t>
+        <t>Note that <xref target="RFC4642"/> has already been
+        updated by <xref target="RFC8143"/> ,which makes an overlapping, but
+        not quite identical, update as this document.</t>
 
-        <t><xref target="RFC6614"/> has a requirement for TLSv1.1 although
-            only makes an informative reference to <xref target="RFC4346"/>.</t>
+        <t><xref target="RFC6614"/> has a requirement for TLSv1.1 or later, although
+            only makes an informative reference to <xref target="RFC4346"/>.
+            This requirement is updated to be for TLSv1.2 or later.</t>
 
-        <t>This document updates DTLS <xref target="RFC6347"/>.</t>
+        <t>This document updates DTLS <xref target="RFC6347"/>.  <xref
+        target="RFC6347"/> had allowed for negotiating the use of DTLSv1.0,
+        which is now forbidden.</t>
       </section>
 
       <section title="Terminology">
@@ -412,13 +424,13 @@
       should remain a minimum baseline for TLS support at this time.</t>
       -->
 
-      <t>Specific details on attacks against TLSv1.0 and TLSv1.1 as well as
-      their mitigations are provided in <xref target="NIST800-52r2">NIST
+      <t>Specific details on attacks against TLSv1.0 and TLSv1.1, as well as
+      their mitigations, are provided in <xref target="NIST800-52r2">NIST
       SP800-52r2</xref>, RFC 7457 <xref target="RFC7457"/> and other
-      referenced RFCs. Although the attacks have been mitigated, if support is
-      dropped for future library releases for these versions, it is unlikely
-      attacks found going forward will be mitigated in older library
-      releases.</t>
+      RFCs referenced therein. Although mitigations for the current known
+      vulnerabilities have been developed, any future issues discovered in old
+      protocol versions might not be mitigated in older library versions when
+      newer library versions do not support those old protocols.</t>
 
       <t>NIST for example have provided the following rationale, copied with
       permission from <xref target="NIST800-52r2">NIST SP800-52r2</xref>,
@@ -667,7 +679,7 @@
       operations, well below the acceptable modern security margin.</t>
 
       <t>Similarly, the authentication of the handshake depends on signatures
-      made using SHA-1 hash or a not stronger concatenation of MD-5 and SHA-1
+      made using a SHA-1 hash or a not appreciably stronger concatenation of MD-5 and SHA-1
       hashes, allowing the attacker to impersonate a server when it is able to
       break the severely weakened SHA-1 hash.</t>
 
@@ -683,9 +695,9 @@
       Negotiation of TLSv1.0 from any version of TLS MUST NOT be
       permitted.</t>
 
-      <t>Any other version of TLS is more secure than TLSv1.0. TLSv1.0 can be
-      configured to prevent interception, though using the highest version
-      available is preferable.</t>
+      <t>Any other version of TLS is more secure than TLSv1.0. While TLSv1.0 can be
+      configured to prevent some types of interception, using the highest version
+      available is preferred.</t>
 
       <t>Pragmatically, clients MUST NOT send a ClientHello with
       ClientHello.client_version set to {03,01}. Similarly, servers MUST NOT
@@ -719,9 +731,9 @@
       MUST respond with a "protocol_version" alert message and close the
       connection.</t>
 
-      <t>Any newer version of TLS is more secure than TLSv1.1. TLSv1.1 can be
-      configured to prevent interception, though using the highest version
-      available is preferable. Support for TLSv1.1 is dwindling in libraries
+      <t>Any newer version of TLS is more secure than TLSv1.1. While TLSv1.1 can be
+      configured to prevent some types of interception, using the highest version
+      available is preferred. Support for TLSv1.1 is dwindling in libraries
       and will impact security going forward if mitigations for attacks cannot
       be easily addressed and supported in older libraries.</t>
 
@@ -763,7 +775,7 @@
 		-->
 
       <t>RFC7525 is BCP195, "Recommendations for Secure Use of Transport Layer
-      Security (TLS) and Datagram Transport Layer Security (DTLS)", is the
+      Security (TLS) and Datagram Transport Layer Security (DTLS)", which is the
       most recent best practice document for implementing TLS and was based on
       TLSv1.2. At the time of publication, TLSv1.0 and TLSv1.1 had not yet
       been deprecated. As such, this document is called out specifically to
@@ -799,7 +811,8 @@
     </section>
 
     <section title="Security Considerations">
-      <t>This document deprecates two older protocol versions for security
+      <t>This document deprecates two older TLS protocol versions and one older
+      DTLS protocol version for security
       reasons already described. The attack surface is reduced when there are
       a smaller number of supported protocols and fallback options are
       removed.</t>
