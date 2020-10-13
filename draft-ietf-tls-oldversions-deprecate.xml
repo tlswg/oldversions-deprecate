@@ -309,7 +309,6 @@
 		<xref target="RFC6750"/> 
 		<xref target="RFC6749"/>
 		<xref target="RFC6739"/> 
-		<xref target="RFC6460"/> 
 		<xref target="RFC6084"/> 
 		<xref target="RFC6083"/> 
 		<xref target="RFC6367"/>
@@ -343,8 +342,6 @@
 		<xref target="RFC4823"/> 
 		<xref target="RFC4791"/> 
 		<xref target="RFC4785"/>
-		<xref target="RFC4744"/> 
-		<xref target="RFC4743"/> 
 		<xref target="RFC4732"/> 
 		<xref target="RFC4712"/> 
 		<xref target="RFC4681"/>
@@ -403,6 +400,11 @@
             only makes an informative reference to <xref target="RFC4346"/>.
             This requirement is updated to be for TLSv1.2 or later.</t>
 
+	<t><xref target="RFC6460"/>, <xref target="RFC4744"/>, and <xref target="RFC4743"/>
+	are already Historic; they are still listed here and marked as
+        updated by this document in order to reiterate that any usage of the
+        obsolete protocol should still use modern TLS.</t>
+	      
         <t>This document updates DTLS <xref target="RFC6347"/>.  <xref
         target="RFC6347"/> had allowed for negotiating the use of DTLSv1.0,
         which is now forbidden.</t>
