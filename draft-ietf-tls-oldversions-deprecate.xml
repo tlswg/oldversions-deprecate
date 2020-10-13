@@ -402,7 +402,7 @@
         target="RFC3316"/></t>
 
 	<t>Note that <xref target="RFC4642"/> has already been
-        updated by <xref target="RFC8143"/> ,which makes an overlapping, but
+        updated by <xref target="RFC8143"/>, which makes an overlapping, but
         not quite identical, update as this document.</t>
 
         <t><xref target="RFC6614"/> has a requirement for TLSv1.1 or later, although
