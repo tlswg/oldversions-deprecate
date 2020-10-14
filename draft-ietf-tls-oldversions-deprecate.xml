@@ -224,7 +224,7 @@
       <!--
       <t>TLSv1.1 and TLSv1.0 are also actively being deprecated in accordance
       with guidance from government agencies (e.g. <xref
-      target="NIST800-52r2">NIST SP 80052r2</xref>) and industry consortia
+      target="NIST800-52r2"/>) and industry consortia
       such as the Payment Card Industry Association (PCI) <xref
       target="PCI-TLS1"/>.</t>
 
@@ -425,15 +425,15 @@
       -->
 
       <t>Specific details on attacks against TLSv1.0 and TLSv1.1, as well as
-      their mitigations, are provided in <xref target="NIST800-52r2">NIST
-      SP800-52r2</xref>, RFC 7457 <xref target="RFC7457"/> and other
+      their mitigations, are provided in <xref target="NIST800-52r2"/>,
+      RFC 7457 <xref target="RFC7457"/> and other
       RFCs referenced therein. Although mitigations for the current known
       vulnerabilities have been developed, any future issues discovered in old
       protocol versions might not be mitigated in older library versions when
       newer library versions do not support those old protocols.</t>
 
       <t>NIST for example have provided the following rationale, copied with
-      permission from <xref target="NIST800-52r2">NIST SP800-52r2</xref>,
+      permission from <xref target="NIST800-52r2"/>,
       section 1.2 "History of TLS" (with references changed for RFC
       formatting). <list>
           <t>TLS 1.1, specified in <xref target="RFC4346"/>, was developed to
@@ -1076,14 +1076,14 @@
       <reference anchor="NIST800-52r2">
         <front>
           <title>NIST SP800-52r2
-          https://csrc.nist.gov/CSRC/media/Publications/sp/800-52/rev-2/draft/documents/sp800-52r2-draft.pdf</title>
+          https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf</title>
 
           <author>
             <organization>National Institute of Standards and
             Technology</organization>
           </author>
 
-          <date year="2018"/>
+          <date month="August" year="2019"/>
         </front>
       </reference>
 
