@@ -118,7 +118,7 @@
 <?rfc inline="yes"?>
 <rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-07"
      ipr="trust200902"
-     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6614 6460 6084 6083 6367 6347 6176 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
+     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6460 6614 6367 6347 6176 6084 6083 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
      obsoletes="7507">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
@@ -379,6 +379,12 @@
 		<xref target="RFC3261"/>
 		
     </t>
+	      
+	<t>The status of <xref target="RFC7562"/>, <xref target="RFC6042"/>,
+		<xref target="RFC5456"/>, <xref target="RFC5024"/>,
+		<xref target="RFC4540"/>, and <xref target="RFC3656"/> will be
+		updated with permission of the Independent Stream Editor.
+	</t>
 
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
         have already been obsoleted; they are still listed here and marked as
@@ -392,8 +398,8 @@
         target="RFC3546"/> <xref target="RFC3489"/> <xref
         target="RFC3316"/></t>
 
-        <t>Note that <xref target="RFC4642"/> has already been
-        updated by <xref target="RFC8143"/> ,which makes an overlapping, but
+	<t>Note that <xref target="RFC4642"/> has already been
+        updated by <xref target="RFC8143"/>, which makes an overlapping, but
         not quite identical, update as this document.</t>
 
         <t><xref target="RFC6614"/> has a requirement for TLSv1.1 or later, although
