@@ -98,7 +98,6 @@
 <!ENTITY rfc7562 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7562.xml">
 <!ENTITY rfc7568 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.7568.xml">
 <!ENTITY rfc8422 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8422.xml">
-<!ENTITY rfc8465 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8465.xml">
 <!ENTITY rfc8143 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.8261.xml">
 <!ENTITY rfc6347 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6347.xml">
 <!ENTITY rfc6460 SYSTEM "https://xml.resource.org/public/rfc/bibxml/reference.RFC.6460.xml">
@@ -118,8 +117,8 @@
 <?rfc inline="yes"?>
 <rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-08"
      ipr="trust200902"
-     updates="8465 8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6460 6614 6367 6347 6176 6084 6083 6042 6012 5878 5734 5469 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
-     obsoletes="7507">
+     updates="8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6460 6614 6367 6347 6176 6084 6083 6042 6012 5878 5734 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
+     obsoletes="5469 7507">
   <front>
     <title abbrev="Deprecating TLSv1.0 and TLSv1.1">Deprecating TLSv1.0 and
     TLSv1.1</title>
@@ -215,7 +214,8 @@
       TLSv1.3 <xref target="RFC8446"/>. Datagram Transport Layer Security
       (DTLS) version 1.0 <xref target="RFC4347"/> was superceded by DTLSv1.2
       <xref target="RFC6347"/> in 2012.  It is therefore timely to further
-      deprecate these old versions.</t>
+      deprecate these old versions.  Accordingly,
+      those documents (will be moved|have been moved) to Historic status.</t>
       
       <!--The expectation is that TLSv1.2 will
       continue to be used for many years alongside TLSv1.3.</t>
@@ -298,7 +298,6 @@
 
     <t>
 		
-		<xref target="RFC8465"/> 
 		<xref target="RFC8422"/> 
 		<xref target="RFC8261"/> 
 		<xref target="RFC7568"/> 
@@ -317,7 +316,6 @@
 		<xref target="RFC6012"/> 
 		<xref target="RFC5878"/> 
 		<xref target="RFC5734"/>
-		<xref target="RFC5469"/> 
 		<xref target="RFC5456"/> 
 		<xref target="RFC5422"/> 
 		<xref target="RFC5415"/> 
@@ -389,7 +387,7 @@
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
         have already been obsoleted; they are still listed here and marked as
         updated by this document in order to reiterate that any usage of the
-        obsolete protocol should still use modern TLS: <xref target="RFC7507"/> <xref target="RFC5101"/> <xref target="RFC5081"/>
+        obsolete protocol should still use modern TLS: <xref target="RFC5101"/> <xref target="RFC5081"/>
         <xref target="RFC5077"/> <xref target="RFC4934"/> <xref
         target="RFC4572"/> <xref target="RFC4507"/> <xref target="RFC4492"/>
         <xref target="RFC4366"/> <xref target="RFC4347"/> <xref
@@ -414,6 +412,25 @@
         <t>This document updates DTLS <xref target="RFC6347"/>.  <xref
         target="RFC6347"/> had allowed for negotiating the use of DTLSv1.0,
         which is now forbidden.</t>
+
+        <t>The DES and IDEA cipher suites specified in <xref
+        target="RFC5469"/> were specifically removed from TLSv1.2 by
+        <xref target="RFC5246"/>; since the only versions of TLS for which
+        their usage is defined are now Historic, RFC 5469 (will be|has been)
+        moved to Historic as well.</t>
+
+        <t>The version-fallback Signaling Cipher Suite Value specified in
+        <xref target="RFC7507"/> waas defined to detect when a given client
+        and server negotiate a lower version of (D)TLS than their highest
+        shared version.  TLSv1.3 (<xref target="RFC8446"/>) incorporates a
+        different mechanism that achieves this purpose, via sentinel values in
+        the ServerHello.Random field.  With (D)TLS versions prior to 1.2 fully
+        deprecated, the only way for (D)TLS implementations to negotiate a
+        lower version than their highest shared version would be to negotiate
+        (D)TLSv1.2 while supporting (D)TLSv1.3; supporting (D)TLSv1.3 implies
+        support for the ServerHello.Random mechanism.  Accordingly, the
+        functionality from <xref target="RFC7507"/> has been superseded, and
+        this document marks it as Obsolete.</t>
       </section>
 
       <section title="Terminology">
@@ -830,7 +847,7 @@
       <t>Thanks to those that provided usage data, reviewed and/or improved
       this document, including: David Benjamin, David Black, Alan DeKok, Viktor Dukhovni,
       Julien Elie, Gary Gapinski, Alessandro Ghedini, Jeremy Harris, James Hodgkinson, Russ
-      Housley, Hubert Kario, Ben Kaduk, John Mattsson, Eric Mill, Yoav Nir, Andrei Popov,
+      Housley, Hubert Kario, Benjamin Kaduk, John Mattsson, Eric Mill, Yoav Nir, Andrei Popov,
       Eric Rescorla, Yaron Sheffer, Robert Sparks, Martin Thomson, Loganaden
       Velvindron, and Jakub Wilk.</t>
 
@@ -858,8 +875,6 @@
       <?rfc include='reference.RFC.7525'?>
 
       <!-- these are from nonobsnorms.sh.refs -->
-
-      <?rfc include='reference.RFC.8465'?>
 
       <?rfc include='reference.RFC.8422'?>
 
