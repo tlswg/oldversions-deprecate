@@ -1,7 +1,9 @@
 # tls-oldversions-deprecate
 
 A draft to deprecate tlsv1.0 and tlsv1.1 initiated by Kathleen Moriarty,
-assisted by sftcd, now adopted by the TLS WG.
+assisted by sftcd, now adopted by the TLS WG. Version 10 of the draft is
+(what we think is) the result of IETF last call, and will hopefully be
+approved by the IESG in due course.
 
 The latest WG draft is [here](https://tools.ietf.org/html/draft-ietf-tls-oldversions-deprecate).
 
