@@ -117,7 +117,7 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
-<rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-10"
+<rfc category="bcp" docName="draft-ietf-tls-oldversions-deprecate-11"
      ipr="trust200902"
      updates="8422 8261 7568 7562 7525 7465 7030 6750 6749 6739 6460 6614 6367 6353 6347 6176 6084 6083 6042 6012 5953 5878 5734 5456 5422 5415 5364 5281 5263 5238 5216 5158 5091 5054 5049 5024 5023 5019 5018 4992 4976 4975 4964 4851 4823 4791 4785 4744 4743 4732 4712 4681 4680 4642 4616 4582 4540 4531 4513 4497 4279 4261 4235 4217 4168 4162 4111 4097 3983 3943 3903 3887 3871 3856 3767 3749 3656 3568 3552 3501 3470 3436 3329 3261"
      obsoletes="5469 7507">
@@ -317,7 +317,6 @@
 		<xref target="RFC6176"/> 
 		<xref target="RFC6042"/> 
 		<xref target="RFC6012"/> 
-		<xref target="RFC5953"/> 
 		<xref target="RFC5878"/> 
 		<xref target="RFC5734"/>
 		<xref target="RFC5456"/> 
@@ -391,7 +390,9 @@
         <t>In addition these RFCs normatively refer to TLSv1.0 or TLSv1.1 and
         have already been obsoleted; they are still listed here and marked as
         updated by this document in order to reiterate that any usage of the
-        obsolete protocol should still use modern TLS: <xref target="RFC5101"/> <xref target="RFC5081"/>
+            obsolete protocol should still use modern TLS: 
+		<xref target="RFC5953"/> 
+        <xref target="RFC5101"/> <xref target="RFC5081"/>
         <xref target="RFC5077"/> <xref target="RFC4934"/> <xref
         target="RFC4572"/> <xref target="RFC4507"/> <xref target="RFC4492"/>
         <xref target="RFC4366"/> <xref target="RFC4347"/> <xref
@@ -1448,6 +1449,14 @@
 
     <section title="Change Log ">
       <t>[[RFC editor: please remove this before publication.]]</t>
+
+      <t>From draft-ietf-tls-oldversions-deprecate-10 to
+          draft-ietf-tls-oldversions-deprecate-11: 
+      <list style="symbols">
+      <t>RFC 5953 was mentioned in the wrong para of section 1.1 - it has been
+          obsoleted already.</t>
+      </list>
+      </t>
 
       <t>From draft-ietf-tls-oldversions-deprecate-09 to
           draft-ietf-tls-oldversions-deprecate-10: 
