@@ -184,7 +184,7 @@
       These versions lack support for current and recommended cryptographic
       algorithms and mechanisms, and various government and industry profiles
       of applications using TLS now mandate avoiding these old TLS versions.
-      TLSv1.2 became the recommended version for IETF protocols since 2008,
+      TLSv1.2 became the recommended version for IETF protocols in 2008,
       providing sufficient time to transition away from older versions.
       Removing support for older versions from implementations reduces the
       attack surface, reduces opportunity for misconfiguration, and
