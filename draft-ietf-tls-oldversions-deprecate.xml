@@ -163,7 +163,7 @@
       </address>
     </author>
 
-    <date year="2020"/>
+    <date year="2021"/>
 
     <area>Security Area</area>
 
@@ -178,25 +178,29 @@
     <keyword>TLSv1.1</keyword>
 
     <abstract>
-      <t>This document, if approved, formally deprecates Transport Layer
-      Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346). Accordingly,
-      those documents (will be moved|have been moved) to Historic status.
-      These versions lack support for current and recommended cryptographic
-      algorithms and mechanisms, and various government and industry profiles
-      of applications using TLS now mandate avoiding these old TLS versions.
-      TLSv1.2 became the recommended version for IETF protocols in 2008,
-      providing sufficient time to transition away from older versions.
-      Removing support for older versions from implementations reduces the
-      attack surface, reduces opportunity for misconfiguration, and
-      streamlines library and product maintenance.</t>
+        <t>
+            This document, if approved, formally deprecates Transport Layer
+            Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346).
+            Accordingly, those documents (will be moved|have been moved)
+            to Historic status. These versions lack support for current
+            and recommended cryptographic algorithms and mechanisms, and
+            various government and industry profiles of applications using
+            TLS now mandate avoiding these old TLS versions. TLSv1.2
+            became the recommended version for IETF protocols in 2008,
+            (subsequently being obsoleted by TLSv1.3 in 2018), providing
+            sufficient time to transition away from older versions.
+            Removing support for older versions from implementations reduces the
+            attack surface, reduces opportunity for misconfiguration, and
+            streamlines library and product maintenance.
+        </t>
 
       <t>This document also deprecates Datagram TLS (DTLS) version 1.0 
-      (RFC4347), but not DTLS version 1.2, and there is no DTLS
+      (RFC 4347), but not DTLS version 1.2, and there is no DTLS
       version 1.1.</t>
 
       <t>This document updates many RFCs that normatively refer to TLSv1.0 or
       TLSv1.1 as described herein. This document also updates the best
-      practices for TLS usage in RFC 7525 and hence is part of BCP195.</t>
+      practices for TLS usage in RFC 7525 and hence is part of BCP 195.</t>
     </abstract>
   </front>
 
@@ -206,7 +210,7 @@
       <t>[[Text in double-square brackets is intended
       to be fixed as the draft evolves. You've seen that we need to
       figure out the list of RFCs that this'd update in the abstract.
-	  There is a repo for this at: https://github.com/tlswg/oldversions-deprecate
+	  There is a repo for this at: https://github.com/tlswg/oldversions-deprecate 
 	  - PRs (on the xml file) are welcome there.]]</t>
 		-->
 
@@ -216,7 +220,8 @@
       TLSv1.3 <xref target="RFC8446"/>. Datagram Transport Layer Security
       (DTLS) version 1.0 <xref target="RFC4347"/> was superseded by DTLSv1.2
       <xref target="RFC6347"/> in 2012.  It is therefore timely to further
-      deprecate these old versions.  Accordingly,
+          deprecate TLSv1.0, TLSv1.1 and DTLSv1.0.
+      Accordingly,
       those documents (will be moved|have been moved) to Historic status.</t>
       
       <!--The expectation is that TLSv1.2 will
@@ -290,7 +295,7 @@
       <section anchor="updates" title="RFCs Updated">
         <t>This document updates the following RFCs that normatively reference
         TLSv1.0 or TLSv1.1 or DTLS1.0. The update is to obsolete usage of
-        these older versions. Fallback to these versions are prohibited
+        these older versions. Fallback to these versions is prohibited
         through this update. Specific references to mandatory minimum protocol
         versions of TLSv1.0 or TLSv1.1 are replaced by TLSv1.2, and references
         to minimum protocol version DTLSv1.0 are replaced by DTLSv1.2.
@@ -796,23 +801,23 @@
     </section>
 	-->
 
-    <section title="Updates to RFC7525">
+    <section title="Updates to RFC 7525">
       <!--
-      <t>[[Since RFC7525 is BCP195, there'll probably be some process-fun to
+      <t>[[Since RFC7525 is BCP 195, there'll probably be some process-fun to
       do an update of that. Formally, it may be that this document becomes a
-      new part of BCP195 I guess, but we can figure that out with chairs and
+      new part of BCP 195 I guess, but we can figure that out with chairs and
       ADs.]]</t>
 		-->
 
-      <t>RFC7525 is BCP195, "Recommendations for Secure Use of Transport Layer
+      <t>RFC7525 is BCP 195, "Recommendations for Secure Use of Transport Layer
       Security (TLS) and Datagram Transport Layer Security (DTLS)", which is the
       most recent best practice document for implementing TLS and was based on
       TLSv1.2. At the time of publication, TLSv1.0 and TLSv1.1 had not yet
-      been deprecated. As such, BCP195 is called out specifically to
+      been deprecated. As such, BCP 195 is called out specifically to
       update text implementing the deprecation recommendations of this
       document.</t>
 
-      <t>This documents updates <xref target="RFC7525"/> Section 3.1.1
+      <t>This document updates <xref target="RFC7525"/> Section 3.1.1
       changing SHOULD NOT to MUST NOT as follows:</t>
 
       <t><list style="symbols">
@@ -1453,7 +1458,7 @@
       <t>From draft-ietf-tls-oldversions-deprecate-11 to
           draft-ietf-tls-oldversions-deprecate-12 (IESG review): 
       <list style="symbols">
-          <t>s/has been/became/ in abstract.</t>
+          <t>(So far...) Minor edits relating to IESG comments</t>
       </list></t>
 
       <t>From draft-ietf-tls-oldversions-deprecate-10 to
