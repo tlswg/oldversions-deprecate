@@ -5,6 +5,10 @@ assisted by sftcd, now adopted by the TLS WG. Version 10 of the draft is
 (what we think is) the result of IETF last call, and will hopefully be
 approved by the IESG in due course.
 
+This has now been approved by the IESG so the next step is it'll enter
+the RFC editor queue and eventually get processed and turned into an
+RFC with only minor copyediting changes.
+
 The latest WG draft is [here](https://tools.ietf.org/html/draft-ietf-tls-oldversions-deprecate).
 
 Please submit any PRs on the 

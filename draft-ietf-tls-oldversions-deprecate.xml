@@ -467,20 +467,29 @@
       protocol versions might not be mitigated in older library versions when
       newer library versions do not support those old protocols.</t>
 
+      <!--
+          Note that the use of "TLS 1.1" etc in the NIST quote below is 
+          deliberately not as used elsewhere in this document where we try
+          be consistent with e.g. "TLSv1.1" - that's just because this
+          is a quote from NIST.
+      --> 
+
       <t>NIST for example has provided the following rationale, copied with
       permission from <xref target="NIST800-52r2"/>,
       section 1.2 "History of TLS" (with references changed for RFC
-      formatting). <list>
-          <t>TLSv1.1, specified in <xref target="RFC4346"/>, was developed to
-          address weaknesses discovered in TLSv1.0, primarily in the areas of
+          formatting). 
+
+      <list>
+          <t>TLS 1.1, specified in <xref target="RFC4346"/>, was developed to
+          address weaknesses discovered in TLS 1.0, primarily in the areas of
           initialization vector selection and padding error processing.
           Initialization vectors were made explicit to prevent a certain class
           of attacks on the Cipher Block Chaining (CBC) mode of operation used
           by TLS. The handling of padding errors was altered to treat a
           padding error as a bad message authentication code, rather than a
-          decryption failure. In addition, the TLSv1.1 RFC acknowledges
+          decryption failure. In addition, the TLS 1.1 RFC acknowledges
           attacks on CBC mode that rely on the time to compute the message
-          authentication code (MAC). The TLSv1.1 specification states that to
+          authentication code (MAC). The TLS 1.1 specification states that to
           defend against such attacks, an implementation must process records
           in the same manner regardless of whether padding errors exist.
           Further implementation considerations for CBC modes (which were not
@@ -1458,7 +1467,7 @@
       <t>From draft-ietf-tls-oldversions-deprecate-11 to
           draft-ietf-tls-oldversions-deprecate-12 (IESG review): 
       <list style="symbols">
-          <t>(So far...) Minor edits relating to IESG comments</t>
+          <t>Minor edits from IESG review comments.</t>
       </list></t>
 
       <t>From draft-ietf-tls-oldversions-deprecate-10 to
